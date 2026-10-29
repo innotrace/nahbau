@@ -1,0 +1,676 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>HFW Trier BIM-Viewer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: Werkzeugleiste oben, links Modellbaum/Aufmaß, Mitte 3D-Ansicht, rechts Eigenschaften. Mobil: Panels als Register unter der Ansicht. */
+:root{
+  --bg:#eef1f4; --panel:#fbfcfd; --fg:#17202a; --muted:#5b6876; --line:#d5dce3; --hover:#e6ebf0;
+  --accent:#1d5fa6; --accent-fg:#ffffff; --gk:#e57a2e; --stb:#9aa3ad; --mw:#b65a40; --warn:#b7791f; --bad:#c0392b; --ok:#2f7d4f;
+  --view:#dfe5eb; --view2:#f6f8fa;
+  --f-ui:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-num:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10151b; --panel:#161d25; --fg:#e3e8ee; --muted:#93a1b0; --line:#28323d; --hover:#1f2832;
+  --accent:#5b9be0; --accent-fg:#0b1118; --gk:#f0904a; --stb:#7c8794; --mw:#c97157; --warn:#e0a84a; --bad:#e46a5c; --ok:#5fb486;
+  --view:#1a222b; --view2:#0f141a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10151b; --panel:#161d25; --fg:#e3e8ee; --muted:#93a1b0; --line:#28323d; --hover:#1f2832;
+  --accent:#5b9be0; --accent-fg:#0b1118; --gk:#f0904a; --stb:#7c8794; --mw:#c97157; --warn:#e0a84a; --bad:#e46a5c; --ok:#5fb486;
+  --view:#1a222b; --view2:#0f141a; color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-ui);font-size:13px;overflow:hidden}
+*{box-sizing:border-box}
+button,input,select{font:inherit;color:inherit}
+.app{height:100%;display:grid;grid-template-rows:auto 1fr;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:8px;gap:8px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;min-width:0}
+.brand{display:flex;flex-direction:column;min-width:0}
+.brand b{font-weight:600;font-size:15px;letter-spacing:.01em}
+.brand span{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tools{display:flex;flex-wrap:wrap;gap:4px;margin-left:auto}
+.tb{border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:5px 9px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.tb:hover{background:var(--hover)}
+.tb[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.tb:focus-visible,.tab:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.sep{width:1px;background:var(--line);margin:2px 2px}
+.main{display:grid;grid-template-columns:minmax(300px,380px) minmax(0,1fr) minmax(260px,330px);gap:8px;min-height:0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column;min-height:0;min-width:0;overflow:hidden}
+.tabs{display:flex;border-bottom:1px solid var(--line)}
+.tab{flex:1;border:0;background:none;padding:8px 6px;cursor:pointer;color:var(--muted);font-weight:500;border-bottom:2px solid transparent}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--accent)}
+.pbody{overflow:auto;min-height:0;flex:1;padding:8px 10px}
+.viewwrap{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--view);min-height:240px}
+#cv{display:block;width:100%;height:100%}
+.labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.ax{position:absolute;transform:translate(-50%,-50%);width:20px;height:20px;border-radius:50%;border:1px solid var(--muted);background:var(--panel);font:500 10px/18px var(--f-num);text-align:center;color:var(--fg)}
+.mlab{position:absolute;transform:translate(-50%,-120%);background:var(--fg);color:var(--panel);font:500 11px var(--f-num);padding:2px 5px;border-radius:4px;white-space:nowrap}
+.rlab{position:absolute;transform:translate(-50%,-50%);font:500 10px var(--f-ui);color:var(--fg);background:color-mix(in srgb,var(--panel) 75%,transparent);padding:1px 4px;border-radius:3px;white-space:nowrap}
+.hud{position:absolute;left:8px;bottom:8px;right:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:flex-end;pointer-events:none}
+.hud>*{pointer-events:auto}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12px;display:flex;gap:6px;align-items:center}
+.chip input[type=range]{width:120px}
+.status{position:absolute;top:8px;left:8px;right:8px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;pointer-events:none;font-size:12px}
+.status .chip{pointer-events:auto}
+.legend{display:flex;flex-direction:column;gap:3px}
+.legend div{display:flex;gap:6px;align-items:center}
+.sw{width:12px;height:12px;border-radius:3px;border:1px solid var(--line);flex:none}
+/* Baum */
+.search{width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);margin-bottom:8px}
+details.node>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;padding:3px 4px;border-radius:4px}
+details.node>summary::-webkit-details-marker{display:none}
+details.node>summary:hover{background:var(--hover)}
+details.node>summary .car{width:10px;color:var(--muted);transition:transform .12s}
+details.node[open]>summary .car{transform:rotate(90deg)}
+.node .cnt{margin-left:auto;color:var(--muted);font:11px var(--f-num)}
+.kids{padding-left:14px}
+.leaf{display:flex;gap:6px;align-items:center;padding:2px 4px;border-radius:4px;cursor:pointer;min-width:0}
+.leaf:hover{background:var(--hover)}
+.leaf.sel{background:color-mix(in srgb,var(--accent) 18%,transparent)}
+.leaf .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.leaf .id{font:11px var(--f-num);color:var(--muted);flex:none}
+.vis{flex:none;width:14px;height:14px;accent-color:var(--accent)}
+/* Eigenschaften */
+.ptitle{font-weight:600;font-size:14px;margin:2px 0 2px;text-wrap:balance}
+.psub{color:var(--muted);font-size:12px;margin-bottom:8px}
+table.kv{width:100%;border-collapse:collapse;font-size:12px}
+table.kv td{padding:3px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+table.kv td:first-child{color:var(--muted);width:44%;word-break:break-word}
+table.kv td:last-child{font-family:var(--f-num);word-break:break-word}
+.sec{margin:10px 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+.pill{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11px;border:1px solid var(--line)}
+.pill.warn{color:var(--warn);border-color:var(--warn)}
+.pill.ok{color:var(--ok);border-color:var(--ok)}
+.empty{color:var(--muted);padding:12px 2px;line-height:1.5}
+.btnrow{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0}
+/* Aufmaß */
+.form{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;align-items:center;font-size:12px}
+.form label{color:var(--muted)}
+.form input,.form select{width:100%;padding:4px 6px;border:1px solid var(--line);border-radius:5px;background:var(--bg);min-width:0}
+.grp{border:1px solid var(--line);border-radius:6px;margin:8px 0;overflow:hidden}
+.grp>.gh{display:grid;grid-template-columns:1fr auto;gap:2px 8px;padding:6px 8px;background:var(--bg)}
+.gh .gt{font-weight:600;font-size:12px}
+.gh .gs{font:600 12px var(--f-num);text-align:right;white-space:nowrap}
+.gh .lv{grid-column:1/-1;display:grid;grid-template-columns:70px 1fr;gap:4px}
+.gh .lv input{padding:3px 5px;border:1px solid var(--line);border-radius:4px;background:var(--panel);font-size:12px;min-width:0}
+.atab{width:100%;border-collapse:collapse;font-size:11.5px;font-variant-numeric:tabular-nums}
+.atab td,.atab th{padding:3px 4px;border-top:1px solid var(--line);text-align:right;white-space:nowrap}
+.atab th{color:var(--muted);font-weight:500}
+.atab td:nth-child(2),.atab th:nth-child(2){text-align:left}
+.atab tr{cursor:pointer}
+.atab tr.x td{opacity:.45;text-decoration:line-through}
+.atab tr.sel td{background:color-mix(in srgb,var(--accent) 16%,transparent)}
+.tot{display:flex;justify-content:space-between;font-weight:600;padding:8px 2px;border-top:2px solid var(--fg);margin-top:6px;font-family:var(--f-num)}
+.note{font-size:11.5px;color:var(--muted);line-height:1.45}
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--panel);padding:8px 14px;border-radius:6px;font-size:12.5px;z-index:20;max-width:90vw}
+.loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:13px}
+.mobtabs{display:none}
+@media (max-width:900px){
+  body{overflow:auto}
+  .app{height:auto;min-height:100%}
+  .main{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto}
+  .viewwrap{height:58vh;order:-1}
+  .mobtabs{display:flex;gap:4px}
+  .main>.panel{max-height:70vh}
+  .main>.panel.mhide{display:none}
+  .tools .lbl{display:none}
+  #legend{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="app">
+  <header>
+    <div class="brand"><b>HFW Trier</b><span id="sub">Hauptfeuerwache mit Rettungswache, An den Kaiserthermen, Trier</span></div>
+    <div class="tools" role="toolbar" aria-label="Ansicht">
+      <button class="tb" id="bFit" title="Alles einpassen (F)">⤢ <span class="lbl">Einpassen</span></button>
+      <button class="tb" id="b3d" aria-pressed="true" title="3D-Ansicht">3D</button>
+      <button class="tb" id="bPlan" aria-pressed="false" title="Grundriss mit Schnitt 1,00 m über OK FFB">Grundriss</button>
+      <select class="tb" id="stSel" aria-label="Geschoss"><option value="all">Alle Geschosse</option></select>
+      <span class="sep"></span>
+      <button class="tb" id="bSect" aria-pressed="false" title="Horizontalschnitt">✂ <span class="lbl">Schnitt</span></button>
+      <button class="tb" id="bMeas" aria-pressed="false" title="Messen: zwei Punkte anklicken (M)">📏 <span class="lbl">Messen</span></button>
+      <button class="tb" id="bXray" aria-pressed="false" title="Röntgen: nicht gewählte Bauteile transparent (X)">◐ <span class="lbl">Röntgen</span></button>
+      <span class="sep"></span>
+      <button class="tb" id="bIso" title="Auswahl isolieren (I)">Isolieren</button>
+      <button class="tb" id="bHide" title="Auswahl ausblenden (H)">Ausblenden</button>
+      <button class="tb" id="bAll" title="Alles einblenden (A)">Alle zeigen</button>
+      <span class="sep"></span>
+      <select class="tb" id="cMode" aria-label="Einfärbung">
+        <option value="class">Farbe: Bauteilklasse</option>
+        <option value="art">Farbe: Wandart</option>
+        <option value="fire">Farbe: Brandschutz</option>
+        <option value="type">Farbe: Wandtyp</option>
+      </select>
+      <button class="tb" id="bIfc" title="IFC-Datei herunterladen">⬇ IFC</button>
+    </div>
+  </header>
+  <div class="mobtabs" role="tablist">
+    <button class="tb" data-m="left" aria-pressed="true">Modell / Aufmaß</button>
+    <button class="tb" data-m="right" aria-pressed="false">Eigenschaften</button>
+  </div>
+  <div class="main">
+    <section class="panel" id="left">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-t="tree">Modell</button>
+        <button class="tab" role="tab" aria-selected="false" data-t="auf">Aufmaß Trockenbau</button>
+        <button class="tab" role="tab" aria-selected="false" data-t="info">Planstand</button>
+      </div>
+      <div class="pbody" id="p-tree">
+        <input class="search" id="q" placeholder="Suchen: Name, Raum, Achse, GUID" aria-label="Suche im Modell">
+        <div id="tree"></div>
+      </div>
+      <div class="pbody" id="p-auf" hidden></div>
+      <div class="pbody" id="p-info" hidden></div>
+    </section>
+    <section class="viewwrap" id="vw">
+      <canvas id="cv"></canvas>
+      <div class="labels" id="labels"></div>
+      <div class="status">
+        <span class="chip" id="selinfo">Keine Auswahl</span>
+        <span class="chip legend" id="legend"></span>
+      </div>
+      <div class="hud">
+        <span class="chip" id="sectChip" hidden><label for="sz">Schnitthöhe</label><input type="range" id="sz" min="0" max="8" step="0.05" value="4.6"><span id="szv" style="font-family:var(--f-num)">+4,60</span></span>
+        <span class="chip"><input type="checkbox" id="tGrid" class="vis" checked><label for="tGrid">Achsen</label></span>
+        <span class="chip"><input type="checkbox" id="tSpace" class="vis"><label for="tSpace">Räume</label></span>
+        <span class="chip"><input type="checkbox" id="tRlab" class="vis"><label for="tRlab">Raumnummern</label></span>
+        <span class="chip" id="measChip" hidden><span id="measInfo">Punkt 1 wählen</span><button class="tb" id="bMclr" style="padding:2px 6px">Löschen</button></span>
+      </div>
+      <div class="loading" id="loading">Modell wird geladen …</div>
+    </section>
+    <section class="panel" id="right">
+      <div class="tabs"><button class="tab" aria-selected="true" tabindex="-1">Eigenschaften</button></div>
+      <div class="pbody" id="props"><div class="empty">Bauteil in der 3D-Ansicht oder im Modellbaum anklicken. Mit Strg/Umschalt mehrere wählen; Längen und Flächen werden summiert.</div></div>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.min.js"></script>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const nf2=new Intl.NumberFormat('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
+const nf3=new Intl.NumberFormat('de-DE',{minimumFractionDigits:3,maximumFractionDigits:3});
+const f2=v=>v==null||isNaN(v)?'–':nf2.format(v), f3=v=>v==null||isNaN(v)?'–':nf3.format(v);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),3200)}
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+/* ---------- Szene ---------- */
+const canvas=$('#cv'), vw=$('#vw');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:false});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.localClippingEnabled=false;
+const scene=new THREE.Scene();
+(THREE.Object3D.DEFAULT_UP||THREE.Object3D.DefaultUp).set(0,0,1);
+const persp=new THREE.PerspectiveCamera(45,1,0.1,2000); persp.up.set(0,0,1);
+const ortho=new THREE.OrthographicCamera(-50,50,50,-50,-500,500); ortho.up.set(0,1,0);
+let camera=persp;
+let controls=new THREE.OrbitControls(camera,canvas);
+controls.enableDamping=true; controls.dampingFactor=0.12;
+scene.add(new THREE.HemisphereLight(0xffffff,0x8a8f96,0.85));
+const sun=new THREE.DirectionalLight(0xffffff,0.55); sun.position.set(-40,-60,90); scene.add(sun);
+const root=new THREE.Group(); scene.add(root);
+const gridGroup=new THREE.Group(); scene.add(gridGroup);
+const measGroup=new THREE.Group(); scene.add(measGroup);
+
+const COL={IfcWall:0xb9bfc6,IfcDoor:0x6f8fb5,IfcWindow:0x9fd3ea,IfcColumn:0x7f868e,IfcStairFlight:0xb59c74,IfcSpace:0x4f8fd8,default:0xc9c9c9};
+const ART={GK:0xe57a2e,STB:0xa9b1ba,MW:0xb65a40};
+const FIRE={'F90':0xe06666,'BBW F90':0xa55aff,'A (nb)':0x6fd6d6,'F60':0xf0b48a,none:0xc5cad0};
+const matCache={};
+function mat(hex,opts={}){const k=hex+'|'+JSON.stringify(opts);if(!matCache[k])matCache[k]=new THREE.MeshLambertMaterial({color:hex,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:1,polygonOffsetUnits:1,...opts});return matCache[k]}
+const selMat=new THREE.MeshLambertMaterial({color:0x2f7cf6,emissive:0x0a2a66,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:1,polygonOffsetUnits:1});
+const edgeMat=new THREE.LineBasicMaterial({color:0x2a3036,transparent:true,opacity:0.55});
+
+let M=null;              // Modell-JSON
+const E={};              // guid -> Element
+const meshes={};         // guid -> mesh
+const sel=new Set();
+let xray=false, colorMode='class';
+let bbox=new THREE.Box3();
+
+function resize(){const r=vw.getBoundingClientRect();renderer.setSize(r.width,r.height,false);persp.aspect=r.width/Math.max(r.height,1);persp.updateProjectionMatrix();setOrthoFrustum()}
+let orthoSize=60;
+function setOrthoFrustum(){const r=vw.getBoundingClientRect();const a=r.width/Math.max(r.height,1);ortho.left=-orthoSize*a/2;ortho.right=orthoSize*a/2;ortho.top=orthoSize/2;ortho.bottom=-orthoSize/2;ortho.updateProjectionMatrix()}
+new ResizeObserver(resize).observe(vw);
+
+function applyTheme(){const bg=css('--view')||'#dfe5eb';renderer.setClearColor(new THREE.Color(bg));edgeMat.color.set(document.documentElement.matches('[data-theme="dark"]')||(matchMedia('(prefers-color-scheme: dark)').matches&&!document.documentElement.matches('[data-theme="light"]'))?0x0b0f14:0x2a3036)}
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyTheme);
+new MutationObserver(applyTheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+/* ---------- Laden ---------- */
+async function load(){
+  const r0=await fetch('model.json',{cache:'no-store'}); if(!r0.ok)throw new Error('model.json '+r0.status);
+  M=await r0.json();
+  const bs=atob(M.bin.b64); const bin=new ArrayBuffer(bs.length); const u8=new Uint8Array(bin); for(let i=0;i<bs.length;i++)u8[i]=bs.charCodeAt(i); delete M.bin.b64;
+  const P=new Float32Array(bin,0,M.bin.positions), I=new Uint32Array(bin,M.bin.positions*4,M.bin.indices);
+  for(const e of M.elements){
+    E[e.g]=e;
+    if(!e.geo)continue;
+    const [v0,vn]=e.geo.v,[i0,ic]=e.geo.i;
+    const g=new THREE.BufferGeometry();
+    g.setAttribute('position',new THREE.BufferAttribute(P.slice(v0*3,(v0+vn)*3),3));
+    g.setIndex(new THREE.BufferAttribute(I.slice(i0,i0+ic),1));
+    const gn=g.toNonIndexed(); gn.computeVertexNormals(); gn.computeBoundingBox();
+    const m=new THREE.Mesh(gn,mat(COL.default)); m.userData.g=e.g;
+    if(e.c!=='IfcSpace'){const eg=new THREE.EdgesGeometry(g,25);const ls=new THREE.LineSegments(eg,edgeMat);ls.raycast=()=>{};m.add(ls)}
+    if(e.c==='IfcSpace'){m.visible=false;m.renderOrder=2}
+    meshes[e.g]=m; root.add(m);
+    if(e.c!=='IfcSpace')bbox.expandByObject(m);
+  }
+  $('#sub').textContent=`${M.meta.building} · Modellstand ${M.meta.version} vom ${M.meta.generated}`.replace(' · ',' | ');
+  $('#stSel').innerHTML='<option value="all">Alle Geschosse</option>'+M.storeys.map(s=>`<option value="${s.n}">${s.n}</option>`).join('');
+  buildGrid(); recolor(); buildTree(); renderInfo(); initAufmass(); applyTheme(); resize(); fit(true);
+  const zr=$('#sz'); zr.min=(bbox.min.z-0.5).toFixed(1); zr.max=(bbox.max.z+0.5).toFixed(1);
+  $('#loading').hidden=true;
+  restoreHot();
+}
+
+/* ---------- Achsraster ---------- */
+const axisLabels=[];
+function buildGrid(){
+  const z=-0.25, gm=new THREE.LineDashedMaterial({color:0x8794a3,dashSize:0.9,gapSize:0.35,transparent:true,opacity:.8});
+  const xs=Object.entries(M.grid.x), ys=Object.entries(M.grid.y);
+  const minx=Math.min(...xs.map(a=>a[1]))-5,maxx=Math.max(...xs.map(a=>a[1]))+8,miny=Math.min(...ys.map(a=>a[1]))-4,maxy=Math.max(...ys.map(a=>a[1]))+5;
+  const add=(a,b,lbl,lp)=>{const g=new THREE.BufferGeometry().setFromPoints([a,b]);const l=new THREE.Line(g,gm);l.computeLineDistances();gridGroup.add(l);const d=document.createElement('div');d.className='ax';d.textContent=lbl;$('#labels').appendChild(d);axisLabels.push({el:d,p:lp})};
+  for(const [k,x] of xs)add(new THREE.Vector3(x,miny,z),new THREE.Vector3(x,maxy,z),k,new THREE.Vector3(x,maxy+1,z));
+  for(const [k,y] of ys)add(new THREE.Vector3(minx,y,z),new THREE.Vector3(maxx,y,z),k,new THREE.Vector3(minx-1,y,z));
+}
+const roomLabels=[];
+function buildRoomLabels(on){
+  roomLabels.forEach(r=>r.el.remove()); roomLabels.length=0; if(!on)return;
+  for(const e of M.elements){if(e.c!=='IfcSpace'||!meshes[e.g])continue;const b=meshes[e.g].geometry.boundingBox;const c=new THREE.Vector3();b.getCenter(c);c.z=b.min.z+0.05;const d=document.createElement('div');d.className='rlab';d.textContent=e.n;$('#labels').appendChild(d);roomLabels.push({el:d,p:c,g:e.g})}
+}
+const tmpV=new THREE.Vector3();
+function placeLabels(){
+  const r=vw.getBoundingClientRect(); const show=$('#tGrid').checked;
+  const proj=(p,el)=>{tmpV.copy(p).project(camera);const vis=tmpV.z<1&&tmpV.z>-1&&Math.abs(tmpV.x)<1.05&&Math.abs(tmpV.y)<1.05;el.style.display=vis?'':'none';if(vis){el.style.left=((tmpV.x+1)/2*r.width)+'px';el.style.top=((1-tmpV.y)/2*r.height)+'px'}};
+  for(const a of axisLabels){if(!show){a.el.style.display='none';continue}proj(a.p,a.el)}
+  for(const a of roomLabels)proj(a.p,a.el);
+  for(const m of measures)proj(m.mid,m.el);
+}
+
+/* ---------- Einfärbung ---------- */
+function wallArt(e){const a=e.p?.HFW_Erfassung?.Wandart; return a==='Trockenbau'?'GK':a==='Mauerwerk'?'MW':a==='Stahlbeton'?'STB':null}
+const typeColors={};
+function typeColor(t){if(!t)return COL.default;if(!typeColors[t]){const n=Object.keys(typeColors).length;const h=(n*0.61803)%1;typeColors[t]=new THREE.Color().setHSL(h,0.55,0.58).getHex()}return typeColors[t]}
+function baseColor(e){
+  if(e.c==='IfcSpace')return COL.IfcSpace;
+  if(colorMode==='class')return e.c==='IfcWall'?(wallArt(e)==='GK'?ART.GK:COL.IfcWall):(COL[e.c]??COL.default);
+  if(colorMode==='art'){if(e.c!=='IfcWall')return 0xd9dde2;return ART[wallArt(e)]??COL.default}
+  if(colorMode==='fire'){if(e.c!=='IfcWall')return 0xdde1e5;const fr=e.p?.Pset_WallCommon?.FireRating;return FIRE[fr]??FIRE.none}
+  if(colorMode==='type'){if(e.c!=='IfcWall')return 0xdde1e5;return typeColor(e.ty)}
+  return COL.default;
+}
+let planMode=false;
+function matFor(e){
+  if(sel.has(e.g))return selMat;
+  let hex=baseColor(e);
+  if(planMode&&e.c!=='IfcSpace'&&e.c!=='IfcWindow'){const c=new THREE.Color(hex).multiplyScalar(0.8).getHex();const k='plan'+c+(xray&&sel.size?'x':'');if(!matCache[k])matCache[k]=new THREE.MeshBasicMaterial({color:c,side:THREE.DoubleSide,transparent:xray&&sel.size,opacity:xray&&sel.size?.15:1});return matCache[k]}
+  if(e.c==='IfcSpace')return mat(hex,{transparent:true,opacity:.18,depthWrite:false});
+  if(e.c==='IfcWindow')return mat(hex,{transparent:true,opacity:.55});
+  if(xray&&sel.size)return mat(hex,{transparent:true,opacity:.12,depthWrite:false});
+  return mat(hex);
+}
+function recolor(){for(const g in meshes){meshes[g].material=matFor(E[g])}legend()}
+function legend(){
+  const L=$('#legend'); let items=[];
+  if(colorMode==='class')items=[['Trockenbauwand',ART.GK],['Massivwand',COL.IfcWall],['Tür',COL.IfcDoor],['Fenster',COL.IfcWindow],['Stütze',COL.IfcColumn],['Treppe',COL.IfcStairFlight]];
+  if(colorMode==='art')items=[['Trockenbau (GK)',ART.GK],['Stahlbeton',ART.STB],['Mauerwerk',ART.MW]];
+  if(colorMode==='fire')items=[['F90 feuerbeständig',FIRE.F90],['BBW F90-A+[M]',FIRE['BBW F90']],['F60',FIRE.F60],['nichtbrennbar A',FIRE['A (nb)']],['ohne Angabe',FIRE.none]];
+  if(colorMode==='type'){const n=Object.keys(typeColors).length;L.innerHTML=`<div>${n} Wandtypen, Farbe je Typ</div>`;return}
+  L.innerHTML=items.map(([t,c])=>`<div><span class="sw" style="background:#${c.toString(16).padStart(6,'0')}"></span>${t}</div>`).join('');
+}
+
+/* ---------- Kamera ---------- */
+function fit(initial){
+  const b=new THREE.Box3(); for(const g in meshes){const m=meshes[g];if(m.visible&&E[g].c!=='IfcSpace')b.expandByObject(m)} if(b.isEmpty())b.copy(bbox);
+  const c=new THREE.Vector3();b.getCenter(c);const s=new THREE.Vector3();b.getSize(s);const r=Math.max(s.x,s.y,s.z);
+  if(camera===persp){const asp=Math.min(1,persp.aspect||1);const d=r*0.62/Math.tan(persp.fov*Math.PI/360)/asp;persp.position.set(c.x-d*0.35,c.y-d*0.7,c.z+d*0.6);controls.target.copy(c)}
+  else{orthoSize=Math.max(s.y,s.x/(vw.clientWidth/vw.clientHeight))*1.08;setOrthoFrustum();ortho.position.set(c.x,c.y,c.z+200);controls.target.set(c.x,c.y,c.z)}
+  camera.updateProjectionMatrix();controls.update();
+}
+function setCam(mode){
+  const t=controls.target.clone(); controls.dispose();
+  if(mode==='plan'){camera=ortho;ortho.position.set(t.x,t.y,t.z+200);ortho.up.set(0,1,0)}else{camera=persp}
+  controls=new THREE.OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.12;controls.target.copy(t);
+  if(mode==='plan'){controls.enableRotate=false;controls.screenSpacePanning=true;controls.mouseButtons={LEFT:THREE.MOUSE.PAN,MIDDLE:THREE.MOUSE.DOLLY,RIGHT:THREE.MOUSE.PAN};controls.touches={ONE:THREE.TOUCH.PAN,TWO:THREE.TOUCH.DOLLY_PAN}}
+  planMode=mode==='plan';recolor();
+  $('#b3d').setAttribute('aria-pressed',mode!=='plan');$('#bPlan').setAttribute('aria-pressed',mode==='plan');
+  fit();
+}
+$('#bFit').onclick=()=>fit();
+$('#b3d').onclick=()=>{setSection(false);setCam('3d')};
+function stZ(n){return (M.storeys.find(s=>s.n===n)||{z:0}).z}
+function baseVis(g){const e=E[g];return (e.c!=='IfcSpace'||$('#tSpace').checked)&&(stFilter==='all'||e.st===stFilter)}
+let stFilter='all';
+function setStorey(n){stFilter=n;$('#stSel').value=n;for(const g in meshes)meshes[g].visible=baseVis(g);syncTreeChecks();
+  if(camera===ortho){setSection(true,stZ(n==='all'?M.storeys[0].n:n)+1.0)}fit()}
+$('#stSel').onchange=e=>setStorey(e.target.value);
+$('#bPlan').onclick=()=>{if(stFilter==='all')setStorey(M.storeys[M.storeys.length-1].n);setSection(true,stZ(stFilter)+1.0);setCam('plan')};
+
+/* ---------- Schnitt ---------- */
+const clipZ=new THREE.Plane(new THREE.Vector3(0,0,-1),4.6);
+function setSection(on,z){
+  if(z!=null){clipZ.constant=z;$('#sz').value=z}
+  renderer.clippingPlanes=on?[clipZ]:[];
+  $('#bSect').setAttribute('aria-pressed',on);$('#sectChip').hidden=!on;$('#szv').textContent=(clipZ.constant>=0?'+':'')+f2(clipZ.constant);
+}
+$('#bSect').onclick=()=>setSection($('#bSect').getAttribute('aria-pressed')!=='true');
+$('#sz').oninput=e=>{clipZ.constant=+e.target.value;$('#szv').textContent=(clipZ.constant>=0?'+':'')+f2(clipZ.constant)};
+
+/* ---------- Sichtbarkeit / Auswahl ---------- */
+$('#tGrid').onchange=e=>{gridGroup.visible=e.target.checked};
+$('#tSpace').onchange=e=>{for(const g in meshes)if(E[g].c==='IfcSpace')meshes[g].visible=baseVis(g);syncTreeChecks()};
+$('#tRlab').onchange=e=>buildRoomLabels(e.target.checked);
+function select(gs,add){
+  if(!add)sel.clear();
+  for(const g of gs){if(add&&sel.has(g)&&gs.length===1)sel.delete(g);else sel.add(g)}
+  recolor(); renderProps(); markTree(); markAuf();
+}
+function clearSel(){sel.clear();recolor();renderProps();markTree();markAuf()}
+$('#bIso').onclick=()=>{if(!sel.size)return toast('Zuerst Bauteile wählen');for(const g in meshes)meshes[g].visible=sel.has(g);syncTreeChecks();fit()};
+$('#bHide').onclick=()=>{if(!sel.size)return toast('Zuerst Bauteile wählen');for(const g of sel)if(meshes[g])meshes[g].visible=false;clearSel();syncTreeChecks()};
+$('#bAll').onclick=()=>{for(const g in meshes)meshes[g].visible=baseVis(g);syncTreeChecks()};
+$('#bXray').onclick=()=>{xray=!xray;$('#bXray').setAttribute('aria-pressed',xray);recolor()};
+$('#cMode').onchange=e=>{colorMode=e.target.value;recolor()};
+
+/* Picking */
+const ray=new THREE.Raycaster(), mouse=new THREE.Vector2();
+let down=null;
+canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY]});
+canvas.addEventListener('pointerup',e=>{
+  if(!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>5)return; down=null;
+  const r=canvas.getBoundingClientRect();mouse.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);
+  ray.setFromCamera(mouse,camera);
+  const cand=Object.values(meshes).filter(m=>m.visible&&!(xray&&sel.size&&!sel.has(m.userData.g)));
+  let hits=ray.intersectObjects(cand,false);
+  if(renderer.clippingPlanes.length)hits=hits.filter(h=>clipZ.distanceToPoint(h.point)>=-1e-3);
+  const solid=hits.filter(h=>E[h.object.userData.g].c!=='IfcSpace');
+  const h=solid[0]||hits[0];
+  if(measuring){if(h)measurePick(h);return}
+  if(!h){if(!e.ctrlKey&&!e.shiftKey&&!e.metaKey)clearSel();return}
+  select([h.object.userData.g],e.ctrlKey||e.shiftKey||e.metaKey);
+  revealInTree(h.object.userData.g);
+});
+
+/* ---------- Messen ---------- */
+let measuring=false, mPts=[]; const measures=[];
+const mLine=new THREE.LineBasicMaterial({color:0xd2342f,depthTest:false}), mDot=new THREE.MeshBasicMaterial({color:0xd2342f,depthTest:false});
+function snap(h){
+  const pos=h.object.geometry.attributes.position, p=h.point; let best=null,bd=0.12;
+  if(h.face){for(const i of [h.face.a,h.face.b,h.face.c]){const v=new THREE.Vector3().fromBufferAttribute(pos,i);const d=v.distanceTo(p);if(d<bd){bd=d;best=v}}}
+  return best||p.clone();
+}
+function measurePick(h){
+  const p=snap(h); const dot=new THREE.Mesh(new THREE.SphereGeometry(0.06,10,8),mDot);dot.position.copy(p);dot.renderOrder=9;measGroup.add(dot);mPts.push(p);
+  if(mPts.length===1){$('#measInfo').textContent='Punkt 2 wählen';return}
+  const [a,b]=mPts; mPts=[];
+  const l=new THREE.Line(new THREE.BufferGeometry().setFromPoints([a,b]),mLine);l.renderOrder=9;measGroup.add(l);
+  const d=a.distanceTo(b),dx=Math.abs(b.x-a.x),dy=Math.abs(b.y-a.y),dz=Math.abs(b.z-a.z);
+  const el=document.createElement('div');el.className='mlab';el.textContent=`${f3(d)} m`;$('#labels').appendChild(el);
+  measures.push({el,mid:a.clone().add(b).multiplyScalar(.5)});
+  $('#measInfo').textContent=`${f3(d)} m  (Δx ${f3(dx)} · Δy ${f3(dy)} · Δz ${f3(dz)})`.replaceAll('·','|');
+}
+function setMeasure(on){measuring=on;mPts=[];$('#bMeas').setAttribute('aria-pressed',on);$('#measChip').hidden=!on;if(on)$('#measInfo').textContent='Punkt 1 wählen'}
+$('#bMeas').onclick=()=>setMeasure(!measuring);
+$('#bMclr').onclick=()=>{measGroup.clear();measures.forEach(m=>m.el.remove());measures.length=0;mPts=[];$('#measInfo').textContent='Punkt 1 wählen'};
+
+/* ---------- Tastatur ---------- */
+addEventListener('keydown',e=>{
+  if(e.target.matches('input,select,textarea'))return;
+  const k=e.key.toLowerCase();
+  if(k==='escape'){setMeasure(false);clearSel()}
+  else if(k==='f')fit(); else if(k==='i')$('#bIso').click(); else if(k==='h')$('#bHide').click(); else if(k==='a')$('#bAll').click();
+  else if(k==='x')$('#bXray').click(); else if(k==='m')$('#bMeas').click();
+});
+
+/* ---------- Modellbaum ---------- */
+const CLS={IfcWall:'Wände',IfcDoor:'Türen',IfcWindow:'Fenster',IfcColumn:'Stützen',IfcStairFlight:'Treppenläufe',IfcSpace:'Räume'};
+function elLabel(e){if(e.c==='IfcSpace')return `${e.n} ${e.d||e.o||''}`;if(e.c==='IfcWall')return `${e.n}  ${e.p?.HFW_Erfassung?.Lage||''}`;return `${e.n||''} ${e.d||''}`}
+function buildTree(){
+  const T={};
+  for(const e of M.elements){if(!CLS[e.c])continue;const st=e.st||'ohne Geschoss';T[st]??={};T[st][e.c]??={};const tk=e.c==='IfcWall'?(e.ty||'ohne Typ'):'_';(T[st][e.c][tk]??=[]).push(e)}
+  const q=$('#q').value.trim().toLowerCase();
+  const match=e=>!q||[e.n,e.d,e.o,e.g,e.ty,e.tag,e.p?.HFW_Erfassung?.Lage,e.p?.HFW_Erfassung?.Raum_Seite_A,e.p?.HFW_Erfassung?.Raum_Seite_B].some(v=>v&&String(v).toLowerCase().includes(q));
+  let h='';
+  for(const st of Object.keys(T).sort()){
+    let sh='',stc=0;
+    for(const c of Object.keys(CLS)){if(!T[st][c])continue;let ch='',cc=0;
+      for(const tk of Object.keys(T[st][c]).sort()){const list=T[st][c][tk].filter(match);if(!list.length)continue;cc+=list.length;
+        const leaves=list.sort((a,b)=>String(a.n).localeCompare(String(b.n),'de',{numeric:true})).map(e=>`<div class="leaf" data-g="${e.g}"><input type="checkbox" class="vis" data-vg="${e.g}" aria-label="sichtbar"><span class="nm">${esc(elLabel(e))}</span></div>`).join('');
+        ch+= tk==='_'?leaves:`<details class="node"${q?' open':''}><summary><span class="car">▸</span><input type="checkbox" class="vis" data-vt="${esc(tk)}" data-vc="${c}" aria-label="Typ sichtbar"><span class="nm">${esc(tk)}</span><span class="cnt">${list.length}</span></summary><div class="kids">${leaves}</div></details>`}
+      if(!cc)continue;stc+=cc;
+      sh+=`<details class="node"${q?' open':''}><summary><span class="car">▸</span><input type="checkbox" class="vis" data-vc="${c}" data-vst="${esc(st)}" aria-label="Klasse sichtbar"><b>${CLS[c]}</b><span class="cnt">${cc}</span></summary><div class="kids">${ch}</div></details>`}
+    h+=`<details class="node" open><summary><span class="car">▸</span><b>${esc(st)}</b><span class="cnt">${stc}</span></summary><div class="kids">${sh}</div></details>`;
+  }
+  $('#tree').innerHTML=h||'<div class="empty">Keine Treffer.</div>'; syncTreeChecks(); markTree();
+}
+$('#q').addEventListener('input',()=>{clearTimeout(buildTree.t);buildTree.t=setTimeout(buildTree,160)});
+$('#tree').addEventListener('click',e=>{
+  const cb=e.target.closest('input.vis');
+  if(cb){const on=cb.checked;const inSum=!!cb.closest('summary');if(inSum)e.preventDefault();
+    setTimeout(()=>{cb.checked=on;
+      if(cb.dataset.vg){if(meshes[cb.dataset.vg])meshes[cb.dataset.vg].visible=on}
+      else{const box=cb.closest('details');box.querySelectorAll('[data-vg]').forEach(x=>{if(meshes[x.dataset.vg])meshes[x.dataset.vg].visible=on})}
+      if(cb.dataset.vc==='IfcSpace')$('#tSpace').checked=on;
+      syncTreeChecks()},0);return}
+  const lf=e.target.closest('.leaf');if(lf){select([lf.dataset.g],e.ctrlKey||e.shiftKey||e.metaKey);if(meshes[lf.dataset.g]&&!meshes[lf.dataset.g].visible){meshes[lf.dataset.g].visible=true;syncTreeChecks()}}
+});
+$('#tree').addEventListener('dblclick',e=>{const lf=e.target.closest('.leaf');if(lf)zoomTo([lf.dataset.g])});
+function syncTreeChecks(){
+  $$('#tree [data-vg]').forEach(cb=>{cb.checked=!!meshes[cb.dataset.vg]?.visible});
+  $$('#tree details').forEach(d=>{const cb=d.querySelector(':scope>summary input.vis');if(!cb)return;const all=[...d.querySelectorAll('[data-vg]')];const n=all.filter(x=>x.checked).length;cb.checked=n>0;cb.indeterminate=n>0&&n<all.length});
+}
+function markTree(){$$('#tree .leaf').forEach(l=>l.classList.toggle('sel',sel.has(l.dataset.g)))}
+function revealInTree(g){const lf=$(`#tree .leaf[data-g="${g}"]`);if(!lf)return;let d=lf.parentElement.closest('details');while(d){d.open=true;d=d.parentElement.closest('details')}lf.scrollIntoView({block:'nearest'})}
+function zoomTo(gs){const b=new THREE.Box3();gs.forEach(g=>meshes[g]&&b.expandByObject(meshes[g]));if(b.isEmpty())return;const c=new THREE.Vector3();b.getCenter(c);const s=new THREE.Vector3();b.getSize(s);const r=Math.max(s.x,s.y,s.z,3);
+  if(camera===persp){const dir=persp.position.clone().sub(controls.target).normalize();persp.position.copy(c.clone().add(dir.multiplyScalar(r*2.2)))}else{orthoSize=r*2;setOrthoFrustum();ortho.position.set(c.x,c.y,c.z+200)}controls.target.copy(c);controls.update()}
+
+/* ---------- Eigenschaften ---------- */
+function kvTable(o){return '<table class="kv">'+Object.entries(o).filter(([k,v])=>v!==null&&v!==undefined&&v!=='').map(([k,v])=>`<tr><td>${esc(k)}</td><td>${esc(typeof v==='number'?(Number.isInteger(v)?v:nf3.format(v)):typeof v==='boolean'?(v?'ja':'nein'):v)}</td></tr>`).join('')+'</table>'}
+function renderProps(){
+  const P=$('#props');
+  if(!sel.size){P.innerHTML='<div class="empty">Bauteil in der 3D-Ansicht oder im Modellbaum anklicken. Mit Strg/Umschalt mehrere wählen; Längen und Flächen werden summiert.</div>';$('#selinfo').textContent='Keine Auswahl';return}
+  const list=[...sel].map(g=>E[g]);
+  const walls=list.filter(e=>e.auf);
+  const sumL=walls.reduce((s,e)=>s+e.auf.L,0), sumA=walls.reduce((s,e)=>s+e.auf.L*e.auf.H,0);
+  $('#selinfo').textContent=list.length===1?`${list[0].n} | ${CLS[list[0].c]||list[0].c}`:`${list.length} Bauteile gewählt`+(walls.length?` | Σ L ${f2(sumL)} m | Σ A ${f2(sumA)} m²`:'');
+  if(list.length>1){
+    const by={};list.forEach(e=>{by[CLS[e.c]||e.c]=(by[CLS[e.c]||e.c]||0)+1});
+    P.innerHTML=`<div class="ptitle">${list.length} Bauteile</div><div class="psub">${Object.entries(by).map(([k,v])=>`${v} ${k}`).join(', ')}</div>`+
+      (walls.length?`<div class="sec">Summe Wände</div>${kvTable({'Anzahl':walls.length,'Länge Σ [m]':sumL,'Wandfläche brutto Σ [m²]':sumA})}`:'')+
+      `<div class="btnrow"><button class="tb" id="pz">Heranzoomen</button></div>`;
+    $('#pz').onclick=()=>zoomTo([...sel]);return}
+  const e=list[0];
+  let h=`<div class="ptitle">${esc(e.n||e.c)}</div><div class="psub">${esc(CLS[e.c]||e.c)}${e.ty?' | '+esc(e.ty):''}</div>`;
+  const st=e.p?.HFW_Erfassung?.Pruefstatus; if(st)h+=`<span class="pill warn">${st==='ungeprueft'?'Automatisch erfasst, ungeprüft':esc(st)}</span>`;
+  h+=`<div class="btnrow"><button class="tb" id="pz">Heranzoomen</button><button class="tb" id="pc">GUID kopieren</button></div>`;
+  h+=`<div class="sec">Attribute</div>`+kvTable({'IFC-Klasse':e.c,'GlobalId':e.g,'Name':e.n,'Beschreibung':e.d,'ObjectType':e.o,'Tag':e.tag,'PredefinedType':e.pt,'Typ':e.ty,'Geschoss':e.st});
+  if(e.auf){const a=e.auf;h+=`<div class="sec">Aufmaßwerte</div>`+kvTable({'Länge [m]':a.L,'Höhe [m]':a.H,'Dicke [m]':a.t,'Wandfläche brutto [m²]':a.L*a.H,'Öffnungen':a.ops.length?a.ops.map(o=>`${o.typ} ${f2(o.b)}×${f2(o.h)}${o.tag?' '+o.tag:''}`).join('; '):'keine','Lage':a.lage,'Raum Seite A':a.rA,'Raum Seite B':a.rB})}
+  if(e.ml){h+=`<div class="sec">Schichtaufbau</div><table class="kv">${e.ml.map(l=>`<tr><td>${esc(l[0])}</td><td>${nf2.format(l[1])} mm</td></tr>`).join('')}</table>`}
+  for(const [ps,vals] of Object.entries(e.p||{})){h+=`<details open><summary class="sec" style="cursor:pointer">${esc(ps)}</summary>${kvTable(vals)}</details>`}
+  P.innerHTML=h;
+  $('#pz').onclick=()=>zoomTo([e.g]);
+  $('#pc').onclick=()=>{navigator.clipboard?.writeText(e.g).then(()=>toast('GUID kopiert'),()=>toast(e.g))};
+}
+
+/* ---------- Planstand ---------- */
+function renderInfo(){
+  const m=M.meta, cnt={};M.elements.forEach(e=>{cnt[e.c]=(cnt[e.c]||0)+1});
+  const noGeo=M.elements.filter(e=>e.c==='IfcSpace'&&!e.geo).length;
+  const unk=M.elements.filter(e=>e.c==='IfcDoor'&&/nicht gekennzeichnet/.test(e.d||'')).length;
+  $('#p-info').innerHTML=`<div class="ptitle">${esc(m.project)}</div><div class="psub">${esc(m.address)} | ${esc(m.nn)}</div>
+  <div class="sec">Modell</div>${kvTable({'Modellstand':m.version,'Erzeugt':m.generated,'IFC-Schema':m.schema,'Datei':m.ifc})}
+  <div class="sec">Eingearbeitete Pläne</div><table class="kv">${m.sources.map(s=>`<tr><td>${esc(s.geschoss)} | ${esc(s.inhalt)}</td><td>${esc(s.plan)}<br>${esc(s.massstab)}, ${esc(s.status)}, ${esc(s.datum)}</td></tr>`).join('')}</table>
+  <div class="sec">Bauteile</div>${kvTable(Object.fromEntries(Object.entries(cnt).map(([k,v])=>[CLS[k]||k,v])))}
+  ${(m.staende||[]).length?`<div class="sec">Modellstände</div><table class="kv">${m.staende.map(s=>`<tr><td>Stand ${s.version} | ${esc(s.datum)}</td><td>${esc(s.notiz)}${Object.keys(s.aenderungen||{}).length?'<br>'+Object.entries(s.aenderungen).map(([k,v])=>`${esc(k.replaceAll('_',' '))}: ${v}`).join(', '):''}</td></tr>`).join('')}</table>`:''}
+  <div class="sec">Prüfhinweise</div><div class="note">
+  <p><span class="pill warn">${unk}</span> Öffnungen ohne Türkennung, als Tür/Durchgang geführt</p>
+  <p><span class="pill warn">${noGeo}</span> Räume ohne Geometrie (Raumkontur nicht geschlossen erkannt)</p></div>
+  ${m.qa?qaHtml(m.qa):''}
+  <div class="sec">Annahmen</div><ul class="note" style="padding-left:16px;margin:0">${m.assumptions.map(a=>`<li>${esc(a)}</li>`).join('')}</ul>
+  <div class="sec">Weiterarbeit</div><p class="note">Neue Pläne im Chat hochladen. Das Modell wird ergänzt und an dieser Stelle aktualisiert; Viewer, Aufmaß-Einstellungen und LV-Zuordnungen bleiben erhalten.</p>`;
+  $('#p-info').querySelectorAll('[data-qg]').forEach(el=>el.onclick=()=>{const gs=el.dataset.qg.split(' ').filter(g=>meshes[g]);if(!gs.length)return toast('Bauteil ohne Geometrie');gs.forEach(g=>meshes[g].visible=true);syncTreeChecks();select(gs,false);zoomTo(gs);revealInTree(gs[0])});
+}
+const QA_TITEL={guid_doppelt:'Doppelte GlobalId',geschossgrenze:'Wand über Geschossgrenze',ueberlappung:'Überlappende Wände (Doppelzählung)',offene_enden:'Offene Trockenbau-Wandenden',raum_ohne_geometrie:'Räume ohne Geometrie'};
+function qaHtml(qa){
+  const by={};qa.befunde.forEach(b=>(by[b.pruefung]??=[]).push(b));
+  let h=`<div class="sec">Modellprüfung (${esc(qa.datei)})</div>`;
+  if(!qa.befunde.length)return h+'<p class="note"><span class="pill ok">ok</span> keine Befunde</p>';
+  for(const k of ['guid_doppelt','geschossgrenze','ueberlappung','offene_enden']){const L=by[k];if(!L)continue;
+    const bad=L.some(b=>b.stufe==='Fehler');
+    h+=`<details class="node"><summary><span class="car">▸</span><span class="pill ${bad?'warn':''}">${L.length}</span>&nbsp;${esc(QA_TITEL[k]||k)}</summary><div class="kids note">${L.map(b=>`<div class="leaf" data-qg="${esc([b.guid,b.partner_guid].filter(Boolean).join(' '))}" title="Im Modell zeigen"><span class="nm"><b>${esc(b.element)}</b> ${esc(b.text)}</span></div>`).join('')}</div></details>`}
+  return h;
+}
+
+/* ---------- Tabs ---------- */
+$$('.tabs .tab[data-t]').forEach(b=>b.onclick=()=>{$$('.tabs .tab[data-t]').forEach(x=>x.setAttribute('aria-selected',x===b));['tree','auf','info'].forEach(t=>$('#p-'+t).hidden=t!==b.dataset.t);if(b.dataset.t==='auf')renderAuf()});
+$$('.mobtabs [data-m]').forEach(b=>b.onclick=()=>{$$('.mobtabs [data-m]').forEach(x=>x.setAttribute('aria-pressed',x===b));$('#left').classList.toggle('mhide',b.dataset.m!=='left');$('#right').classList.toggle('mhide',b.dataset.m!=='right')});
+if(matchMedia('(max-width:900px)').matches)$('#right').classList.add('mhide');
+
+/* ---------- Aufmaß Trockenbau ---------- */
+const CFG_DEF={header:{projekt:'Hauptfeuerwache mit Rettungswache Trier',ag:'Stadtverwaltung Trier, Amt für Brand-, Zivilschutz und Rettungsdienst',an:'',gewerk:'Trockenbauarbeiten (VOB/C DIN 18340)',nr:'1',datum:new Date().toLocaleDateString('de-DE'),geschoss:'OG1'},
+  rule:'vob',sides:1,hov:'',filter:'gk',st:'all',lv:{},excl:{}};
+let CFG=JSON.parse(JSON.stringify(CFG_DEF)); let db=null, saveT=null, dbState='lokal';
+async function initAufmass(){
+  try{const c=await window.claude?.use?.('db');if(c){db=c;const s=await db.doc('aufmass/config').get();if(s.exists){CFG={...CFG_DEF,...s.data(),header:{...CFG_DEF.header,...(s.data().header||{})}}}dbState='gespeichert'}}catch(e){dbState='lokal'}
+  renderAuf();
+}
+function saveCfg(){clearTimeout(saveT);saveT=setTimeout(async()=>{if(!db){dbState='nur in dieser Sitzung';updDb();return}try{await db.doc('aufmass/config').set(JSON.parse(JSON.stringify(CFG)));dbState='gespeichert';}catch(e){dbState='nicht gespeichert ('+(e.code||'Fehler')+')'}updDb()},700)}
+function updDb(){const el=$('#dbst');if(el)el.textContent='Einstellungen: '+dbState}
+function aufRows(){
+  CFG.header.geschoss=CFG.st==='all'?M.storeys.map(s=>s.n).join(', '):CFG.st;
+  const walls=M.elements.filter(e=>e.auf&&(CFG.filter==='all'||e.auf.kind==='GK')&&(CFG.st==='all'||e.auf.st===CFG.st));
+  const hov=parseFloat(String(CFG.hov).replace(',','.'));
+  const groups={};
+  for(const e of walls){const a=e.auf;const H=isFinite(hov)&&hov>0?hov:a.H;const brutto=a.L*H*CFG.sides;
+    let abz=0;const ops=[];for(const o of a.ops){const ar=o.b*Math.min(o.h,H);const d=CFG.rule==='all'||(CFG.rule==='vob'&&ar>2.5);if(d)abz+=ar*CFG.sides;ops.push({...o,ar,d})}
+    const r={g:e.g,id:a.id,typ:a.type,lage:a.lage,raum:[a.rA,a.rB].filter(Boolean).join(' / '),L:a.L,H,brutto,abz,netto:brutto-abz,ops,x:!!CFG.excl[e.g]};
+    (groups[a.type]??=[]).push(r)}
+  const keys=Object.keys(groups).sort((a,b)=>sumN(groups[b])-sumN(groups[a]));
+  return keys.map((k,i)=>({typ:k,oz:CFG.lv[k]?.oz||'',kt:CFG.lv[k]?.kt||k,rows:groups[k].sort((a,b)=>a.id.localeCompare(b.id,'de',{numeric:true})),idx:i+1}));
+}
+const sumN=rs=>rs.filter(r=>!r.x).reduce((s,r)=>s+r.netto,0);
+function renderAuf(){
+  if(!M)return; const G=aufRows(); const H=CFG.header;
+  const tot=G.reduce((s,g)=>s+sumN(g.rows),0);
+  let h=`<div class="form">
+   <label for="h_an">Auftragnehmer</label><input id="h_an" data-h="an" value="${esc(H.an)}" placeholder="Firma eintragen">
+   <label for="h_nr">Aufmaß-Nr.</label><input id="h_nr" data-h="nr" value="${esc(H.nr)}">
+   <label for="h_dt">Datum</label><input id="h_dt" data-h="datum" value="${esc(H.datum)}">
+   <label for="a_st">Geschoss</label><select id="a_st"><option value="all">alle Geschosse</option>${M.storeys.map(s=>`<option value="${s.n}">${s.n}</option>`).join('')}</select>
+   <label for="a_f">Bauteile</label><select id="a_f"><option value="gk">nur Trockenbauwände</option><option value="all">alle Wände</option></select>
+   <label for="a_r">Abzug Öffnungen</label><select id="a_r"><option value="vob">DIN 18340: > 2,5 m² abziehen</option><option value="all">alle abziehen</option><option value="none">keine Abzüge</option></select>
+   <label for="a_s">Flächenansatz</label><select id="a_s"><option value="1">Wandfläche einseitig</option><option value="2">beidseitig (Beplankung)</option></select>
+   <label for="a_h">Höhe übersteuern</label><input id="a_h" value="${esc(CFG.hov)}" placeholder="aus Modell (m)" inputmode="decimal">
+  </div>
+  <div class="btnrow" style="margin-top:8px"><button class="tb" id="xDoc">⬇ Word (.docx)</button><button class="tb" id="xPdf">⬇ PDF</button><button class="tb" id="xCsv">⬇ CSV</button><button class="tb" id="xShow">Im Modell zeigen</button></div>
+  <div class="note" id="dbst">Einstellungen: ${dbState}</div>`;
+  if(!G.length)h+='<div class="empty">Keine Wände für den gewählten Filter im Modell.</div>';
+  for(const g of G){
+    h+=`<div class="grp"><div class="gh"><span class="gt">${String(g.idx).padStart(2,'0')} | ${esc(g.typ)}</span><span class="gs">${f2(sumN(g.rows))} m²</span>
+      <div class="lv"><input data-lvoz="${esc(g.typ)}" value="${esc(g.oz)}" placeholder="LV-OZ" aria-label="LV-Ordnungszahl"><input data-lvkt="${esc(g.typ)}" value="${esc(CFG.lv[g.typ]?.kt||'')}" placeholder="Kurztext aus LV" aria-label="LV-Kurztext"></div></div>
+      <div style="overflow-x:auto"><table class="atab"><thead><tr><th title="einbeziehen">✓</th><th>Bauteil | Lage</th><th>L</th><th>H</th><th>Brutto</th><th>Abzug</th><th>Netto</th></tr></thead><tbody>
+      ${g.rows.map(r=>`<tr data-g="${r.g}" class="${r.x?'x':''}${sel.has(r.g)?' sel':''}" title="${esc(r.raum)}"><td><input type="checkbox" class="vis" data-ex="${r.g}" ${r.x?'':'checked'} aria-label="einbeziehen"></td><td>${esc(r.id)} | ${esc(r.lage.replace('Achse ',''))}</td><td>${f2(r.L)}</td><td>${f2(r.H)}</td><td>${f2(r.brutto)}</td><td>${r.abz?'−'+f2(r.abz):'–'}</td><td><b>${f2(r.netto)}</b></td></tr>`).join('')}
+      </tbody></table></div></div>`}
+  h+=`<div class="tot"><span>Summe Trockenbau ${esc(CFG.header.geschoss)}</span><span>${f2(tot)} m²</span></div>
+  <p class="note">Abrechnung nach VOB/C DIN 18340: Wandflächen in m², Öffnungen über 2,5 m² Einzelgröße werden abgezogen. Höhen und Öffnungsmaße teilweise angenommen (siehe Planstand). Ausgeschlossene Zeilen (Haken entfernt) zählen nicht zur Summe.</p>`;
+  const P=$('#p-auf');P.innerHTML=h;
+  $('#a_f').value=CFG.filter;$('#a_r').value=CFG.rule;$('#a_s').value=String(CFG.sides);
+  P.querySelectorAll('[data-h]').forEach(i=>i.oninput=()=>{CFG.header[i.dataset.h]=i.value;saveCfg()});
+  $('#a_f').onchange=e=>{CFG.filter=e.target.value;saveCfg();renderAuf()};
+  $('#a_st').value=CFG.st||'all';$('#a_st').onchange=e=>{CFG.st=e.target.value;saveCfg();renderAuf()};
+  $('#a_r').onchange=e=>{CFG.rule=e.target.value;saveCfg();renderAuf()};
+  $('#a_s').onchange=e=>{CFG.sides=+e.target.value;saveCfg();renderAuf()};
+  $('#a_h').onchange=e=>{CFG.hov=e.target.value.trim();saveCfg();renderAuf()};
+  P.querySelectorAll('[data-lvoz]').forEach(i=>i.oninput=()=>{(CFG.lv[i.dataset.lvoz]??={}).oz=i.value;saveCfg()});
+  P.querySelectorAll('[data-lvkt]').forEach(i=>i.oninput=()=>{(CFG.lv[i.dataset.lvkt]??={}).kt=i.value;saveCfg()});
+  P.querySelectorAll('[data-ex]').forEach(c=>c.onclick=e=>{e.stopPropagation();if(c.checked)delete CFG.excl[c.dataset.ex];else CFG.excl[c.dataset.ex]=true;saveCfg();renderAuf()});
+  P.querySelectorAll('tr[data-g]').forEach(tr=>tr.onclick=e=>{if(e.target.matches('input'))return;select([tr.dataset.g],e.ctrlKey||e.shiftKey||e.metaKey);zoomTo([tr.dataset.g])});
+  $('#xShow').onclick=()=>{const gs=G.flatMap(g=>g.rows.filter(r=>!r.x).map(r=>r.g));select(gs,false);xray=true;$('#bXray').setAttribute('aria-pressed',true);recolor();fit()};
+  $('#xDoc').onclick=()=>exportDocx(G);$('#xPdf').onclick=()=>exportPdf(G);$('#xCsv').onclick=()=>exportCsv(G);
+}
+function markAuf(){$$('#p-auf tr[data-g]').forEach(t=>t.classList.toggle('sel',sel.has(t.dataset.g)))}
+
+/* Downloads */
+async function save(filename,data){
+  try{const d=await window.claude?.use?.('downloads');if(!d){toast('Download ist in dieser Ansicht nicht verfügbar');return}
+    const r=await d.save({filename,data});toast(r.status==='saved'?`${filename} gespeichert`:`${filename} bereitgestellt`)}
+  catch(e){toast(e?.code==='declined'?'Download abgebrochen':`Download nicht möglich (${e?.code||e?.message||'Fehler'})`)}
+}
+$('#bIfc').onclick=async()=>{try{const t=await fetch(M.meta.ifc,{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text()});await save(`HFW_Trier_Modell_v${M.meta.version}.ifc`,new Blob([t],{type:'application/x-step'}))}catch(e){toast('IFC-Datei nicht gefunden')}};
+const fname=ext=>`Aufmass_Trockenbau_HFW_Trier_${String(CFG.header.geschoss).replace(/[,\s]+/g,'-')}_Nr${CFG.header.nr||'1'}.${ext}`.replace(/\s+/g,'_');
+
+function exportCsv(G){
+  const L=[['Pos','LV-OZ','Wandtyp','Bauteil','Lage','Räume','Länge m','Höhe m','Brutto m²','Abzug m²','Netto m²','Öffnungen'].join(';')];
+  for(const g of G)for(const r of g.rows){if(r.x)continue;L.push([String(g.idx).padStart(2,'0'),g.oz,g.kt||g.typ,r.id,r.lage,r.raum,f3(r.L),f3(r.H),f2(r.brutto),f2(r.abz),f2(r.netto),r.ops.map(o=>`${o.typ} ${f2(o.b)}x${f2(o.h)}${o.d?' (abgezogen)':''}`).join(', ')].map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(';'))}
+  save(fname('csv'),'﻿'+L.join('\r\n'));
+}
+function exportPdf(G){
+  const {jsPDF}=window.jspdf; const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4'}); const H=CFG.header;
+  const head=()=>{doc.setFont('helvetica','bold');doc.setFontSize(13);doc.text('Aufmaß Trockenbauarbeiten',14,14);doc.setFont('helvetica','normal');doc.setFontSize(8.5);
+    doc.text(`Bauvorhaben: ${H.projekt}`,14,20);doc.text(`Auftraggeber: ${H.ag}`,14,24.5);doc.text(`Auftragnehmer: ${H.an||'–'}`,14,29);
+    doc.text(`Aufmaß-Nr.: ${H.nr}   Datum: ${H.datum}   Geschoss: ${H.geschoss}`,200,20);doc.text(`Gewerk: ${H.gewerk}`,200,24.5);doc.text(`Grundlage: IFC-Modell Stand ${M.meta.version} (${M.meta.generated})`,200,29)};
+  head(); let y=34; const body=[];
+  for(const g of G){const rs=g.rows.filter(r=>!r.x);if(!rs.length)continue;
+    body.push([{content:`${String(g.idx).padStart(2,'0')}  ${g.oz?('OZ '+g.oz+'  '):''}${g.kt||g.typ}`,colSpan:8,styles:{fontStyle:'bold',fillColor:[235,239,243]}}]);
+    rs.forEach(r=>body.push([r.id,r.lage,r.raum,f3(r.L),f3(r.H),f2(r.brutto),r.abz?f2(r.abz):'',f2(r.netto)]));
+    body.push([{content:`Summe Pos. ${String(g.idx).padStart(2,'0')}`,colSpan:7,styles:{halign:'right',fontStyle:'bold'}},{content:f2(sumN(g.rows))+' m²',styles:{fontStyle:'bold',halign:'right'}}]);}
+  const tot=G.reduce((s,g)=>s+sumN(g.rows),0);
+  body.push([{content:'Gesamtsumme',colSpan:7,styles:{halign:'right',fontStyle:'bold'}},{content:f2(tot)+' m²',styles:{fontStyle:'bold',halign:'right'}}]);
+  doc.autoTable({startY:y,head:[['Bauteil','Lage','Räume','Länge [m]','Höhe [m]','Brutto [m²]','Abzug [m²]','Netto [m²]']],body,styles:{fontSize:7.5,cellPadding:1.2},headStyles:{fillColor:[29,95,166]},
+    columnStyles:{3:{halign:'right'},4:{halign:'right'},5:{halign:'right'},6:{halign:'right'},7:{halign:'right'}},margin:{left:14,right:14,top:34},
+    didDrawPage:d=>{if(d.pageNumber>1)head();doc.setFontSize(7.5);doc.text(`Seite ${d.pageNumber}`,283,203,{align:'right'});doc.text(`Abrechnung VOB/C DIN 18340, Öffnungen ${CFG.rule==='vob'?'> 2,5 m² abgezogen':CFG.rule==='all'?'alle abgezogen':'nicht abgezogen'}, Flächenansatz ${CFG.sides===2?'beidseitig':'einseitig'}`,14,203)}});
+  const yy=doc.lastAutoTable.finalY+14; if(yy<190){doc.setFontSize(8.5);doc.line(14,yy,90,yy);doc.line(200,yy,276,yy);doc.text('Auftragnehmer, Datum, Unterschrift',14,yy+4);doc.text('Auftraggeber / Bauleitung, Datum, Unterschrift',200,yy+4)}
+  save(fname('pdf'),doc.output('blob'));
+}
+function x(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function wp(text,o={}){const r=`<w:rPr>${o.b?'<w:b/>':''}<w:sz w:val="${o.sz||18}"/>${o.col?`<w:color w:val="${o.col}"/>`:''}</w:rPr>`;return `<w:p><w:pPr><w:spacing w:after="${o.after??60}"/>${o.jc?`<w:jc w:val="${o.jc}"/>`:''}</w:pPr><w:r>${r}<w:t xml:space="preserve">${x(text)}</w:t></w:r></w:p>`}
+function wc(text,w,o={}){return `<w:tc><w:tcPr><w:tcW w:w="${w}" w:type="dxa"/>${o.span?`<w:gridSpan w:val="${o.span}"/>`:''}${o.fill?`<w:shd w:val="clear" w:color="auto" w:fill="${o.fill}"/>`:''}</w:tcPr>${wp(text,{b:o.b,sz:o.sz||16,jc:o.jc,after:0,col:o.col})}</w:tc>`}
+async function exportDocx(G){
+  const H=CFG.header; const W=[1250,2300,3300,1150,1050,1250,1150,1250]; const R=(cells,hdr)=>`<w:tr>${hdr?'<w:trPr><w:tblHeader/></w:trPr>':''}${cells}</w:tr>`;
+  let rows=R(['Bauteil','Lage','Räume','Länge [m]','Höhe [m]','Brutto [m²]','Abzug [m²]','Netto [m²]'].map((t,i)=>wc(t,W[i],{b:true,fill:'1D5FA6',col:'FFFFFF',jc:i>2?'right':'left'})).join(''),true);
+  for(const g of G){const rs=g.rows.filter(r=>!r.x);if(!rs.length)continue;
+    rows+=R(wc(`${String(g.idx).padStart(2,'0')}  ${g.oz?'OZ '+g.oz+'  ':''}${g.kt||g.typ}`,W.reduce((a,b)=>a+b),{span:8,b:true,fill:'EBEFF3'}));
+    for(const r of rs)rows+=R([r.id,r.lage,r.raum,f3(r.L),f3(r.H),f2(r.brutto),r.abz?f2(r.abz):'',f2(r.netto)].map((t,i)=>wc(t,W[i],{jc:i>2?'right':'left'})).join(''));
+    rows+=R(wc(`Summe Pos. ${String(g.idx).padStart(2,'0')}`,W.slice(0,7).reduce((a,b)=>a+b),{span:7,b:true,jc:'right'})+wc(f2(sumN(g.rows))+' m²',W[7],{b:true,jc:'right'}))}
+  const tot=G.reduce((s,g)=>s+sumN(g.rows),0);
+  rows+=R(wc('Gesamtsumme',W.slice(0,7).reduce((a,b)=>a+b),{span:7,b:true,jc:'right',fill:'EBEFF3'})+wc(f2(tot)+' m²',W[7],{b:true,jc:'right',fill:'EBEFF3'}));
+  const border='<w:tblBorders>'+['top','left','bottom','right','insideH','insideV'].map(b=>`<w:${b} w:val="single" w:sz="4" w:space="0" w:color="B8C2CC"/>`).join('')+'</w:tblBorders>';
+  const meta=[['Bauvorhaben',H.projekt],['Auftraggeber',H.ag],['Auftragnehmer',H.an||'–'],['Gewerk',H.gewerk],['Aufmaß-Nr. / Datum',`${H.nr} / ${H.datum}`],['Geschoss',H.geschoss],['Grundlage',`IFC-Modell HFW Trier, Stand ${M.meta.version} (${M.meta.generated})`],['Abrechnung',`VOB/C DIN 18340, Öffnungen ${CFG.rule==='vob'?'> 2,5 m² abgezogen':CFG.rule==='all'?'alle abgezogen':'nicht abgezogen'}, Flächenansatz ${CFG.sides===2?'beidseitig':'einseitig'}`]];
+  const metaT=`<w:tbl><w:tblPr><w:tblW w:w="12600" w:type="dxa"/></w:tblPr><w:tblGrid><w:gridCol w:w="2600"/><w:gridCol w:w="10000"/></w:tblGrid>${meta.map(([k,v])=>R(wc(k,2600,{b:true})+wc(v,10000))).join('')}</w:tbl>`;
+  const body=`${wp('Aufmaß Trockenbauarbeiten',{b:true,sz:30,after:120})}${metaT}${wp('',{after:120})}<w:tbl><w:tblPr><w:tblW w:w="${W.reduce((a,b)=>a+b)}" w:type="dxa"/>${border}<w:tblLayout w:type="fixed"/></w:tblPr><w:tblGrid>${W.map(w=>`<w:gridCol w:w="${w}"/>`).join('')}</w:tblGrid>${rows}</w:tbl>
+  ${wp('',{after:600})}${wp('_______________________________________                    _______________________________________',{after:0})}${wp('Auftragnehmer, Datum, Unterschrift                                           Auftraggeber / Bauleitung, Datum, Unterschrift',{sz:16})}`;
+  const docXml=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><w:body>${body}<w:sectPr><w:footerReference w:type="default" r:id="rId2"/><w:pgSz w:w="16838" w:h="11906" w:orient="landscape"/><w:pgMar w:top="850" w:right="850" w:bottom="850" w:left="850" w:header="400" w:footer="400" w:gutter="0"/></w:sectPr></w:body></w:document>`;
+  const footer=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:p><w:pPr><w:jc w:val="right"/></w:pPr><w:r><w:rPr><w:sz w:val="16"/></w:rPr><w:t xml:space="preserve">HFW Trier | Aufmaß Trockenbau | Seite </w:t></w:r><w:r><w:rPr><w:sz w:val="16"/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:sz w:val="16"/></w:rPr><w:instrText>PAGE</w:instrText></w:r><w:r><w:rPr><w:sz w:val="16"/></w:rPr><w:fldChar w:fldCharType="end"/></w:r></w:p></w:ftr>`;
+  const styles=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/><w:sz w:val="18"/><w:lang w:val="de-DE"/></w:rPr></w:rPrDefault></w:docDefaults></w:styles>`;
+  const zip=new JSZip();
+  zip.file('[Content_Types].xml','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/></Types>');
+  zip.file('_rels/.rels','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>');
+  zip.file('word/_rels/document.xml.rels','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/></Relationships>');
+  zip.file('word/document.xml',docXml);zip.file('word/styles.xml',styles);zip.file('word/footer1.xml',footer);
+  const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE',mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+  save(fname('docx'),blob);
+}
+
+/* ---------- Hot-Update (Kamera behalten) ---------- */
+window.claude?.hot?.snapshot?.(()=>({cam:camera===persp?'3d':'plan',p:camera.position.toArray(),t:controls.target.toArray()}));
+let hotData=window.claude?.hot?.data||null;
+function restoreHot(){if(!hotData||!hotData.p)return;if(hotData.cam==='plan')setCam('plan');camera.position.fromArray(hotData.p);controls.target.fromArray(hotData.t);controls.update()}
+
+/* ---------- Loop ---------- */
+function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,camera);placeLabels()}
+loop();
+load().catch(err=>{$('#loading').textContent='Modell konnte nicht geladen werden: '+err.message});
+})();
+</script>
+
+</body></html>

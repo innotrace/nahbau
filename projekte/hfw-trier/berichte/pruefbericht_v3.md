@@ -1,0 +1,214 @@
+# Prüfbericht hfw_trier_v3.ifc
+
+| Prüfung | Stufe | Anzahl |
+|---|---|---:|
+| Offene Trockenbau-Wandenden | Hinweis | 102 |
+| Räume ohne Geometrie | Hinweis | 53 |
+| Überlappende Wände | Fehler | 32 |
+| Überlappende Wände | Hinweis | 10 |
+
+## Überlappende Wände (42)
+
+- **W-EG-022** – überlappt mit W-EG-024 (0,09 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-022** – überlappt mit W-EG-023 (0,09 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-023** – überlappt mit W-EG-024 (0,35 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-029** – überlappt mit W-EG-030 (0,04 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-094** – überlappt mit W-EG-095 (0,08 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-097** – überlappt mit W-EG-099 (0,04 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-097** – überlappt mit W-EG-098 (0,60 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-101** – überlappt mit W-EG-102 (0,03 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-124** – überlappt mit W-EG-126 (0,06 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-131** – überlappt mit W-EG-134 (0,24 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-146** – überlappt mit W-EG-154 (0,97 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-150** – überlappt mit W-EG-151 (0,08 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-162** – überlappt mit W-EG-163 (0,93 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-203** – überlappt mit W-EG-204 (0,34 m² Grundfläche) – Doppelzählung prüfen
+- **W-EG-211** – überlappt mit W-EG-212 (0,33 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-024** – überlappt mit W-OG1-025 (0,04 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-041** – überlappt mit W-OG1-194 (0,36 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-047** – überlappt mit W-OG1-048 (0,04 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-048** – überlappt mit W-OG1-049 (0,04 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-051** – überlappt mit W-OG1-052 (0,14 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-056** – überlappt mit W-OG1-065 (0,07 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-056** – überlappt mit W-OG1-058 (0,07 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-073** – überlappt mit W-OG1-077 (0,04 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-074** – überlappt mit W-OG1-080 (0,07 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-076** – überlappt mit W-OG1-082 (0,54 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-079** – überlappt mit W-OG1-081 (0,36 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-111** – überlappt mit W-OG1-112 (0,23 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-116** – überlappt mit W-OG1-118 (0,09 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-119** – überlappt mit W-OG1-120 (0,04 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-119** – überlappt mit W-OG1-121 (0,04 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-120** – überlappt mit W-OG1-121 (0,12 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-122** – überlappt mit W-OG1-124 (0,06 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-133** – überlappt mit W-OG1-136 (0,07 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-137** – überlappt mit W-OG1-140 (0,60 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-139** – überlappt mit W-OG1-143 (0,84 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-146** – überlappt mit W-OG1-150 (0,23 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-161** – überlappt mit W-OG1-162 (0,08 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-170** – überlappt mit W-OG1-171 (0,32 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-170** – überlappt mit W-OG1-172 (0,12 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-171** – überlappt mit W-OG1-172 (0,13 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-180** – überlappt mit W-OG1-181 (0,10 m² Grundfläche) – Doppelzählung prüfen
+- **W-OG1-184** – überlappt mit W-OG1-186 (0,07 m² Grundfläche) – Doppelzählung prüfen
+
+## Offene Trockenbau-Wandenden (102)
+
+- **W-EG-004** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-004** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-005** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-005** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-006** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-006** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-007** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-007** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-009** – Ende: Anschluss prüfen (Abstand 0,02 m)
+- **W-EG-011** – Anfang: Anschluss prüfen (Abstand 0,43 m)
+- **W-EG-039** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-039** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-040** – Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 1,18 m)
+- **W-EG-041** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-041** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-042** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-042** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-094** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,01 m)
+- **W-EG-096** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,76 m)
+- **W-EG-102** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,03 m)
+- **W-EG-103** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,23 m)
+- **W-EG-104** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,37 m)
+- **W-EG-104** – Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 1,14 m)
+- **W-EG-117** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-121** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,65 m)
+- **W-EG-122** – Ende: Anschluss prüfen (Abstand 0,43 m)
+- **W-EG-125** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,86 m)
+- **W-EG-127** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,20 m)
+- **W-EG-132** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,02 m)
+- **W-EG-138** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,79 m)
+- **W-EG-153** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,02 m)
+- **W-EG-153** – Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,99 m)
+- **W-EG-155** – Anfang: Anschluss prüfen (Abstand 0,55 m)
+- **W-EG-155** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,29 m)
+- **W-EG-157** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,14 m)
+- **W-EG-158** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,33 m)
+- **W-EG-158** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-159** – Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,50 m)
+- **W-EG-160** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,50 m)
+- **W-EG-161** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-169** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,60 m)
+- **W-EG-169** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-177** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,60 m)
+- **W-EG-177** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-178** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,52 m)
+- **W-EG-182** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,47 m)
+- **W-EG-182** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,47 m)
+- **W-EG-183** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,44 m)
+- **W-EG-183** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,44 m)
+- **W-EG-184** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,44 m)
+- **W-EG-188** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-192** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-EG-196** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,91 m)
+- **W-EG-198** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,66 m)
+- **W-EG-220** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,10 m)
+- **W-EG-221** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,03 m)
+- **W-OG1-001** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-OG1-003** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 1,58 m)
+- **W-OG1-003** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-OG1-013** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,78 m)
+- **W-OG1-013** – Ende: Anschluss prüfen (Abstand 0,25 m)
+- **W-OG1-015** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,21 m)
+- **W-OG1-015** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,75 m)
+- **W-OG1-016** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,62 m)
+- **W-OG1-019** – Ende: Anschluss prüfen (Abstand 0,35 m)
+- **W-OG1-025** – Ende: Anschluss prüfen (Abstand 0,03 m)
+- **W-OG1-045** – Ende: Anschluss prüfen (Abstand 0,33 m)
+- **W-OG1-046** – Ende: Anschluss prüfen (Abstand 0,33 m)
+- **W-OG1-049** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,03 m)
+- **W-OG1-050** – Ende: Anschluss prüfen (Abstand 0,30 m)
+- **W-OG1-053** – Ende: Anschluss prüfen (Abstand 0,30 m)
+- **W-OG1-069** – Ende: Anschluss prüfen (Abstand 0,14 m)
+- **W-OG1-071** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,12 m)
+- **W-OG1-089** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,60 m)
+- **W-OG1-091** – Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,56 m)
+- **W-OG1-105** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-OG1-105** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,38 m)
+- **W-OG1-112** – Anfang: Anschluss prüfen (Abstand 0,06 m)
+- **W-OG1-113** – Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,55 m)
+- **W-OG1-114** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,55 m)
+- **W-OG1-114** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,80 m)
+- **W-OG1-120** – Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,02 m)
+- **W-OG1-123** – Anfang: Anschluss prüfen (Abstand 0,24 m)
+- **W-OG1-123** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,81 m)
+- **W-OG1-125** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,38 m)
+- **W-OG1-125** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,38 m)
+- **W-OG1-130** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)
+- **W-OG1-141** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,02 m)
+- **W-OG1-141** – Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,43 m)
+- **W-OG1-142** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,71 m)
+- **W-OG1-147** – Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,50 m)
+- **W-OG1-148** – Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,50 m)
+- **W-OG1-150** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,82 m)
+- **W-OG1-155** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,44 m)
+- **W-OG1-166** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,22 m)
+- **W-OG1-166** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,25 m)
+- **W-OG1-167** – Anfang: Anschluss prüfen (Abstand 0,38 m)
+- **W-OG1-167** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,05 m)
+- **W-OG1-168** – Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,25 m)
+- **W-OG1-168** – Ende: Anschluss prüfen (Abstand 0,40 m)
+- **W-OG1-187** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,02 m)
+- **W-OG1-188** – Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,03 m)
+
+## Räume ohne Geometrie (53)
+
+- **FW.00.001** – Foyer inkl. Wachzentrale: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.T01** – TRH 1 FW: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.010** – Tagesalarm BS 40P: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.013** – Alarmhalle 1. Abmarsch: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.014** – Tagesalarm RD 10P: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.T02** – TRH 2 FW: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.016** – Tagesmagazin: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.018** – Waschhalle u. Bestückung: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.026** – Desinfektionshalle: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.F03** – Flur: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.032** – Werkstatthalle Geräteprüfung: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.032.1** – Service-Point: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.T04** – TRH 4 FW: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.044** – Materialpflege RD: Wäschemagazin: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.047** – MPf Pool schwarz: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.048** – Schlauchlager weiß: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.T03** – TRH 3 FW: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.038** – (zus.) Lager ITW / Archiv: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.058** – Prüfstelle RD: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.036** – ELT Trafo 2: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.039** – MS 1 - Raum: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.013.1** – Alarmhalle 1. Abmarsch: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.015** – Durchfahrtshalle: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.F05** – Flur: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.053** – Schreinerei: nur Stempeldaten, Raumkontur fehlt
+- **NG.00.001** – 25 Entsorgungsplatz: nur Stempeldaten, Raumkontur fehlt
+- **FW.00.F04** – Flur: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.006** – B WF Tagesdienst: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.F01** – Flur: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.001** – WC He: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.010** – Büro Einsatzbetrieb und Info: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.005** – B WL: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.F02** – Flur: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.004** – Büro Einsatzbetrieb und Info: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.T02** – TRH 2 FW: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.023** – Anleiterraum: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.021** – Verbrauchmittellager: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.036** – Büro: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.038** – Büro: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.035** – Doppelbüro: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.039** – Funkwerkstatt: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.041** – Lager Funk: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.T03** – TRH 3 FW: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.026** – Büro Hausmeister: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.015** – Brandschutzlager: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.014** – Lager Gebäudebetrieb (Hausmeister): nur Stempeldaten, Raumkontur fehlt
+- **FW.01.034** – Schlauchpflege: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.025** – Werkstatt schwarz: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.024** – Werkstatt weiß: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.F06** – Flur: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.016** – : nur Stempeldaten, Raumkontur fehlt
+- **FW.01.019** – Lager EDV: nur Stempeldaten, Raumkontur fehlt
+- **FW.01.019.1** – Lager EDV: nur Stempeldaten, Raumkontur fehlt

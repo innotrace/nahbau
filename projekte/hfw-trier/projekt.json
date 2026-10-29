@@ -1,0 +1,75 @@
+{
+  "projekt": "HFW Trier",
+  "gebaeude": "Hauptfeuerwache mit Rettungswache und Integrierte Leitstelle",
+  "adresse": "An den Kaiserthermen 1-3, 54290 Trier",
+  "hoehenbezug": "±0,00 = 145,70 m ü. NN",
+  "viewer_artifact": "https://claude.ai/artifact/UT8X1EWjSTAbgvDowtxNgE",
+  "ifc_viewer_datei": "hfw_trier.ifc.txt",
+  "schema": "IFC4",
+  "geschosse": [
+    {
+      "name": "EG",
+      "elevation": 0.0,
+      "ok_rfb": -0.18
+    },
+    {
+      "name": "OG1",
+      "elevation": 3.6,
+      "ok_rfb": 3.45
+    }
+  ],
+  "plaene": [
+    {
+      "plan": "HFW_F_5_GPOBJ_00_GR_10_F-L",
+      "inhalt": "Grundriss EG",
+      "massstab": "1:50",
+      "status": "Ausführungsplanung",
+      "datum": "13.05.2026",
+      "geschoss": "EG"
+    },
+    {
+      "plan": "HFW_F_5_GPOBJ_01_GR_10_F-H",
+      "inhalt": "Grundriss OG1",
+      "massstab": "1:50",
+      "status": "Ausführungsplanung",
+      "datum": "03.06.2026 / Index 06.08.2026",
+      "geschoss": "OG1"
+    }
+  ],
+  "annahmen": [
+    "Wände je Geschoss: keine Wand reicht über OK RFB des nächsten Geschosses (Prüfung 'geschossgrenze')",
+    "Trockenbau-Wandenden automatisch angeschlossen bei Lücke bis 60 cm: T-Stoß bis Fläche der Nachbarwand, L-Ecke durchlaufend/stumpf, Überstände bis 10 cm gekürzt; dokumentiert in HFW_Erfassung.Anschluss_Anfang/_Ende",
+    "Wandstücke, die zu ≥ 95 % in einer gleichartigen Wand gleicher Dicke liegen, wurden als Erfassungsreste entfernt",
+    "Lage EG zu OG1 über die Achslinien beider Pläne (28 Achsen, Versatz je Achse identisch)",
+    "Wandhöhe: OK RFB (EG -0,180 / OG1 +3,450) bis UK RD der angrenzenden Räume laut Raumstempel, sonst Geschossstandard (EG +3,150 / OG1 +6,700)",
+    "EG-Wände ohne Raumbezug und ohne OG1-Geschossdecke darüber: Hallenhöhe UK RD +6,820, geteilt an OK RFB OG1 +3,450 (unterer Teil EG, oberer Teil OG1)",
+    "EG-Wände unter einer OG1-Wand werden an UK RD EG +3,150 begrenzt",
+    "Türöffnungen: Rohbaurichtmaß 2,135 m ab OK FFB (Höhe nicht aus Plan)",
+    "Fensteröffnungen: BRH 0,90 m (aus Plan), Sturz +2,80 m ab OK FFB angenommen",
+    "Wandtypen automatisch aus Schichtaufbau und Schraffur erkannt (Beplankung 12,5 mm je Lage)",
+    "Öffnungen ohne Türkennung (T-...) als \"Tür/Durchgang (nicht gekennzeichnet)\" geführt",
+    "Treppenläufe nur in Draufsicht (Steigung/Lage aus Schnitten ergänzen)",
+    "Räume ohne geschlossene Wandkontur erhalten keine Geometrie, nur Stempeldaten",
+    "Decken, Dach, Hallentore und Pfosten-Riegel-Fassaden der Hallen noch nicht modelliert"
+  ],
+  "fremde_plaene": [
+    {
+      "datei": "00141_0_F_Trockenbau-Durchbruchsplanung_EG_1.pdf",
+      "grund": "gehört zu BG Klinik Ludwigshafen, Umbau EG IMC Turm 2 (Plan LU-012, a|sh, 21.05.2026), nicht HFW Trier – nicht eingearbeitet",
+      "datum": "29.10.2026"
+    }
+  ],
+  "modellstaende": [
+    {
+      "version": 3,
+      "datum": "29.10.2026",
+      "notiz": "Bereinigung: Duplikate, enthaltene Wandstücke, Geschossteilung Hallenwände, Wandanschlüsse Trockenbau",
+      "aenderungen": {
+        "duplikate": 5,
+        "enthaltene_wände": 12,
+        "geschossteilung": 8,
+        "anschluesse": 34
+      }
+    }
+  ]
+}
