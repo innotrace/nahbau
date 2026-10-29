@@ -13,7 +13,8 @@ import ifcopenshell
 import ifcopenshell.geom
 import ifcopenshell.util.element as ue
 
-KLASSEN = ("IfcWall", "IfcDoor", "IfcWindow", "IfcColumn", "IfcStairFlight", "IfcSpace", "IfcGrid")
+KLASSEN = ("IfcWall", "IfcDoor", "IfcWindow", "IfcColumn", "IfcStairFlight", "IfcSpace",
+           "IfcOpeningElement", "IfcBuildingElementProxy", "IfcGrid")
 
 
 def storey_of(el):
@@ -51,17 +52,31 @@ def openings(wall):
             ops.append({"typ": "Tür" if f.is_a("IfcDoor") else "Fenster",
                         "b": f.OverallWidth, "h": f.OverallHeight, "tag": f.Tag})
         if not o.HasFillings:  # Durchbruch / Aussparung ohne Füllung
-            prof = o.Representation.Representations[0].Items[0]
-            ops.append({"typ": o.ObjectType or "Aussparung", "b": prof.SweptArea.XDim,
-                        "h": prof.Depth, "tag": o.Name})
+            d = ue.get_psets(o).get("HFW_Durchbruch", {})
+            b = d.get("Breite_m", d.get("Durchmesser_m"))
+            h = d.get("Hoehe_m", d.get("Durchmesser_m"))
+            ops.append({"typ": "Durchbruch", "b": b, "h": h, "tag": (d.get("Kennung_Plan") if d else o.Name) if (d.get("Kennung_Plan") if d else o.Name) != "-" else None, "a": d.get("Flaeche_m2"), "g": o.GlobalId})
     return ops
+
+
+def achse(el):
+    """Wandachse in Weltkoordinaten und UK/OK absolut."""
+    import ifcopenshell.util.placement as up
+    M = up.get_local_placement(el.ObjectPlacement)
+    ax = next(r for r in el.Representation.Representations if r.RepresentationIdentifier == "Axis").Items[0].Points
+    body = next(r for r in el.Representation.Representations if r.RepresentationIdentifier == "Body").Items[0]
+    w = lambda c: [round(float(v), 4) for v in (M @ np.array([c[0], c[1], 0, 1]))[:2]]
+    z0 = float(M[2, 3])
+    return w(ax[0].Coordinates), w(ax[-1].Coordinates), round(z0, 4), round(z0 + body.Depth, 4)
 
 
 def auf(el, p, ty, st):
     q = p.get("Qto_WallBaseQuantities", {})
     e = p.get("HFW_Erfassung", {})
     c = p.get("Pset_WallCommon", {})
+    p0, p1, z0, z1 = achse(el)
     return {"guid": el.GlobalId, "id": el.Name, "st": st, "type": ty, "kind": el.ObjectType,
+            "p0": p0, "p1": p1, "z0": z0, "z1": z1,
             "L": q.get("Length"), "H": q.get("Height"), "t": q.get("Width"), "ops": openings(el),
             "lage": e.get("Lage"), "rA": e.get("Raum_Seite_A"), "rB": e.get("Raum_Seite_B"),
             "fire": c.get("FireRating"), "ext": c.get("IsExternal", False)}
@@ -82,7 +97,8 @@ def export(projekt_dir, ifc_path, version, qa_path=None):
     st = ifcopenshell.geom.settings()
     st.set("use-world-coords", True)
     meshes = {}
-    it = ifcopenshell.geom.iterator(st, f, include=[e for c in KLASSEN[:-1] for e in f.by_type(c)])
+    geo_el = [e for c in KLASSEN[:-1] for e in f.by_type(c) if not (c == "IfcOpeningElement" and e.HasFillings)]
+    it = ifcopenshell.geom.iterator(st, f, include=geo_el)
     if it.initialize():
         while True:
             s = it.get()
@@ -109,6 +125,10 @@ def export(projekt_dir, ifc_path, version, qa_path=None):
                 P_all.append(v); I_all.append(i); nv += len(v); ni += len(i)
             if c == "IfcWall":
                 e["auf"] = auf(el, p, ty, s)
+            if c == "IfcOpeningElement":
+                if el.HasFillings:
+                    continue  # Tür-/Fensteröffnungen stecken in der Füllung, nicht als eigenes Element
+                e["host"] = el.VoidsElements[0].RelatingBuildingElement.GlobalId
             elements.append(e)
 
     pos = np.concatenate(P_all).ravel().astype("<f4")

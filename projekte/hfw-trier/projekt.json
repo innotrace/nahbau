@@ -24,7 +24,7 @@
       "inhalt": "Grundriss EG",
       "massstab": "1:50",
       "status": "Ausführungsplanung",
-      "datum": "13.05.2026",
+      "datum": "13.05.2026 / Index L 08.09.2026",
       "geschoss": "EG"
     },
     {
@@ -37,20 +37,22 @@
     }
   ],
   "annahmen": [
-    "Wände je Geschoss: keine Wand reicht über OK RFB des nächsten Geschosses (Prüfung 'geschossgrenze')",
-    "Trockenbau-Wandenden automatisch angeschlossen bei Lücke bis 60 cm: T-Stoß bis Fläche der Nachbarwand, L-Ecke durchlaufend/stumpf, Überstände bis 10 cm gekürzt; dokumentiert in HFW_Erfassung.Anschluss_Anfang/_Ende",
-    "Wandstücke, die zu ≥ 95 % in einer gleichartigen Wand gleicher Dicke liegen, wurden als Erfassungsreste entfernt",
     "Lage EG zu OG1 über die Achslinien beider Pläne (28 Achsen, Versatz je Achse identisch)",
     "Wandhöhe: OK RFB (EG -0,180 / OG1 +3,450) bis UK RD der angrenzenden Räume laut Raumstempel, sonst Geschossstandard (EG +3,150 / OG1 +6,700)",
-    "EG-Wände ohne Raumbezug und ohne OG1-Geschossdecke darüber: Hallenhöhe UK RD +6,820, geteilt an OK RFB OG1 +3,450 (unterer Teil EG, oberer Teil OG1)",
+    "EG-Wände ohne Raumbezug und ohne OG1-Geschossdecke darüber: Hallenhöhe UK RD +6,820",
     "EG-Wände unter einer OG1-Wand werden an UK RD EG +3,150 begrenzt",
+    "Geschossweise Teilung: keine Wand reicht über ein Geschoss hinaus; Wände über OK RFB OG1 (+3,450) werden dort geteilt, der obere Teil gehört zum OG1 (Name ...-OG)",
+    "Wandanschlüsse: Trockenbauwände bis an die Fläche der angrenzenden Wand/Stütze verlängert (T-Stoß), Ecken geschlossen (bis 0,45 m bzw. 0,60 m Lücke)",
+    "EG-Plan Index K (06.08.2026) geprüft: durch Index L (08.09.2026) ersetzt, Modell basiert auf Index L",
     "Türöffnungen: Rohbaurichtmaß 2,135 m ab OK FFB (Höhe nicht aus Plan)",
     "Fensteröffnungen: BRH 0,90 m (aus Plan), Sturz +2,80 m ab OK FFB angenommen",
     "Wandtypen automatisch aus Schichtaufbau und Schraffur erkannt (Beplankung 12,5 mm je Lage)",
     "Öffnungen ohne Türkennung (T-...) als \"Tür/Durchgang (nicht gekennzeichnet)\" geführt",
     "Treppenläufe nur in Draufsicht (Steigung/Lage aus Schnitten ergänzen)",
     "Räume ohne geschlossene Wandkontur erhalten keine Geometrie, nur Stempeldaten",
-    "Decken, Dach, Hallentore und Pfosten-Riegel-Fassaden der Hallen noch nicht modelliert"
+    "Wanddurchbrüche (WD-...): Lage aus Plansymbol (Sanduhr), Breite/Höhe/Durchmesser und UK/OK bzw. Achshöhe aus Planbeschriftung, als IfcOpeningElement in der Wand",
+    "Durchbrüche in Unterzügen und an nicht modellierten Wänden als Platzhalter (orange) geführt",
+    "Decken, Dach, Unterzüge, Hallentore und Pfosten-Riegel-Fassaden der Hallen noch nicht modelliert"
   ],
   "fremde_plaene": [
     {
@@ -61,14 +63,26 @@
   ],
   "modellstaende": [
     {
-      "version": 3,
+      "version": 2,
       "datum": "29.10.2026",
-      "notiz": "Bereinigung: Duplikate, enthaltene Wandstücke, Geschossteilung Hallenwände, Wandanschlüsse Trockenbau",
+      "notiz": "Grundriss EG und OG1 automatisch aus Vektor-PDF erfasst (Chat-Sitzung)",
+      "aenderungen": {}
+    },
+    {
+      "version": 4,
+      "datum": "29.10.2026",
+      "notiz": "EG Index L, Wanddurchbrüche, Geschossteilung, Wandanschlüsse (Chat-Sitzung)",
+      "aenderungen": {}
+    },
+    {
+      "version": 5,
+      "datum": "29.10.2026",
+      "notiz": "Bereinigung auf Stand 4: Duplikate, enthaltene Wandstücke, restliche Trockenbau-Wandanschlüsse; Prüfbericht",
       "aenderungen": {
-        "duplikate": 5,
-        "enthaltene_wände": 12,
-        "geschossteilung": 8,
-        "anschluesse": 34
+        "duplikate": 2,
+        "enthaltene_wände": 7,
+        "geschossteilung": 0,
+        "anschluesse": 1
       }
     }
   ]

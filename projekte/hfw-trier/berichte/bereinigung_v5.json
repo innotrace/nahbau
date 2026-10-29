@@ -1,0 +1,825 @@
+{
+ "duplikate": [
+  {
+   "entfernt": "S-OG1-069",
+   "identisch_mit": "S-OG1-029",
+   "guid": "3Vqe0DIPLQ79KyR$AnxBg3"
+  },
+  {
+   "entfernt": "W-EG-050",
+   "identisch_mit": "W-EG-046",
+   "guid": "0h0JntmgbVkhhcNHQvuG5E"
+  }
+ ],
+ "enthaltene_wände": [
+  {
+   "entfernt": "W-EG-015",
+   "enthalten_in": "W-EG-014",
+   "guid": "3CZ0OtHtnKw9oGnx$FmtAe"
+  },
+  {
+   "entfernt": "W-EG-035",
+   "enthalten_in": "W-EG-033",
+   "guid": "16XdetW_bIyPW2iTyCjtPG"
+  },
+  {
+   "entfernt": "W-OG1-002",
+   "enthalten_in": "W-OG1-001",
+   "guid": "1CvmXA6KXNau2VXLprSmyo"
+  },
+  {
+   "entfernt": "W-OG1-023",
+   "enthalten_in": "W-OG1-021",
+   "guid": "34quRXFGjVe8ttPY8gv8hv"
+  },
+  {
+   "entfernt": "W-OG1-051",
+   "enthalten_in": "W-OG1-050",
+   "guid": "3_6BtsnJnUXxnlGJSLEj8I"
+  },
+  {
+   "entfernt": "W-OG1-065",
+   "enthalten_in": "W-OG1-064",
+   "guid": "3JxLR_RdXKeuaKcsPo7uVS"
+  },
+  {
+   "entfernt": "W-OG1-091",
+   "enthalten_in": "W-OG1-087",
+   "guid": "2VxWATkIHG79KHb6jj_PUZ"
+  }
+ ],
+ "geschossteilung": [],
+ "anschluesse": [
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-064",
+   "ende": 1,
+   "art": "T-Stoß",
+   "an": "W-OG1-131",
+   "an_art": "MASS",
+   "verlaengert_m": 0.05
+  }
+ ],
+ "offene_enden": [
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-005",
+   "guid": "19PDklyUjTS8LHnb3Hy8TN",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 36.41,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-005",
+   "guid": "19PDklyUjTS8LHnb3Hy8TN",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 36.79,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-006",
+   "guid": "2XbHwEzATJMOpvL_oXGuEB",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 40.91,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-006",
+   "guid": "2XbHwEzATJMOpvL_oXGuEB",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 41.29,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-007",
+   "guid": "1zgDkycP9GQPRWekB0Z6cX",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 63.41,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-007",
+   "guid": "1zgDkycP9GQPRWekB0Z6cX",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 63.79,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-008",
+   "guid": "0YXC8CYuHJ7ADURqQqpJCb",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 67.91,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-008",
+   "guid": "0YXC8CYuHJ7ADURqQqpJCb",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 68.29,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-012",
+   "guid": "14jk0qBPPRFfzTTXZx4HGL",
+   "ende": "Anfang",
+   "abstand_m": 0.43,
+   "x": 11.04,
+   "y": 59.99,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-027",
+   "guid": "2$8shAPkfRrg3wW4DK7RRQ",
+   "ende": "Anfang",
+   "abstand_m": 0.33,
+   "x": 74.04,
+   "y": 55.03,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-046",
+   "guid": "0h0JntmgbVkhhcNHQvuG5E",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 63.41,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-046",
+   "guid": "0h0JntmgbVkhhcNHQvuG5E",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 63.79,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-049",
+   "guid": "1ZIJht56rRux3GCBJb4KMd",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 49.91,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-049",
+   "guid": "1ZIJht56rRux3GCBJb4KMd",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 50.29,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-094",
+   "guid": "2hYZUf4EnS99af5mJzDSyu",
+   "ende": "Anfang",
+   "abstand_m": 0.013,
+   "x": 6.62,
+   "y": 13.5,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-096",
+   "guid": "36AutAzEfI8A160b6CCu97",
+   "ende": "Ende",
+   "abstand_m": 0.758,
+   "x": 12.65,
+   "y": 13.5,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-105",
+   "guid": "3SvPFdF_XItRvfGg$_jXMH",
+   "ende": "Anfang",
+   "abstand_m": 0.025,
+   "x": 34.45,
+   "y": 11.81,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-106",
+   "guid": "1D8uBB0iTSjBd_jdhVjaS$",
+   "ende": "Anfang",
+   "abstand_m": 0.24,
+   "x": 13.79,
+   "y": 9.57,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-107",
+   "guid": "3Esm_$lTXTUAgp2t5wGwa$",
+   "ende": "Anfang",
+   "abstand_m": 1.372,
+   "x": 6.61,
+   "y": 9.57,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-107",
+   "guid": "3Esm_$lTXTUAgp2t5wGwa$",
+   "ende": "Ende",
+   "abstand_m": 1.135,
+   "x": 12.65,
+   "y": 9.57,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-127",
+   "guid": "2rUScM2$TN79NARGscw7Iq",
+   "ende": "Anfang",
+   "abstand_m": 1.682,
+   "x": 9.54,
+   "y": 15.62,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-128",
+   "guid": "3fn79OSnLSiuE5TQGv4FF6",
+   "ende": "Ende",
+   "abstand_m": 0.43,
+   "x": 10.23,
+   "y": 57.35,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-131",
+   "guid": "2T_TvDFObJjxlNN8cFlIhU",
+   "ende": "Anfang",
+   "abstand_m": 0.71,
+   "x": 11.61,
+   "y": 59.22,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-141",
+   "guid": "09J_1RG_rTC89DV_jSQr$T",
+   "ende": "Anfang",
+   "abstand_m": 0.637,
+   "x": 14.09,
+   "y": 14.97,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-157",
+   "guid": "1$GMOnJffSARf1CV1wEbmq",
+   "ende": "Ende",
+   "abstand_m": 1.291,
+   "x": 20.35,
+   "y": 57.35,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-159",
+   "guid": "1bHWrKlRTGJ8slzwGvN1cg",
+   "ende": "Ende",
+   "abstand_m": 1.138,
+   "x": 21.69,
+   "y": 57.27,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-160",
+   "guid": "2e5pdKYWrOaOZkq_hK4vdr",
+   "ende": "Anfang",
+   "abstand_m": 0.169,
+   "x": 22.35,
+   "y": -1.46,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-160",
+   "guid": "2e5pdKYWrOaOZkq_hK4vdr",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 22.35,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-162",
+   "guid": "2rGyL7kD9MFfePI9LYv2AK",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 23.09,
+   "y": 11.62,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-163",
+   "guid": "2nxCDCNRPVSBH2l080il8D",
+   "ende": "Anfang",
+   "abstand_m": 0.445,
+   "x": 23.09,
+   "y": 8.5,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-171",
+   "guid": "3arwiwldjVg9KKU6lnIFQy",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 28.35,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-179",
+   "guid": "0u39e9lB9JFOjMqBNl4dZw",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 34.35,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-180",
+   "guid": "2lIZ$WUDTOPxzTzzphvfrD",
+   "ende": "Ende",
+   "abstand_m": 1.523,
+   "x": 37.22,
+   "y": 13.71,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-184",
+   "guid": "1kHuDf_WTJguLONTrWUb7$",
+   "ende": "Ende",
+   "abstand_m": 1.472,
+   "x": 40.31,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-185",
+   "guid": "2PPZwqQFjLaehFe693DbFT",
+   "ende": "Ende",
+   "abstand_m": 1.438,
+   "x": 41.85,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-186",
+   "guid": "2A8YaAaDvGg8$Tv7AsCwH6",
+   "ende": "Ende",
+   "abstand_m": 0.202,
+   "x": 43.35,
+   "y": -5.74,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-190",
+   "guid": "1GZglk7_5Lje8DMUmBHIlq",
+   "ende": "Ende",
+   "abstand_m": 0.202,
+   "x": 45.6,
+   "y": -5.74,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-194",
+   "guid": "1cvCmJTffL694u5DhmZq8u",
+   "ende": "Ende",
+   "abstand_m": 0.202,
+   "x": 47.85,
+   "y": -5.74,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-198",
+   "guid": "11MAvrsgvLswmSfQ6uOxfV",
+   "ende": "Ende",
+   "abstand_m": 0.202,
+   "x": 50.16,
+   "y": -5.74,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-202",
+   "guid": "1qKL7SmBXHyxcPh1Q20dbT",
+   "ende": "Ende",
+   "abstand_m": 0.66,
+   "x": 51.5,
+   "y": 20.05,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-225",
+   "guid": "1THmk4twTUHP2Yccr8sZH5",
+   "ende": "Anfang",
+   "abstand_m": 1.105,
+   "x": 75.31,
+   "y": 58.63,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-226",
+   "guid": "0cDoCFfoXPbux7ziXC44fh",
+   "ende": "Anfang",
+   "abstand_m": 1.027,
+   "x": 76.47,
+   "y": 58.53,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-001",
+   "guid": "3$3u5a3hPLmxBUyDvhkW8q",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 5.12,
+   "y": 62.02,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-003",
+   "guid": "2WfJvPKyvGNhUaNs32kxIt",
+   "ende": "Anfang",
+   "abstand_m": 1.418,
+   "x": 24.69,
+   "y": 62.02,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-003",
+   "guid": "2WfJvPKyvGNhUaNs32kxIt",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 26.21,
+   "y": 62.02,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-013",
+   "guid": "0dms17mwLJ18rf8R877Kmr",
+   "ende": "Anfang",
+   "abstand_m": 0.638,
+   "x": 13.09,
+   "y": 57.31,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-014",
+   "guid": "1ktIGcl_fSs81VPpQxj8Mm",
+   "ende": "Anfang",
+   "abstand_m": 0.644,
+   "x": 19.37,
+   "y": 57.31,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-015",
+   "guid": "1X$IDV3PXR6u0tk1yHF8ur",
+   "ende": "Anfang",
+   "abstand_m": 0.835,
+   "x": 5.25,
+   "y": 55.21,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-015",
+   "guid": "1X$IDV3PXR6u0tk1yHF8ur",
+   "ende": "Ende",
+   "abstand_m": 1.529,
+   "x": 8.11,
+   "y": 55.21,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-017",
+   "guid": "22aIYpkzDQ$wkhsz5dkAnj",
+   "ende": "Ende",
+   "abstand_m": 0.625,
+   "x": 26.82,
+   "y": 55.19,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-028",
+   "guid": "2bOJlMfBPSRheZncsebbvu",
+   "ende": "Ende",
+   "abstand_m": 0.03,
+   "x": 12.44,
+   "y": 53.95,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-047",
+   "guid": "3pJDioW_XQfQd3kbxFhVyo",
+   "ende": "Ende",
+   "abstand_m": 0.325,
+   "x": 19.17,
+   "y": 31.84,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-048",
+   "guid": "2IxMcwCWDTtQUEE$Yd7cVF",
+   "ende": "Ende",
+   "abstand_m": 0.325,
+   "x": 19.17,
+   "y": 30.87,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-050",
+   "guid": "1WdqoXyoPJaQ_Sk2JAUFRB",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 0.15,
+   "y": 30.71,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-052",
+   "guid": "3jlpgW6STVoATY_qjJNdRT",
+   "ende": "Ende",
+   "abstand_m": 0.3,
+   "x": 19.14,
+   "y": 28.83,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-055",
+   "guid": "2rtYxpzFPM48rxMorbjsBo",
+   "ende": "Ende",
+   "abstand_m": 0.3,
+   "x": 19.14,
+   "y": 27.86,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-068",
+   "guid": "3kFSiFRhnIsw1S_pJV4YzN",
+   "ende": "Ende",
+   "abstand_m": 0.14,
+   "x": 51.56,
+   "y": 19.96,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-070",
+   "guid": "3NoaaL3W9UFAtavnKh1gtV",
+   "ende": "Ende",
+   "abstand_m": 1.123,
+   "x": 51.52,
+   "y": 18.79,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-087",
+   "guid": "2jnA_FPtvT4fU16ZNs$4M2",
+   "ende": "Anfang",
+   "abstand_m": 0.602,
+   "x": 38.19,
+   "y": 11.18,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-089",
+   "guid": "3E9eqDU1LIvADFvbw2$6NJ",
+   "ende": "Ende",
+   "abstand_m": 0.025,
+   "x": 37.05,
+   "y": 11.17,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-099",
+   "guid": "0PL6EH9S1TrxdniuzvBnM5",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": -0.12,
+   "y": 60.3,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-099",
+   "guid": "0PL6EH9S1TrxdniuzvBnM5",
+   "ende": "Ende",
+   "abstand_m": 1.375,
+   "x": -0.12,
+   "y": 58.83,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-111",
+   "guid": "1TqoPccwjPQuMM$kMbvNoi",
+   "ende": "Ende",
+   "abstand_m": 0.022,
+   "x": 6.84,
+   "y": -1.13,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-114",
+   "guid": "1u6TxI1zPNxP4NTBXpd0$I",
+   "ende": "Anfang",
+   "abstand_m": 0.886,
+   "x": 9.69,
+   "y": 54.97,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-116",
+   "guid": "3$iSSKFTTSEgGGYYwy6B4k",
+   "ende": "Anfang",
+   "abstand_m": 1.363,
+   "x": 11.21,
+   "y": 57.53,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-116",
+   "guid": "3$iSSKFTTSEgGGYYwy6B4k",
+   "ende": "Ende",
+   "abstand_m": 1.363,
+   "x": 11.21,
+   "y": 57.27,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-133",
+   "guid": "0TZvybZcXKYezf7rtitIm0",
+   "ende": "Ende",
+   "abstand_m": 1.014,
+   "x": 18.61,
+   "y": 53.11,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-148",
+   "guid": "3YeKax5sHMzvlHatPy$k0l",
+   "ende": "Anfang",
+   "abstand_m": 1.438,
+   "x": 32.01,
+   "y": 19.81,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-157",
+   "guid": "0trtCoLj9UuQUT0qYXWQop",
+   "ende": "Anfang",
+   "abstand_m": 1.54,
+   "x": 48.67,
+   "y": 15.62,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-161",
+   "guid": "0z4na1VxTJl8RZKgm_vMMB",
+   "ende": "Anfang",
+   "abstand_m": 1.172,
+   "x": 50.29,
+   "y": 15.62,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-161",
+   "guid": "0z4na1VxTJl8RZKgm_vMMB",
+   "ende": "Ende",
+   "abstand_m": 1.247,
+   "x": 50.29,
+   "y": 13.11,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-162",
+   "guid": "0jzUWcc0LQQBq4cu2vix4R",
+   "ende": "Anfang",
+   "abstand_m": 0.371,
+   "x": 51.6,
+   "y": 13.11,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-163",
+   "guid": "1g338B_y5Pc8N0HGLZrFbh",
+   "ende": "Anfang",
+   "abstand_m": 1.118,
+   "x": 51.91,
+   "y": 14.48,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-163",
+   "guid": "1g338B_y5Pc8N0HGLZrFbh",
+   "ende": "Ende",
+   "abstand_m": 0.383,
+   "x": 51.91,
+   "y": 13.41,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-184",
+   "guid": "24aKNltgbRGQk$T4FhAiCs",
+   "ende": "Ende",
+   "abstand_m": 1.052,
+   "x": 75.3,
+   "y": 57.5,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-185",
+   "guid": "25p5WAMWTQIPTg36lC1SUN",
+   "ende": "Ende",
+   "abstand_m": 1.027,
+   "x": 76.47,
+   "y": 57.52,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  }
+ ]
+}

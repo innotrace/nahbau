@@ -52,3 +52,11 @@ projekte/<projekt>/
 ## Umgebung
 `pip install -r requirements.txt` (ifcopenshell 0.9, shapely, numpy, pymupdf). Für Plots: matplotlib.
 cdn.jsdelivr.net ist in Cloud-Sitzungen evtl. gesperrt – `viewer_test.js` bedient die Bibliotheken lokal.
+
+## Achtung: parallele Bearbeitung
+Der Viewer kann auch aus Chat-Sitzungen auf claude.ai aktualisiert werden (so entstand Stand 4). Vor jedem Build
+den aktuellen Artifact-Stand lesen (`Artifact read` mit `paths`), IFC als neuen Modellstand übernehmen und
+`viewer/index.html` aus dem Artifact übernehmen, falls dort geändert. `tools/viewer_export.py` muss model.json des
+Artifacts exakt reproduzieren (Format: auf.p0/p1/z0/z1, Durchbrüche als IfcOpeningElement mit host, Platzhalter als
+IfcBuildingElementProxy). Markierungen (`markups`) und Aufmaß-Einstellungen (`aufmass/config`) liegen in der
+Artifact-Datenbank und hängen an GUIDs – GUIDs bestehender Bauteile nie ändern.

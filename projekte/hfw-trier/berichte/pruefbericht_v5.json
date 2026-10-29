@@ -1,0 +1,2101 @@
+{
+ "datei": "hfw_trier_v5.ifc",
+ "zusammenfassung": [
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "anzahl": 76
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "anzahl": 88
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "anzahl": 66
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "anzahl": 20
+  }
+ ],
+ "befunde": [
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-001",
+   "guid": "0S3RTfPf9TbOhs8xKERiV3",
+   "partner": "W-EG-003",
+   "partner_guid": "2Rf8Xbal5SmfQZvRnvR$3X",
+   "text": "überlappt mit W-EG-003 (0,19 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-010",
+   "guid": "0T4Hge5SzMgw_V2_xcFHhs",
+   "partner": "W-EG-011",
+   "partner_guid": "1p_qJqzh1HEfHwVabuCJ3A",
+   "text": "überlappt mit W-EG-011 (0,09 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-022",
+   "guid": "1PnnzgLD1R59EC_Eeywkaz",
+   "partner": "W-EG-024",
+   "partner_guid": "3PF6QbB5jUhhyc5o6RE8kZ",
+   "text": "überlappt mit W-EG-024 (0,08 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-026",
+   "guid": "1RXiOsQKvM5x0I4$sqLO8F",
+   "partner": "W-EG-029",
+   "partner_guid": "2niPmVUFjVPxsIbYp0E0qr",
+   "text": "überlappt mit W-EG-029 (0,16 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-026",
+   "guid": "1RXiOsQKvM5x0I4$sqLO8F",
+   "partner": "W-EG-028",
+   "partner_guid": "1ppP0XzNnJU92MnocNha2Q",
+   "text": "überlappt mit W-EG-028 (0,16 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-028",
+   "guid": "1ppP0XzNnJU92MnocNha2Q",
+   "partner": "W-EG-029",
+   "partner_guid": "2niPmVUFjVPxsIbYp0E0qr",
+   "text": "überlappt mit W-EG-029 (0,42 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-032",
+   "guid": "0VI1QpYefJA9nbOZepe6ok",
+   "partner": "W-EG-033",
+   "partner_guid": "0BJd05rszHLvSf6azmsbMD",
+   "text": "überlappt mit W-EG-033 (0,03 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-042",
+   "guid": "03cyqTnDvVJxMtLm7EatyQ",
+   "partner": "W-EG-047",
+   "partner_guid": "35ZsuwGCvQkQF_CY2ZO_Ic",
+   "text": "überlappt mit W-EG-047 (0,22 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-042",
+   "guid": "03cyqTnDvVJxMtLm7EatyQ",
+   "partner": "W-EG-044",
+   "partner_guid": "18q8lly0XTKP4x1hzM8CHn",
+   "text": "überlappt mit W-EG-044 (0,33 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-044",
+   "guid": "18q8lly0XTKP4x1hzM8CHn",
+   "partner": "W-EG-047",
+   "partner_guid": "35ZsuwGCvQkQF_CY2ZO_Ic",
+   "text": "überlappt mit W-EG-047 (0,20 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-045",
+   "guid": "14ETkXokTVThmvwGVQy7Gf",
+   "partner": "W-EG-048",
+   "partner_guid": "1JlZpW9tXUbRBpvR3wuWLf",
+   "text": "überlappt mit W-EG-048 (0,06 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-EG-066",
+   "guid": "0qmoHHzLjQCfCcsCPfy3Xq",
+   "partner": "W-EG-069",
+   "partner_guid": "3kA0qUF$bMLfBqDqktJCNO",
+   "text": "überlappt mit W-EG-069 (0,16 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-EG-066",
+   "guid": "0qmoHHzLjQCfCcsCPfy3Xq",
+   "partner": "W-EG-067",
+   "partner_guid": "2LOdqg1pDGWOk$7hfszW0p",
+   "text": "überlappt mit W-EG-067 (0,34 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-EG-067",
+   "guid": "2LOdqg1pDGWOk$7hfszW0p",
+   "partner": "W-EG-069",
+   "partner_guid": "3kA0qUF$bMLfBqDqktJCNO",
+   "text": "überlappt mit W-EG-069 (0,34 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-EG-071",
+   "guid": "0gBY03AJfTIA_eHpn79puM",
+   "partner": "W-EG-075",
+   "partner_guid": "1LZRbwCY9JIgKsbUvUJqE2",
+   "text": "überlappt mit W-EG-075 (0,11 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-EG-072",
+   "guid": "1uA4jpIQDJlOZMB_2_AAWS",
+   "partner": "W-EG-073",
+   "partner_guid": "2vsq5ws11TzvkFyc2rDyMn",
+   "text": "überlappt mit W-EG-073 (0,05 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-EG-085",
+   "guid": "09zLIx4AfNHhNvCSadDFek",
+   "partner": "W-EG-089",
+   "partner_guid": "3YZJMod9rMP91nsaAvAMf$",
+   "text": "überlappt mit W-EG-089 (0,10 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-094",
+   "guid": "2hYZUf4EnS99af5mJzDSyu",
+   "partner": "W-EG-095",
+   "partner_guid": "2mlgksz$PMxPyo0ls3VO7j",
+   "text": "überlappt mit W-EG-095 (0,08 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-097",
+   "guid": "1S0OjB8$PMBOTTIyuLFm5O",
+   "partner": "W-EG-100",
+   "partner_guid": "0hxtWPHMbIiAGhuj6mBo8J",
+   "text": "überlappt mit W-EG-100 (0,55 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-097",
+   "guid": "1S0OjB8$PMBOTTIyuLFm5O",
+   "partner": "W-EG-101",
+   "partner_guid": "0FuMTOT0fS8O_613KpD5GO",
+   "text": "überlappt mit W-EG-101 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-097",
+   "guid": "1S0OjB8$PMBOTTIyuLFm5O",
+   "partner": "W-EG-098",
+   "partner_guid": "3E6$ewc9jQ1eX_vogZs84x",
+   "text": "überlappt mit W-EG-098 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-097",
+   "guid": "1S0OjB8$PMBOTTIyuLFm5O",
+   "partner": "W-EG-102",
+   "partner_guid": "1DN9J3b2nTOQnaV0Z25pLs",
+   "text": "überlappt mit W-EG-102 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-097",
+   "guid": "1S0OjB8$PMBOTTIyuLFm5O",
+   "partner": "W-EG-099",
+   "partner_guid": "1LUzhXtyPNdBqpq7C$Pl7k",
+   "text": "überlappt mit W-EG-099 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-098",
+   "guid": "3E6$ewc9jQ1eX_vogZs84x",
+   "partner": "W-EG-101",
+   "partner_guid": "0FuMTOT0fS8O_613KpD5GO",
+   "text": "überlappt mit W-EG-101 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-099",
+   "guid": "1LUzhXtyPNdBqpq7C$Pl7k",
+   "partner": "W-EG-102",
+   "partner_guid": "1DN9J3b2nTOQnaV0Z25pLs",
+   "text": "überlappt mit W-EG-102 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-104",
+   "guid": "3vlX$TZlnGNxidmO3n30nX",
+   "partner": "W-EG-105",
+   "partner_guid": "3SvPFdF_XItRvfGg$_jXMH",
+   "text": "überlappt mit W-EG-105 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-124",
+   "guid": "1QPjF_I55LbuDzlgOj8EOS",
+   "partner": "W-EG-125",
+   "partner_guid": "1vIgyYzkzSHgM6mK5LmKVZ",
+   "text": "überlappt mit W-EG-125 (0,09 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-130",
+   "guid": "3CGezxarfUmxeu4CrN55JN",
+   "partner": "W-EG-132",
+   "partner_guid": "0G9uhmgRfQu9FR5DOdFIzS",
+   "text": "überlappt mit W-EG-132 (0,16 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-136",
+   "guid": "0MlTmlG4rU19smkIiu2zVP",
+   "partner": "W-EG-139",
+   "partner_guid": "1Zcgj4RvXVlR5gZF4Vfl$u",
+   "text": "überlappt mit W-EG-139 (0,26 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-151",
+   "guid": "0HaXHWYa1K4eVreELJWP24",
+   "partner": "W-EG-156",
+   "partner_guid": "2$Oz_a1RXGovk5QUfsEUzt",
+   "text": "überlappt mit W-EG-156 (0,97 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-EG-152",
+   "guid": "1NhSBxOhXVyBmGdhWnxXws",
+   "partner": "W-EG-154",
+   "partner_guid": "2a4sHr5rDJXh_rv1JTsHNz",
+   "text": "überlappt mit W-EG-154 (0,06 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-152",
+   "guid": "1NhSBxOhXVyBmGdhWnxXws",
+   "partner": "W-EG-155",
+   "partner_guid": "3EdAu_IPHRwu$9Ra1SOUyx",
+   "text": "überlappt mit W-EG-155 (0,26 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-164",
+   "guid": "1pUugnBAbGLP3ytcysCaBU",
+   "partner": "W-EG-165",
+   "partner_guid": "2Z70azQuXPRhhhdr4eXwww",
+   "text": "überlappt mit W-EG-165 (0,91 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-186",
+   "guid": "2A8YaAaDvGg8$Tv7AsCwH6",
+   "partner": "W-EG-187",
+   "partner_guid": "32iLkG0MXPlgF3zMTh$djQ",
+   "text": "überlappt mit W-EG-187 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-186",
+   "guid": "2A8YaAaDvGg8$Tv7AsCwH6",
+   "partner": "W-EG-188",
+   "partner_guid": "1U2raIaATMEBZ1PHwQZqBh",
+   "text": "überlappt mit W-EG-188 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-187",
+   "guid": "32iLkG0MXPlgF3zMTh$djQ",
+   "partner": "W-EG-188",
+   "partner_guid": "1U2raIaATMEBZ1PHwQZqBh",
+   "text": "überlappt mit W-EG-188 (0,06 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-190",
+   "guid": "1GZglk7_5Lje8DMUmBHIlq",
+   "partner": "W-EG-192",
+   "partner_guid": "1NOrx5EAjGIflgMrZqK0Hz",
+   "text": "überlappt mit W-EG-192 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-190",
+   "guid": "1GZglk7_5Lje8DMUmBHIlq",
+   "partner": "W-EG-191",
+   "partner_guid": "1yc1r2v0zQLgMH9q4vpP9X",
+   "text": "überlappt mit W-EG-191 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-191",
+   "guid": "1yc1r2v0zQLgMH9q4vpP9X",
+   "partner": "W-EG-192",
+   "partner_guid": "1NOrx5EAjGIflgMrZqK0Hz",
+   "text": "überlappt mit W-EG-192 (0,06 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-194",
+   "guid": "1cvCmJTffL694u5DhmZq8u",
+   "partner": "W-EG-196",
+   "partner_guid": "0pdtLcq6LKvgSH7OZZ0DSW",
+   "text": "überlappt mit W-EG-196 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-194",
+   "guid": "1cvCmJTffL694u5DhmZq8u",
+   "partner": "W-EG-195",
+   "partner_guid": "36M5MeKSfKKupanuPqf2QX",
+   "text": "überlappt mit W-EG-195 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-195",
+   "guid": "36M5MeKSfKKupanuPqf2QX",
+   "partner": "W-EG-196",
+   "partner_guid": "0pdtLcq6LKvgSH7OZZ0DSW",
+   "text": "überlappt mit W-EG-196 (0,06 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-198",
+   "guid": "11MAvrsgvLswmSfQ6uOxfV",
+   "partner": "W-EG-199",
+   "partner_guid": "1LJyw9aT1KoPt43fgNzx7A",
+   "text": "überlappt mit W-EG-199 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-198",
+   "guid": "11MAvrsgvLswmSfQ6uOxfV",
+   "partner": "W-EG-200",
+   "partner_guid": "1dygZTAGHJ4wv57DbqXIXB",
+   "text": "überlappt mit W-EG-200 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-199",
+   "guid": "1LJyw9aT1KoPt43fgNzx7A",
+   "partner": "W-EG-200",
+   "partner_guid": "1dygZTAGHJ4wv57DbqXIXB",
+   "text": "überlappt mit W-EG-200 (0,03 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-207",
+   "guid": "1AOj0O0CDHnO33K_fG8A$M",
+   "partner": "W-EG-209",
+   "partner_guid": "06DU1cO$PTBQO2zNpUIFR5",
+   "text": "überlappt mit W-EG-209 (0,17 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-208",
+   "guid": "1jEXvrpifKd9rUhycZm9$p",
+   "partner": "W-EG-210",
+   "partner_guid": "1Oa7Lqu59RafkSUhH9sHAE",
+   "text": "überlappt mit W-EG-210 (0,11 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-EG-221",
+   "guid": "09Rax0dxXOp9wGGdBnb$I9",
+   "partner": "W-EG-223",
+   "partner_guid": "32mY75N$vN9eu8ABwjNzvi",
+   "text": "überlappt mit W-EG-223 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-EG-222",
+   "guid": "0c1tkZzj1VPwNjS1$G5WRE",
+   "partner": "W-EG-224",
+   "partner_guid": "1H$Gjo4lHGWvbyu8yABcVy",
+   "text": "überlappt mit W-EG-224 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-EG-229",
+   "guid": "3vMjmdWl1GcQfQNOQTMyRB",
+   "partner": "W-EG-232",
+   "partner_guid": "1ONb6jPsTPBAMM2RfI8zTh",
+   "text": "überlappt mit W-EG-232 (0,03 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-001",
+   "guid": "3$3u5a3hPLmxBUyDvhkW8q",
+   "partner": "W-OG1-006",
+   "partner_guid": "2qYnAI_8XUghYoRmLSeRd0",
+   "text": "überlappt mit W-OG1-006 (0,11 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-011",
+   "guid": "1DVR5p69jPlvSCtmOhmQWg",
+   "partner": "W-OG1-013",
+   "partner_guid": "0dms17mwLJ18rf8R877Kmr",
+   "text": "überlappt mit W-OG1-013 (0,05 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-016",
+   "guid": "1ZN_zudnjMouRd8leBogVx",
+   "partner": "W-OG1-019",
+   "partner_guid": "3BrJWLwifHT8c09LXf_YlV",
+   "text": "überlappt mit W-OG1-019 (0,11 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-016",
+   "guid": "1ZN_zudnjMouRd8leBogVx",
+   "partner": "W-OG1-018",
+   "partner_guid": "0qvi1nwZnTlgiVAuHtbiO_",
+   "text": "überlappt mit W-OG1-018 (0,11 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-017",
+   "guid": "22aIYpkzDQ$wkhsz5dkAnj",
+   "partner": "W-OG1-019",
+   "partner_guid": "3BrJWLwifHT8c09LXf_YlV",
+   "text": "überlappt mit W-OG1-019 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-017",
+   "guid": "22aIYpkzDQ$wkhsz5dkAnj",
+   "partner": "W-OG1-018",
+   "partner_guid": "0qvi1nwZnTlgiVAuHtbiO_",
+   "text": "überlappt mit W-OG1-018 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-018",
+   "guid": "0qvi1nwZnTlgiVAuHtbiO_",
+   "partner": "W-OG1-019",
+   "partner_guid": "3BrJWLwifHT8c09LXf_YlV",
+   "text": "überlappt mit W-OG1-019 (0,14 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-024",
+   "guid": "3ap_b9hK9GcgUK0XjEKs7$",
+   "partner": "W-OG1-025",
+   "partner_guid": "0t8LkNdBzVKRqj4HbzF05K",
+   "text": "überlappt mit W-OG1-025 (0,16 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-027",
+   "guid": "1YyAjHclvPYghs0KE7tuUT",
+   "partner": "W-OG1-028",
+   "partner_guid": "2bOJlMfBPSRheZncsebbvu",
+   "text": "überlappt mit W-OG1-028 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-049",
+   "guid": "1asMt0o1fRmRRkIcwlxNWZ",
+   "partner": "W-OG1-050",
+   "partner_guid": "1WdqoXyoPJaQ_Sk2JAUFRB",
+   "text": "überlappt mit W-OG1-050 (0,06 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-053",
+   "guid": "3bMf0dw69IdBk6vsROtAXC",
+   "partner": "W-OG1-054",
+   "partner_guid": "0dXbXt5APOVPIjZdvaDjNC",
+   "text": "überlappt mit W-OG1-054 (0,25 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-058",
+   "guid": "29n4sC7HvIFwDCqlr9NMxh",
+   "partner": "W-OG1-059",
+   "partner_guid": "03rcxOFUrJRQRVKNIg6TRZ",
+   "text": "überlappt mit W-OG1-059 (0,11 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-072",
+   "guid": "32qzuAngDISARiqh53hxYS",
+   "partner": "W-OG1-076",
+   "partner_guid": "3Qqzuo5cDNgOCDNg_W$L0d",
+   "text": "überlappt mit W-OG1-076 (0,14 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-072",
+   "guid": "32qzuAngDISARiqh53hxYS",
+   "partner": "W-OG1-073",
+   "partner_guid": "3cmGJhF9POyQA0kScKYCR5",
+   "text": "überlappt mit W-OG1-073 (0,15 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-073",
+   "guid": "3cmGJhF9POyQA0kScKYCR5",
+   "partner": "W-OG1-076",
+   "partner_guid": "3Qqzuo5cDNgOCDNg_W$L0d",
+   "text": "überlappt mit W-OG1-076 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-075",
+   "guid": "2uzLsf_oDGIRMdcmiVvrCf",
+   "partner": "W-OG1-079",
+   "partner_guid": "10zXboXiPIIQsNNa5qC0U5",
+   "text": "überlappt mit W-OG1-079 (0,54 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-088",
+   "guid": "32BFHqOpnHOAiC8VjBVzUz",
+   "partner": "W-OG1-089",
+   "partner_guid": "3E9eqDU1LIvADFvbw2$6NJ",
+   "text": "überlappt mit W-OG1-089 (0,04 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-097",
+   "guid": "1t2Hh1uOjQ6hujvPzRQ8dg",
+   "partner": "W-OG1-098",
+   "partner_guid": "1kD$84idTKKvq_VbzwL1RK",
+   "text": "überlappt mit W-OG1-098 (0,17 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-110",
+   "guid": "2F5r3C51nHpgUX$nz9NRrh",
+   "partner": "W-OG1-111",
+   "partner_guid": "1TqoPccwjPQuMM$kMbvNoi",
+   "text": "überlappt mit W-OG1-111 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-110",
+   "guid": "2F5r3C51nHpgUX$nz9NRrh",
+   "partner": "W-OG1-112",
+   "partner_guid": "3bClJa$q9Jevp7QfviHlAa",
+   "text": "überlappt mit W-OG1-112 (0,10 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-111",
+   "guid": "1TqoPccwjPQuMM$kMbvNoi",
+   "partner": "W-OG1-112",
+   "partner_guid": "3bClJa$q9Jevp7QfviHlAa",
+   "text": "überlappt mit W-OG1-112 (0,10 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-113",
+   "guid": "1IkFk9MlvOfBh2T7yZniem",
+   "partner": "W-OG1-115",
+   "partner_guid": "3f577qhInHrOPP8DwB9UfC",
+   "text": "überlappt mit W-OG1-115 (0,06 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-124",
+   "guid": "2l$jocicrPPeuqxmPNdsva",
+   "partner": "W-OG1-127",
+   "partner_guid": "0FjUaAO3TQ5Qrby_rzjt6w",
+   "text": "überlappt mit W-OG1-127 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-128",
+   "guid": "0_j4Cu$79MAAhcygK5mqQw",
+   "partner": "W-OG1-132",
+   "partner_guid": "0LjQaONabHc9LKHtpeRe3i",
+   "text": "überlappt mit W-OG1-132 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-129",
+   "guid": "2QiPvwAJnPcehgx6CVxJXu",
+   "partner": "W-OG1-132",
+   "partner_guid": "0LjQaONabHc9LKHtpeRe3i",
+   "text": "überlappt mit W-OG1-132 (0,06 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-130",
+   "guid": "1612CJmV9Q_RklPHi$q8FV",
+   "partner": "W-OG1-133",
+   "partner_guid": "0TZvybZcXKYezf7rtitIm0",
+   "text": "überlappt mit W-OG1-133 (0,08 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-131",
+   "guid": "0kO6$gW_5UMgMdTwgl2Wzo",
+   "partner": "W-OG1-135",
+   "partner_guid": "3ghcKbOf1SP9vKum0xmebr",
+   "text": "überlappt mit W-OG1-135 (0,84 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-138",
+   "guid": "1SfBHLW$vG4vbI4EQC9WyG",
+   "partner": "W-OG1-140",
+   "partner_guid": "0HUzlJtXfTZx2$T8gyON9b",
+   "text": "überlappt mit W-OG1-140 (0,03 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-140",
+   "guid": "0HUzlJtXfTZx2$T8gyON9b",
+   "partner": "W-OG1-142",
+   "partner_guid": "1DrJydU5THIPM5Gp9SjtFF",
+   "text": "überlappt mit W-OG1-142 (0,03 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-154",
+   "guid": "3q6JiIL2TH_BCnZ7bwvF9A",
+   "partner": "W-OG1-155",
+   "partner_guid": "00mK5A1M5R7f7UXwtS4S3h",
+   "text": "überlappt mit W-OG1-155 (0,08 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-165",
+   "guid": "32JsP$B1LSGAX_qBdEGnN7",
+   "partner": "W-OG1-166",
+   "partner_guid": "0hxcXifg1Kj9wMhQzdfSJP",
+   "text": "überlappt mit W-OG1-166 (0,20 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-165",
+   "guid": "32JsP$B1LSGAX_qBdEGnN7",
+   "partner": "W-OG1-167",
+   "partner_guid": "0BTMFn6FDSDQWJkNsduFn6",
+   "text": "überlappt mit W-OG1-167 (0,09 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-166",
+   "guid": "0hxcXifg1Kj9wMhQzdfSJP",
+   "partner": "W-OG1-167",
+   "partner_guid": "0BTMFn6FDSDQWJkNsduFn6",
+   "text": "überlappt mit W-OG1-167 (0,13 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-176",
+   "guid": "2jp2fy3ZvUke2Nio_$5Egb",
+   "partner": "W-OG1-177",
+   "partner_guid": "3plJwIn01JyOoQsT8L6rC6",
+   "text": "überlappt mit W-OG1-177 (0,19 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Hinweis",
+   "element": "W-OG1-177",
+   "guid": "3plJwIn01JyOoQsT8L6rC6",
+   "partner": "W-OG1-178",
+   "partner_guid": "2zJ1EQpFPTpus5rsGr1Cvd",
+   "text": "überlappt mit W-OG1-178 (0,12 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "ueberlappung",
+   "stufe": "Fehler",
+   "element": "W-OG1-181",
+   "guid": "3DjcsZVjLO38wOVWuKaod7",
+   "partner": "W-OG1-183",
+   "partner_guid": "0sCtktUzXVse6TUIVy_Q6L",
+   "text": "überlappt mit W-OG1-183 (0,07 m² Grundfläche) – Doppelzählung prüfen"
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-005",
+   "guid": "19PDklyUjTS8LHnb3Hy8TN",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 36.41,
+   "y": 61.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-005",
+   "guid": "19PDklyUjTS8LHnb3Hy8TN",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 36.79,
+   "y": 61.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-006",
+   "guid": "2XbHwEzATJMOpvL_oXGuEB",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 40.91,
+   "y": 61.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-006",
+   "guid": "2XbHwEzATJMOpvL_oXGuEB",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 41.29,
+   "y": 61.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-007",
+   "guid": "1zgDkycP9GQPRWekB0Z6cX",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 63.41,
+   "y": 61.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-007",
+   "guid": "1zgDkycP9GQPRWekB0Z6cX",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 63.79,
+   "y": 61.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-008",
+   "guid": "0YXC8CYuHJ7ADURqQqpJCb",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 67.91,
+   "y": 61.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-008",
+   "guid": "0YXC8CYuHJ7ADURqQqpJCb",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 68.29,
+   "y": 61.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-012",
+   "guid": "14jk0qBPPRFfzTTXZx4HGL",
+   "text": "Anfang: Anschluss prüfen (Abstand 0,43 m)",
+   "x": 11.04,
+   "y": 59.99
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-027",
+   "guid": "2$8shAPkfRrg3wW4DK7RRQ",
+   "text": "Anfang: Anschluss prüfen (Abstand 0,33 m)",
+   "x": 74.04,
+   "y": 55.03
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-046",
+   "guid": "0h0JntmgbVkhhcNHQvuG5E",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 63.41,
+   "y": 49.42
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-046",
+   "guid": "0h0JntmgbVkhhcNHQvuG5E",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 63.79,
+   "y": 49.42
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-049",
+   "guid": "1ZIJht56rRux3GCBJb4KMd",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 49.91,
+   "y": 49.42
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-049",
+   "guid": "1ZIJht56rRux3GCBJb4KMd",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 50.29,
+   "y": 49.42
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-094",
+   "guid": "2hYZUf4EnS99af5mJzDSyu",
+   "text": "Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,01 m)",
+   "x": 6.62,
+   "y": 13.5
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-096",
+   "guid": "36AutAzEfI8A160b6CCu97",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,76 m)",
+   "x": 12.65,
+   "y": 13.5
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-105",
+   "guid": "3SvPFdF_XItRvfGg$_jXMH",
+   "text": "Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,03 m)",
+   "x": 34.45,
+   "y": 11.81
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-106",
+   "guid": "1D8uBB0iTSjBd_jdhVjaS$",
+   "text": "Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,24 m)",
+   "x": 13.79,
+   "y": 9.57
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-107",
+   "guid": "3Esm_$lTXTUAgp2t5wGwa$",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,37 m)",
+   "x": 6.61,
+   "y": 9.57
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-107",
+   "guid": "3Esm_$lTXTUAgp2t5wGwa$",
+   "text": "Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 1,14 m)",
+   "x": 12.65,
+   "y": 9.57
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-127",
+   "guid": "2rUScM2$TN79NARGscw7Iq",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,68 m)",
+   "x": 9.54,
+   "y": 15.62
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-128",
+   "guid": "3fn79OSnLSiuE5TQGv4FF6",
+   "text": "Ende: Anschluss prüfen (Abstand 0,43 m)",
+   "x": 10.23,
+   "y": 57.35
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-131",
+   "guid": "2T_TvDFObJjxlNN8cFlIhU",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,71 m)",
+   "x": 11.61,
+   "y": 59.22
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-141",
+   "guid": "09J_1RG_rTC89DV_jSQr$T",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,64 m)",
+   "x": 14.09,
+   "y": 14.97
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-157",
+   "guid": "1$GMOnJffSARf1CV1wEbmq",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,29 m)",
+   "x": 20.35,
+   "y": 57.35
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-159",
+   "guid": "1bHWrKlRTGJ8slzwGvN1cg",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,14 m)",
+   "x": 21.69,
+   "y": 57.27
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-160",
+   "guid": "2e5pdKYWrOaOZkq_hK4vdr",
+   "text": "Anfang: Anschluss prüfen (Abstand 0,17 m)",
+   "x": 22.35,
+   "y": -1.46
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-160",
+   "guid": "2e5pdKYWrOaOZkq_hK4vdr",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 22.35,
+   "y": -5.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-162",
+   "guid": "2rGyL7kD9MFfePI9LYv2AK",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 23.09,
+   "y": 11.62
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-163",
+   "guid": "2nxCDCNRPVSBH2l080il8D",
+   "text": "Anfang: Anschluss prüfen (Abstand 0,45 m)",
+   "x": 23.09,
+   "y": 8.5
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-171",
+   "guid": "3arwiwldjVg9KKU6lnIFQy",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 28.35,
+   "y": -5.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-179",
+   "guid": "0u39e9lB9JFOjMqBNl4dZw",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 34.35,
+   "y": -5.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-180",
+   "guid": "2lIZ$WUDTOPxzTzzphvfrD",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,52 m)",
+   "x": 37.22,
+   "y": 13.71
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-184",
+   "guid": "1kHuDf_WTJguLONTrWUb7$",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,47 m)",
+   "x": 40.31,
+   "y": -5.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-185",
+   "guid": "2PPZwqQFjLaehFe693DbFT",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,44 m)",
+   "x": 41.85,
+   "y": -5.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-186",
+   "guid": "2A8YaAaDvGg8$Tv7AsCwH6",
+   "text": "Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,20 m)",
+   "x": 43.35,
+   "y": -5.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-190",
+   "guid": "1GZglk7_5Lje8DMUmBHIlq",
+   "text": "Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,20 m)",
+   "x": 45.6,
+   "y": -5.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-194",
+   "guid": "1cvCmJTffL694u5DhmZq8u",
+   "text": "Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,20 m)",
+   "x": 47.85,
+   "y": -5.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-198",
+   "guid": "11MAvrsgvLswmSfQ6uOxfV",
+   "text": "Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,20 m)",
+   "x": 50.16,
+   "y": -5.74
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-202",
+   "guid": "1qKL7SmBXHyxcPh1Q20dbT",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,66 m)",
+   "x": 51.5,
+   "y": 20.05
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-225",
+   "guid": "1THmk4twTUHP2Yccr8sZH5",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,10 m)",
+   "x": 75.31,
+   "y": 58.63
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-EG-226",
+   "guid": "0cDoCFfoXPbux7ziXC44fh",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,03 m)",
+   "x": 76.47,
+   "y": 58.53
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-001",
+   "guid": "3$3u5a3hPLmxBUyDvhkW8q",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 5.12,
+   "y": 62.02
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-003",
+   "guid": "2WfJvPKyvGNhUaNs32kxIt",
+   "text": "Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 1,42 m)",
+   "x": 24.69,
+   "y": 62.02
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-003",
+   "guid": "2WfJvPKyvGNhUaNs32kxIt",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 26.21,
+   "y": 62.02
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-013",
+   "guid": "0dms17mwLJ18rf8R877Kmr",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,64 m)",
+   "x": 13.09,
+   "y": 57.31
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-014",
+   "guid": "1ktIGcl_fSs81VPpQxj8Mm",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,64 m)",
+   "x": 19.37,
+   "y": 57.31
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-015",
+   "guid": "1X$IDV3PXR6u0tk1yHF8ur",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,83 m)",
+   "x": 5.25,
+   "y": 55.21
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-015",
+   "guid": "1X$IDV3PXR6u0tk1yHF8ur",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,53 m)",
+   "x": 8.11,
+   "y": 55.21
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-017",
+   "guid": "22aIYpkzDQ$wkhsz5dkAnj",
+   "text": "Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,62 m)",
+   "x": 26.82,
+   "y": 55.19
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-028",
+   "guid": "2bOJlMfBPSRheZncsebbvu",
+   "text": "Ende: Anschluss prüfen (Abstand 0,03 m)",
+   "x": 12.44,
+   "y": 53.95
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-047",
+   "guid": "3pJDioW_XQfQd3kbxFhVyo",
+   "text": "Ende: Anschluss prüfen (Abstand 0,33 m)",
+   "x": 19.17,
+   "y": 31.84
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-048",
+   "guid": "2IxMcwCWDTtQUEE$Yd7cVF",
+   "text": "Ende: Anschluss prüfen (Abstand 0,33 m)",
+   "x": 19.17,
+   "y": 30.87
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-050",
+   "guid": "1WdqoXyoPJaQ_Sk2JAUFRB",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": 0.15,
+   "y": 30.71
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-052",
+   "guid": "3jlpgW6STVoATY_qjJNdRT",
+   "text": "Ende: Anschluss prüfen (Abstand 0,30 m)",
+   "x": 19.14,
+   "y": 28.83
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-055",
+   "guid": "2rtYxpzFPM48rxMorbjsBo",
+   "text": "Ende: Anschluss prüfen (Abstand 0,30 m)",
+   "x": 19.14,
+   "y": 27.86
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-068",
+   "guid": "3kFSiFRhnIsw1S_pJV4YzN",
+   "text": "Ende: Anschluss prüfen (Abstand 0,14 m)",
+   "x": 51.56,
+   "y": 19.96
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-070",
+   "guid": "3NoaaL3W9UFAtavnKh1gtV",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,12 m)",
+   "x": 51.52,
+   "y": 18.79
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-087",
+   "guid": "2jnA_FPtvT4fU16ZNs$4M2",
+   "text": "Anfang: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,60 m)",
+   "x": 38.19,
+   "y": 11.18
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-089",
+   "guid": "3E9eqDU1LIvADFvbw2$6NJ",
+   "text": "Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,03 m)",
+   "x": 37.05,
+   "y": 11.17
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-099",
+   "guid": "0PL6EH9S1TrxdniuzvBnM5",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 9,90 m)",
+   "x": -0.12,
+   "y": 60.3
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-099",
+   "guid": "0PL6EH9S1TrxdniuzvBnM5",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,38 m)",
+   "x": -0.12,
+   "y": 58.83
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-111",
+   "guid": "1TqoPccwjPQuMM$kMbvNoi",
+   "text": "Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 0,02 m)",
+   "x": 6.84,
+   "y": -1.13
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-114",
+   "guid": "1u6TxI1zPNxP4NTBXpd0$I",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 0,89 m)",
+   "x": 9.69,
+   "y": 54.97
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-116",
+   "guid": "3$iSSKFTTSEgGGYYwy6B4k",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,36 m)",
+   "x": 11.21,
+   "y": 57.53
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-116",
+   "guid": "3$iSSKFTTSEgGGYYwy6B4k",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,36 m)",
+   "x": 11.21,
+   "y": 57.27
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-133",
+   "guid": "0TZvybZcXKYezf7rtitIm0",
+   "text": "Ende: Lücke in gleicher Flucht – Durchgang/Öffnung prüfen (Abstand 1,01 m)",
+   "x": 18.61,
+   "y": 53.11
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-148",
+   "guid": "3YeKax5sHMzvlHatPy$k0l",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,44 m)",
+   "x": 32.01,
+   "y": 19.81
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-157",
+   "guid": "0trtCoLj9UuQUT0qYXWQop",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,54 m)",
+   "x": 48.67,
+   "y": 15.62
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-161",
+   "guid": "0z4na1VxTJl8RZKgm_vMMB",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,17 m)",
+   "x": 50.29,
+   "y": 15.62
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-161",
+   "guid": "0z4na1VxTJl8RZKgm_vMMB",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,25 m)",
+   "x": 50.29,
+   "y": 13.11
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-162",
+   "guid": "0jzUWcc0LQQBq4cu2vix4R",
+   "text": "Anfang: Anschluss prüfen (Abstand 0,37 m)",
+   "x": 51.6,
+   "y": 13.11
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-163",
+   "guid": "1g338B_y5Pc8N0HGLZrFbh",
+   "text": "Anfang: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,12 m)",
+   "x": 51.91,
+   "y": 14.48
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-163",
+   "guid": "1g338B_y5Pc8N0HGLZrFbh",
+   "text": "Ende: Anschluss prüfen (Abstand 0,38 m)",
+   "x": 51.91,
+   "y": 13.41
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-184",
+   "guid": "24aKNltgbRGQk$T4FhAiCs",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,05 m)",
+   "x": 75.3,
+   "y": 57.5
+  },
+  {
+   "pruefung": "offene_enden",
+   "stufe": "Hinweis",
+   "element": "W-OG1-185",
+   "guid": "25p5WAMWTQIPTg36lC1SUN",
+   "text": "Ende: frei endend (z, B, Raumteiler) – prüfen (Abstand 1,03 m)",
+   "x": 76.47,
+   "y": 57.52
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.001",
+   "guid": "3DUE5Ash9Np8LYW4n2m1PO",
+   "text": "Foyer inkl. Wachzentrale: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.002",
+   "guid": "2Z4bcjlTrNmOUIygVczE4j",
+   "text": "(zus.) Backoffice: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.005",
+   "guid": "2EINkxuQDQehqZ4oBNgGqt",
+   "text": "WC He Vorraum: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.T01",
+   "guid": "3I8yrTldTUPR4_4Gt7noT0",
+   "text": "TRH 1 FW: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.011",
+   "guid": "0kU1Ik3XnVnuhips754woY",
+   "text": "Alarm-Mappenraum: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.012",
+   "guid": "0dK8hNxNHU0Roio6xLK2Vk",
+   "text": "Tagesalarm BS 40P: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.010",
+   "guid": "39YloL3NfJuB0Mg6m8e3IR",
+   "text": "Tagesalarm BS 40P: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.F02",
+   "guid": "3CoC9$3QDJdh19nM_xbQm$",
+   "text": "Flur: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.008.1",
+   "guid": "3qkeA57pjJaRNkYpi54cHR",
+   "text": "WC He: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.013",
+   "guid": "1M2iasYQDMzfEwLkIFNcgb",
+   "text": "Alarmhalle 1. Abmarsch: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.014",
+   "guid": "36P0nY4fnI_Q1IkdkVY954",
+   "text": "Tagesalarm RD 10P: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.T02",
+   "guid": "3UQqFjTJTQgB8DuSDoHGNQ",
+   "text": "TRH 2 FW: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.S06.1",
+   "guid": "0Yt9veIKjLDvjjS3FTtzNh",
+   "text": ": nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.016",
+   "guid": "3ZnZkMSh1KX98uKrE1101i",
+   "text": "Tagesmagazin: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.018",
+   "guid": "2rfXhoqv1HLRUfY6_GfWR7",
+   "text": "Waschhalle u. Bestückung: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.026",
+   "guid": "30W3NsA8vR9v1EJAUpVsyW",
+   "text": "Desinfektionshalle: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.027.1",
+   "guid": "1_OFtkZQ1ToeKGb$_HOUrS",
+   "text": "Tagesmagazin RD: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.F03",
+   "guid": "3bpRFJTyfGORG1aWX7556a",
+   "text": "Flur: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.032",
+   "guid": "0UHMVvp3TQS8cf_VaJFnwB",
+   "text": "Werkstatthalle Geräteprüfung: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.032.1",
+   "guid": "0gULvW1QPN$vlgSz3eZeSw",
+   "text": "Service-Point: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.033",
+   "guid": "1Nh657DhTSlRT0ZD4fY0JH",
+   "text": "Fahrzeughallen 1: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.033.1",
+   "guid": "3yTFKwLTfKTAdbU1_ydhFE",
+   "text": "Fahrzeughallen 1: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.017",
+   "guid": "3AK$Xss5DTeQvxujcviBM3",
+   "text": "Pumpenprüfstand: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.022",
+   "guid": "0EngIgZ7vTmhKjixcXQUEv",
+   "text": "Hochdruckreiniger: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.T04",
+   "guid": "1CtTSZVYPN4AWf02ocdOjO",
+   "text": "TRH 4 FW: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.044",
+   "guid": "0BlyDhapTQjOOPRPmB7mJN",
+   "text": "Materialpflege RD: Wäschemagazin: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.047",
+   "guid": "2YYe1c$p1TQgRvH4PeFj6F",
+   "text": "MPf Pool schwarz: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.048",
+   "guid": "3Q3imdDcXLoPRTtBjCCPvJ",
+   "text": "Schlauchlager weiß: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.024",
+   "guid": "0OBfL_R15KWO7vpR1xuZGX",
+   "text": "Lager: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.021",
+   "guid": "1RnazaIRLSD9i7OAqMV$9W",
+   "text": ": nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.020",
+   "guid": "3XXfjkR7rRGhmqy8EE0oRn",
+   "text": "Sammlung Mat [S]: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.052",
+   "guid": "0u5eSsH9rNRgvWA3c6nQ1l",
+   "text": "Lager: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.T03",
+   "guid": "1EBOPR1x1R7fRNBl6K1XpH",
+   "text": "TRH 3 FW: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.038",
+   "guid": "3HmaQjz79OKwqmPnBj$Nln",
+   "text": "(zus.) Lager ITW / Archiv: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.057",
+   "guid": "02$SKlOY9VEvR3ze_PBnCX",
+   "text": "Rettungsdienstlager: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.058",
+   "guid": "29g3b2_K1NDPN267Sfnrsw",
+   "text": "Prüfstelle RD: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.035",
+   "guid": "37SofEJs5PaPlu0VkcQ0Vn",
+   "text": "ELT Trafo 1: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.039",
+   "guid": "3npHioAZvO9A4pTh9$UipP",
+   "text": "MS 1 - Raum: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.007",
+   "guid": "3grO$QkdTMSg7v00us4eL4",
+   "text": "ELT AV/SV: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.013.1",
+   "guid": "1dDKUzO99LlvIRHJmvIYWI",
+   "text": "Alarmhalle 1. Abmarsch: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.015",
+   "guid": "3S17UBOO1U2wPklW68$VfQ",
+   "text": "Durchfahrtshalle: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.F05",
+   "guid": "0efARGcv9GOPijXFJSLrBD",
+   "text": "Flur: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.A04",
+   "guid": "1dgjT1AY1TF8kV$CT_xube",
+   "text": "Aufzug: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.040.1",
+   "guid": "35u7CSDAzTA8b$O1JYkJJ9",
+   "text": "Ankleide: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.040",
+   "guid": "1FnLL0M8rLGwHiOtWnV30a",
+   "text": "Schleusenbereich [S] + Dekondusche: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "NG.00.001",
+   "guid": "3D2luyiPbPzAneCZX5y_VY",
+   "text": "25 Entsorgungsplatz: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "NG.00.002",
+   "guid": "3BAmd9lD9KY8Nnkkj7FqmR",
+   "text": "Sondermüll: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.028.1",
+   "guid": "2w3k5poofTjfyg7MXsOt_x",
+   "text": "Lager Infektionswäsche: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.00.F04",
+   "guid": "0gX0RC$AfS_B3jU1zqokaU",
+   "text": "Flur: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.006",
+   "guid": "1UF$25uZbHwhPXeYIjW488",
+   "text": "B WF Tagesdienst: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.F01",
+   "guid": "1vVki0AprIA8q8wcUB26tw",
+   "text": "Flur: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.007",
+   "guid": "04a9Iy2VXT8x$WI_qaE5X_",
+   "text": "Besprechungsraum WA: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.001",
+   "guid": "1BCWCIQtbQD95R4N3i34O0",
+   "text": "WC He: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.T01",
+   "guid": "3yIM1w8mPVGex_vNeF1I$8",
+   "text": "TRH 1 FW: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.010",
+   "guid": "19mzRY57PO3PKeHiuc1ZyI",
+   "text": "Büro Einsatzbetrieb und Info: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.005",
+   "guid": "3qQFyWlIzJ_hplp93HMeGQ",
+   "text": "B WL: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.011",
+   "guid": "2FXYD3pS5Ik91hZXXwwzZ3",
+   "text": "B WAL WAF: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.F02",
+   "guid": "28mKOh8TPRhPPnygLc0U8f",
+   "text": "Flur: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.004",
+   "guid": "3SbuNro_DUCQRxKjEGh92i",
+   "text": "Büro Einsatzbetrieb und Info: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.012",
+   "guid": "2G$6Iy6MzNXg1vx5N_qhAL",
+   "text": "Lüftungskanäle Fahrzeughalle: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.T02",
+   "guid": "2oSEP14VrJZxbsC$nPCXWB",
+   "text": "TRH 2 FW: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.023",
+   "guid": "0cYCJDFOXUv9jh_HGz7vwj",
+   "text": "Anleiterraum: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.021",
+   "guid": "1e7SbnSIvPahwM_N0ooIlV",
+   "text": "Verbrauchmittellager: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.020",
+   "guid": "0FXGmST_1T_BgGxtXT2S2L",
+   "text": "ELT-Raum AV/SV: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.036",
+   "guid": "2OX6$hX91RDRwPbdWO5krn",
+   "text": "Büro: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.038",
+   "guid": "031_3PhMvQ9RLjTqVR7FE5",
+   "text": "Büro: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.035",
+   "guid": "3je7$b$znMuwyD$7IhnyqQ",
+   "text": "Doppelbüro: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.039",
+   "guid": "1b3a9aRAzGY8bHWMdAcXf$",
+   "text": "Funkwerkstatt: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.041",
+   "guid": "2uO$kDhgvPx8exF9LQUDgz",
+   "text": "Lager Funk: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.T03",
+   "guid": "0YPfTEUx9IvBdBkf5f3Xa8",
+   "text": "TRH 3 FW: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.030",
+   "guid": "0UR8E5zp9P78ol_MTWNOaG",
+   "text": "IT-ELT AV/SV Raum: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.028",
+   "guid": "1Rgj5sGoDOQgrvx8gh6ZjU",
+   "text": "Büro: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.027",
+   "guid": "0zfVMRx4zJIvEbxdGEAnwS",
+   "text": "Lager, Schlauchlogistik [S]: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.026",
+   "guid": "0XzQM5KPnQXQkIP_GPkzvz",
+   "text": "Büro Hausmeister: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.017",
+   "guid": "1$OAGG$rLPVuE1HCRpMnWr",
+   "text": "Kleiderkammer: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.015",
+   "guid": "1jpjy8wJbKtgqnUJl8YukI",
+   "text": "Brandschutzlager: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.014",
+   "guid": "2xyLVxz8zTi8y3_Yh7CsV_",
+   "text": "Lager Gebäudebetrieb (Hausmeister): nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.034",
+   "guid": "2qHPDsKM9Iq8NAmcDQWJ9s",
+   "text": "Schlauchpflege: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.025",
+   "guid": "2SF6x3rmnOteYWt2qVhqo4",
+   "text": "Werkstatt schwarz: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.024",
+   "guid": "3j1$eefCTK0x4$8$aubDN5",
+   "text": "Werkstatt weiß: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.F06",
+   "guid": "1ZvZnwvUDHPOBWpACa2uKO",
+   "text": "Flur: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.016",
+   "guid": "1a5pv8V89L3B3$u7Q6Evxf",
+   "text": ": nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.A04",
+   "guid": "1Jt4cbg5jKyPbSQYK6Z9KR",
+   "text": "Aufzug: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.A03",
+   "guid": "3Mq0Sul6rTvvc3O_a5hFx0",
+   "text": "Aufzug: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.009",
+   "guid": "1WK2uwU3HU2ReJX_kp7e22",
+   "text": "B Praxisanleiter: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.F08.1",
+   "guid": "2SvJcK$7XKpRaPaCH5bPnv",
+   "text": "Flur: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.019",
+   "guid": "0yS6VtsDXKLwLp4Aor2mzl",
+   "text": "Lager EDV: nur Stempeldaten, Raumkontur fehlt"
+  },
+  {
+   "pruefung": "raum_ohne_geometrie",
+   "stufe": "Hinweis",
+   "element": "FW.01.019.1",
+   "guid": "1p2yUAKA9HCxD$C5$bflkz",
+   "text": "Lager EDV: nur Stempeldaten, Raumkontur fehlt"
+  }
+ ]
+}
