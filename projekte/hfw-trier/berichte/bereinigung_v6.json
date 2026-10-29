@@ -1,0 +1,4119 @@
+{
+ "duplikate": [],
+ "enthaltene_wände": [],
+ "raumstempel": [
+  {
+   "raeume": 171
+  }
+ ],
+ "wandhoehen": [
+  {
+   "wand": "W-EG-001",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-002",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-005",
+   "raeume": [
+    "FW.00.013",
+    "FW.00.013"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.085,
+    6.82
+   ],
+   "status": "geändert",
+   "hinweis": "OK RFB mit Gefälle, tiefster Wert verwendet"
+  },
+  {
+   "wand": "W-EG-006",
+   "raeume": [
+    "FW.00.013.1",
+    "FW.00.013.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    0.0,
+    6.82
+   ],
+   "status": "geändert",
+   "hinweis": "OK RFB mit Gefälle, tiefster Wert verwendet"
+  },
+  {
+   "wand": "W-EG-007",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-008",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-010",
+   "raeume": [
+    "FW.00.A01",
+    "FW.00.008.1",
+    "FW.00.A01",
+    "FW.00.008.1"
+   ],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-011",
+   "raeume": [
+    "FW.00.008.1",
+    "FW.00.008.1"
+   ],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-012",
+   "raeume": [
+    "FW.00.006",
+    "FW.00.006"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-017",
+   "raeume": [
+    "FW.00.F02",
+    "FW.00.F02"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-018",
+   "raeume": [
+    "FW.00.F01",
+    "FW.00.F01"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-021",
+   "raeume": [
+    "FW.00.F01",
+    "FW.00.006",
+    "FW.00.F01",
+    "FW.00.006"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-022",
+   "raeume": [
+    "FW.00.F01",
+    "FW.00.004"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-023",
+   "raeume": [
+    "FW.00.005",
+    "FW.00.F01",
+    "FW.00.002"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-024",
+   "raeume": [
+    "FW.00.F01",
+    "FW.00.004"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-025",
+   "raeume": [
+    "FW.00.F02",
+    "FW.00.011"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-026",
+   "raeume": [
+    "FW.00.T01"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-027",
+   "raeume": [
+    "FW.00.T02",
+    "FW.00.T02"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.25
+   ],
+   "status": "geändert",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-028",
+   "raeume": [
+    "FW.00.T01"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-033",
+   "raeume": [
+    "FW.00.004"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-034",
+   "raeume": [
+    "FW.00.004"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-036",
+   "raeume": [
+    "FW.00.F02",
+    "FW.00.012"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-044",
+   "raeume": [
+    "FW.00.005"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-045",
+   "raeume": [
+    "FW.00.013",
+    "FW.00.013"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.085,
+    6.82
+   ],
+   "status": "geändert",
+   "hinweis": "OK RFB mit Gefälle, tiefster Wert verwendet"
+  },
+  {
+   "wand": "W-EG-046",
+   "raeume": [
+    "FW.00.S06.1",
+    "FW.00.S06.1"
+   ],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-047",
+   "raeume": [
+    "FW.00.005",
+    "FW.00.015"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    6.82
+   ],
+   "status": "geändert",
+   "hinweis": "angrenzende Räume mit unterschiedlicher UK RD (3,15, 6,82), höchster Wert verwendet – prüfen"
+  },
+  {
+   "wand": "W-EG-048",
+   "raeume": [
+    "FW.00.013",
+    "FW.00.013"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.085,
+    6.82
+   ],
+   "status": "geändert",
+   "hinweis": "OK RFB mit Gefälle, tiefster Wert verwendet"
+  },
+  {
+   "wand": "W-EG-049",
+   "raeume": [
+    "FW.00.013.1",
+    "FW.00.013.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    0.0,
+    6.82
+   ],
+   "status": "geändert",
+   "hinweis": "OK RFB mit Gefälle, tiefster Wert verwendet"
+  },
+  {
+   "wand": "W-EG-092",
+   "raeume": [
+    "FW.00.046",
+    "FW.00.F04",
+    "FW.00.047",
+    "FW.00.S09"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-093",
+   "raeume": [
+    "FW.00.041",
+    "FW.00.041",
+    "FW.00.042.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-094",
+   "raeume": [
+    "FW.00.040.1",
+    "FW.00.041",
+    "FW.00.040.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-095",
+   "raeume": [
+    "FW.00.040.1",
+    "FW.00.041",
+    "FW.00.040.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-096",
+   "raeume": [
+    "FW.00.042",
+    "FW.00.043.1",
+    "FW.00.043.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-097",
+   "raeume": [
+    "FW.00.040.1",
+    "FW.00.042.1",
+    "FW.00.043.1",
+    "FW.00.040.1",
+    "FW.00.042.1",
+    "FW.00.043.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-098",
+   "raeume": [
+    "FW.00.040.1",
+    "FW.00.040.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-099",
+   "raeume": [
+    "FW.00.043.1",
+    "FW.00.043.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-100",
+   "raeume": [
+    "FW.00.040.1",
+    "FW.00.042.1",
+    "FW.00.040.1",
+    "FW.00.042.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-101",
+   "raeume": [
+    "FW.00.040.1",
+    "FW.00.040.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-102",
+   "raeume": [
+    "FW.00.043.1",
+    "FW.00.043.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-103",
+   "raeume": [
+    "FW.00.059",
+    "FW.00.058"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-104",
+   "raeume": [
+    "FW.00.052",
+    "FW.00.052"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-105",
+   "raeume": [
+    "FW.00.F03.1",
+    "FW.00.F03.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-106",
+   "raeume": [
+    "FW.00.043.1",
+    "FW.00.043.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-107",
+   "raeume": [
+    "FW.00.F07",
+    "FW.00.F07"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-112",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-121",
+   "raeume": [
+    "FW.00.002",
+    "FW.00.005",
+    "FW.00.F01"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-123",
+   "raeume": [
+    "FW.00.041",
+    "FW.00.041"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-124",
+   "raeume": [
+    "FW.00.003",
+    "FW.00.002"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-125",
+   "raeume": [
+    "FW.00.004",
+    "FW.00.003",
+    "FW.00.002"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-127",
+   "raeume": [
+    "FW.00.042",
+    "FW.00.041"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-128",
+   "raeume": [
+    "FW.00.F01",
+    "FW.00.F01"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-129",
+   "raeume": [
+    "FW.00.043.1",
+    "FW.00.042.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-130",
+   "raeume": [
+    "FW.00.005.1",
+    "FW.00.005.1",
+    "FW.00.006"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-131",
+   "raeume": [
+    "FW.00.006",
+    "FW.00.F01",
+    "FW.00.006",
+    "FW.00.F01"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-132",
+   "raeume": [
+    "FW.00.005.1",
+    "FW.00.005.1",
+    "FW.00.006"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-133",
+   "raeume": [
+    "FW.00.004"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-134",
+   "raeume": [
+    "FW.00.042",
+    "FW.00.042"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-136",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-137",
+   "raeume": [
+    "FW.00.006"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-141",
+   "raeume": [
+    "FW.00.043.1",
+    "FW.00.043.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-149",
+   "raeume": [
+    "FW.00.045",
+    "FW.00.045"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-155",
+   "raeume": [
+    "FW.00.011"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-156",
+   "raeume": [
+    "FW.00.023",
+    "FW.00.025"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-157",
+   "raeume": [
+    "FW.00.008.1",
+    "FW.00.F02",
+    "FW.00.A01",
+    "FW.00.F02"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-158",
+   "raeume": [
+    "FW.00.F02",
+    "FW.00.012",
+    "FW.00.011"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-159",
+   "raeume": [
+    "FW.00.F02",
+    "FW.00.F02"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-160",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-161",
+   "raeume": [
+    "FW.00.009",
+    "FW.00.S04",
+    "FW.00.008.1",
+    "FW.00.F02"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-162",
+   "raeume": [
+    "FW.00.046",
+    "FW.00.F04",
+    "FW.00.047",
+    "FW.00.F04",
+    "FW.00.047"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-163",
+   "raeume": [
+    "FW.00.047",
+    "FW.00.047"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-164",
+   "raeume": [
+    "FW.00.029",
+    "FW.00.S09"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-166",
+   "raeume": [
+    "FW.00.S09",
+    "FW.00.046"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-171",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-179",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-180",
+   "raeume": [
+    "FW.00.051",
+    "FW.00.051"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-181",
+   "raeume": [
+    "FW.00.053",
+    "FW.00.051"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-182",
+   "raeume": [
+    "FW.00.053",
+    "FW.00.052"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-184",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-185",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-186",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-187",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-188",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-189",
+   "raeume": [
+    "FW.00.054",
+    "FW.00.053"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-190",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-191",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-192",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-193",
+   "raeume": [
+    "FW.00.055",
+    "FW.00.054"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-194",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-195",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-196",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-198",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-199",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-200",
+   "raeume": [],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-201",
+   "raeume": [
+    "FW.00.056",
+    "FW.00.055"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-202",
+   "raeume": [
+    "FW.00.S10.1",
+    "FW.00.S10.1"
+   ],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-207",
+   "raeume": [
+    "FW.00.S11",
+    "FW.00.S10.1",
+    "FW.00.T03",
+    "FW.00.S10.1"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-208",
+   "raeume": [
+    "FW.00.T03",
+    "FW.00.S10.1",
+    "FW.00.T03"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-215",
+   "raeume": [
+    "FW.00.058",
+    "FW.00.059"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-217",
+   "raeume": [
+    "FW.00.S06.1"
+   ],
+   "status": "kein Raumstempel – Höhe unverändert",
+   "z0": -0.18,
+   "z1": 3.15
+  },
+  {
+   "wand": "W-EG-220",
+   "raeume": [
+    "FW.00.059",
+    "FW.00.058"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.15
+   ],
+   "status": "bestätigt",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-222",
+   "raeume": [
+    "FW.00.T02",
+    "FW.00.S06.2"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.25
+   ],
+   "status": "geändert",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-224",
+   "raeume": [
+    "FW.00.T02",
+    "FW.00.S06.2"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.25
+   ],
+   "status": "geändert",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-225",
+   "raeume": [
+    "FW.00.T02",
+    "FW.00.T02"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.25
+   ],
+   "status": "geändert",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-226",
+   "raeume": [
+    "FW.00.T02",
+    "FW.00.T02"
+   ],
+   "alt": [
+    -0.18,
+    3.15
+   ],
+   "neu": [
+    -0.18,
+    3.25
+   ],
+   "status": "geändert",
+   "hinweis": ""
+  }
+ ],
+ "bodenplatte": [
+  {
+   "name": "BP-EG-01.1",
+   "ok_rfb": -0.18,
+   "uk_rfb": -0.58,
+   "d": 0.4,
+   "flaeche_m2": 530.95,
+   "raeume": [
+    "FW.00.034",
+    "FW.00.035",
+    "FW.00.036",
+    "FW.00.037",
+    "FW.00.038",
+    "FW.00.057",
+    "FW.00.058",
+    "FW.00.059",
+    "FW.00.F05",
+    "FW.00.F05.1"
+   ]
+  },
+  {
+   "name": "BP-EG-01.2",
+   "ok_rfb": -0.18,
+   "uk_rfb": -0.58,
+   "d": 0.4,
+   "flaeche_m2": 1295.59,
+   "raeume": [
+    "FW.00.001",
+    "FW.00.002",
+    "FW.00.003",
+    "FW.00.004",
+    "FW.00.005",
+    "FW.00.005.1",
+    "FW.00.006",
+    "FW.00.008.1",
+    "FW.00.010",
+    "FW.00.011",
+    "FW.00.012",
+    "FW.00.016",
+    "FW.00.017",
+    "FW.00.018",
+    "FW.00.019",
+    "FW.00.020",
+    "FW.00.021",
+    "FW.00.022",
+    "FW.00.023",
+    "FW.00.024",
+    "FW.00.025",
+    "FW.00.026",
+    "FW.00.027",
+    "FW.00.028",
+    "FW.00.029",
+    "FW.00.030",
+    "FW.00.031",
+    "FW.00.F01",
+    "FW.00.F02",
+    "FW.00.F03"
+   ]
+  },
+  {
+   "name": "BP-EG-02.1",
+   "ok_rfb": -0.18,
+   "uk_rfb": -0.48,
+   "d": 0.3,
+   "flaeche_m2": 238.86,
+   "raeume": [
+    "FW.00.014",
+    "FW.00.T02"
+   ]
+  },
+  {
+   "name": "BP-EG-02.2",
+   "ok_rfb": -0.18,
+   "uk_rfb": -0.48,
+   "d": 0.3,
+   "flaeche_m2": 710.71,
+   "raeume": [
+    "FW.00.040",
+    "FW.00.040.1",
+    "FW.00.041",
+    "FW.00.042",
+    "FW.00.042.1",
+    "FW.00.043",
+    "FW.00.043.1",
+    "FW.00.045",
+    "FW.00.046",
+    "FW.00.047",
+    "FW.00.048",
+    "FW.00.049",
+    "FW.00.050",
+    "FW.00.051",
+    "FW.00.052",
+    "FW.00.053",
+    "FW.00.054",
+    "FW.00.055",
+    "FW.00.056",
+    "FW.00.F03.1",
+    "FW.00.F04",
+    "FW.00.F07",
+    "FW.00.T03",
+    "FW.00.T04"
+   ]
+  },
+  {
+   "name": "BP-EG-02.3",
+   "ok_rfb": -0.18,
+   "uk_rfb": -0.48,
+   "d": 0.3,
+   "flaeche_m2": 35.32,
+   "raeume": [
+    "FW.00.007",
+    "FW.00.T01"
+   ]
+  },
+  {
+   "name": "BP-EG-03",
+   "ok_rfb": 0.0,
+   "uk_rfb": -0.45,
+   "d": 0.45,
+   "flaeche_m2": 915.28,
+   "raeume": [
+    "FW.00.013",
+    "FW.00.032",
+    "FW.00.032.1",
+    "FW.00.033",
+    "FW.00.033.1"
+   ]
+  },
+  {
+   "name": "BP-EG-04",
+   "ok_rfb": 0.08,
+   "uk_rfb": -0.58,
+   "d": 0.66,
+   "flaeche_m2": 403.29,
+   "raeume": [
+    "FW.00.013.1"
+   ]
+  },
+  {
+   "name": "BP-EG-05",
+   "ok_rfb": 0.0,
+   "uk_rfb": -0.76,
+   "d": 0.76,
+   "flaeche_m2": 104.21,
+   "raeume": [
+    "FW.00.015"
+   ]
+  },
+  {
+   "name": "BP-EG-06",
+   "ok_rfb": -1.33,
+   "uk_rfb": -1.73,
+   "d": 0.4,
+   "flaeche_m2": 29.59,
+   "raeume": [
+    "FW.00.039"
+   ]
+  }
+ ],
+ "bodenplatte_hinweise": [
+  {
+   "raum": "FW.00.009",
+   "OK_RFB": -0.18,
+   "UK_RFB": 3.575,
+   "grund": "Plattendicke aus Stempel unplausibel – Fläche den Nachbarzonen zugeschlagen"
+  }
+ ],
+ "wandtypen_farben": [
+  {
+   "farbe": "#ffb13b",
+   "flaechen": 230,
+   "flaeche_m2": 6.12,
+   "typ": "TW02",
+   "grund": "Legendenfarbe"
+  },
+  {
+   "farbe": "#5eaeff",
+   "flaechen": 170,
+   "flaeche_m2": 3.14,
+   "typ": "TW15",
+   "grund": "Farbe nicht in Legende, Beschriftungen {'TW15': 13, 'TW19': 4, 'TW18': 1, 'TW22': 1, 'TW02': 1, 'VW02': 1, 'TW23': 1}"
+  },
+  {
+   "farbe": "#0000a0",
+   "flaechen": 53,
+   "flaeche_m2": 0.84,
+   "typ": "TW18",
+   "grund": "Legendenfarbe"
+  },
+  {
+   "farbe": "#008000",
+   "flaechen": 12,
+   "flaeche_m2": 0.93,
+   "typ": "TW24",
+   "grund": "Legendenfarbe"
+  },
+  {
+   "farbe": "#0080c0",
+   "flaechen": 17,
+   "flaeche_m2": 0.75,
+   "typ": "TW16",
+   "grund": "Farbe nicht in Legende, Beschriftungen {'TW16': 1}"
+  },
+  {
+   "farbe": "#3f561b",
+   "flaechen": 10,
+   "flaeche_m2": 0.25,
+   "typ": "VW08",
+   "grund": "Legendenfarbe"
+  },
+  {
+   "farbe": "#408080",
+   "flaechen": 71,
+   "flaeche_m2": 1.14,
+   "typ": "IW",
+   "grund": "Legendenfarbe mehrdeutig ['TW21', 'IW'], Streifenbreite 2.4 cm"
+  },
+  {
+   "farbe": "#5555ff",
+   "flaechen": 128,
+   "flaeche_m2": 2.02,
+   "typ": "TW19",
+   "grund": "Legendenfarbe"
+  },
+  {
+   "farbe": "#3485c0",
+   "flaechen": 1,
+   "flaeche_m2": 0.08,
+   "typ": "VW03",
+   "grund": "Legendenfarbe mehrdeutig ['TW16', 'VW03'], Beschriftungen {'VW03': 1}"
+  },
+  {
+   "farbe": "#804040",
+   "flaechen": 12,
+   "flaeche_m2": 0.69,
+   "typ": "TW22",
+   "grund": "Legendenfarbe"
+  },
+  {
+   "farbe": "#ffb3d9",
+   "flaechen": 2,
+   "flaeche_m2": 0.18,
+   "typ": "VW04",
+   "grund": "Legendenfarbe"
+  },
+  {
+   "farbe": "#ba75ff",
+   "flaechen": 19,
+   "flaeche_m2": 2.17,
+   "typ": "VW09",
+   "grund": "Legendenfarbe"
+  },
+  {
+   "farbe": "#b2cccc",
+   "flaechen": 6,
+   "flaeche_m2": 0.13,
+   "typ": "TW19",
+   "grund": "Farbe nicht in Legende, Beschriftungen {'TW15': 1, 'TW19': 3}"
+  },
+  {
+   "farbe": "#cbf5ff",
+   "flaechen": 3,
+   "flaeche_m2": 0.03,
+   "typ": "VW02",
+   "grund": "Legendenfarbe"
+  }
+ ],
+ "wandtypen": [
+  {
+   "wand": "W-EG-001",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-002",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-005",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-006",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-007",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-008",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-010",
+   "typ": "TW15",
+   "anteil": 0.19,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-011",
+   "typ": "TW15",
+   "anteil": 0.26,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-012",
+   "typ": "TW15",
+   "anteil": 0.64,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-017",
+   "typ": "TW18",
+   "anteil": 0.61,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-018",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-021",
+   "typ": "TW15",
+   "anteil": 0.36,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-022",
+   "typ": "TW02",
+   "anteil": 0.36,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-023",
+   "typ": "TW02",
+   "anteil": 0.66,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-024",
+   "typ": null,
+   "anteil": 0.14
+  },
+  {
+   "wand": "W-EG-025",
+   "typ": "TW02",
+   "anteil": 0.37,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-026",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-027",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-028",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-033",
+   "typ": "TW15",
+   "anteil": 0.55,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-034",
+   "typ": "TW15",
+   "anteil": 0.71,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-036",
+   "typ": "TW22",
+   "anteil": 0.67,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-044",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-045",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-046",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-047",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-048",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-049",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-092",
+   "typ": "IW",
+   "anteil": 0.11,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-093",
+   "typ": "IW",
+   "anteil": 0.13,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-094",
+   "typ": "TW19",
+   "anteil": 0.64,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-095",
+   "typ": "TW19",
+   "anteil": 0.8,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-096",
+   "typ": "TW19",
+   "anteil": 0.61,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-097",
+   "typ": "TW19",
+   "anteil": 0.44,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-098",
+   "typ": "TW19",
+   "anteil": 0.47,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-099",
+   "typ": "TW19",
+   "anteil": 0.52,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-100",
+   "typ": "TW19",
+   "anteil": 0.56,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-101",
+   "typ": "TW19",
+   "anteil": 0.42,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-102",
+   "typ": "TW19",
+   "anteil": 0.47,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-103",
+   "typ": "TW02",
+   "anteil": 0.68,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-104",
+   "typ": "TW15",
+   "anteil": 0.6,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-105",
+   "typ": "TW15",
+   "anteil": 0.63,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-106",
+   "typ": "TW15",
+   "anteil": 0.8,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-107",
+   "typ": "TW15",
+   "anteil": 0.55,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-112",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-121",
+   "typ": "TW02",
+   "anteil": 0.55,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-123",
+   "typ": "TW19",
+   "anteil": 0.64,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-124",
+   "typ": "TW02",
+   "anteil": 0.24,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-125",
+   "typ": "TW02",
+   "anteil": 0.56,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-127",
+   "typ": "TW19",
+   "anteil": 0.61,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-128",
+   "typ": null,
+   "anteil": 0.06
+  },
+  {
+   "wand": "W-EG-129",
+   "typ": null,
+   "anteil": 0.13
+  },
+  {
+   "wand": "W-EG-130",
+   "typ": "TW15",
+   "anteil": 0.29,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-131",
+   "typ": "IW",
+   "anteil": 0.15,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-132",
+   "typ": "TW15",
+   "anteil": 0.27,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-133",
+   "typ": "VW08",
+   "anteil": 0.25,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-134",
+   "typ": "TW19",
+   "anteil": 0.56,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-136",
+   "typ": null,
+   "anteil": 0.08
+  },
+  {
+   "wand": "W-EG-137",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-141",
+   "typ": "TW15",
+   "anteil": 0.33,
+   "status": "prüfen",
+   "hinweis": "mehrere Typfarben: TW15 33%, TW19 33%"
+  },
+  {
+   "wand": "W-EG-149",
+   "typ": "TW16",
+   "anteil": 0.6,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-155",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-156",
+   "typ": "VW09",
+   "anteil": 0.43,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-157",
+   "typ": "IW",
+   "anteil": 0.14,
+   "status": "automatisch zugeordnet",
+   "hinweis": "Planbeschriftung in der Nähe: TW18"
+  },
+  {
+   "wand": "W-EG-158",
+   "typ": "TW02",
+   "anteil": 0.49,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-159",
+   "typ": "TW18",
+   "anteil": 0.72,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-160",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-161",
+   "typ": "TW22",
+   "anteil": 0.23,
+   "status": "prüfen",
+   "hinweis": "mehrere Typfarben: TW22 23%, TW15 21%"
+  },
+  {
+   "wand": "W-EG-162",
+   "typ": "TW18",
+   "anteil": 0.28,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-163",
+   "typ": "TW18",
+   "anteil": 0.53,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-164",
+   "typ": "VW09",
+   "anteil": 0.56,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-166",
+   "typ": "TW15",
+   "anteil": 0.73,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-171",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-179",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-180",
+   "typ": "TW15",
+   "anteil": 0.55,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-181",
+   "typ": "VW08",
+   "anteil": 0.24,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-182",
+   "typ": "TW02",
+   "anteil": 0.72,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-184",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-185",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-186",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-187",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-188",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-189",
+   "typ": "TW02",
+   "anteil": 0.69,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-190",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-191",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-192",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-193",
+   "typ": "TW02",
+   "anteil": 0.69,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-194",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-195",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-196",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-198",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-199",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-200",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-201",
+   "typ": "TW02",
+   "anteil": 0.68,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-202",
+   "typ": "TW18",
+   "anteil": 0.68,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-207",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-208",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-215",
+   "typ": "TW24",
+   "anteil": 0.65,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-217",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-220",
+   "typ": "TW02",
+   "anteil": 0.72,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-222",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-224",
+   "typ": null,
+   "anteil": 0.0
+  },
+  {
+   "wand": "W-EG-225",
+   "typ": "TW18",
+   "anteil": 0.71,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  },
+  {
+   "wand": "W-EG-226",
+   "typ": "TW18",
+   "anteil": 0.68,
+   "status": "automatisch zugeordnet",
+   "hinweis": ""
+  }
+ ],
+ "verstaerkungen": [
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-220",
+   "seite": "B",
+   "laenge_m": 3.51
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-103",
+   "seite": "B",
+   "laenge_m": 3.72
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-220",
+   "seite": "A",
+   "laenge_m": 3.32
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-103",
+   "seite": "A",
+   "laenge_m": 3.64
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-189",
+   "seite": "B",
+   "laenge_m": 7.4
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-189",
+   "seite": "A",
+   "laenge_m": 7.4
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-193",
+   "seite": "B",
+   "laenge_m": 7.4
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-193",
+   "seite": "A",
+   "laenge_m": 7.4
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-201",
+   "seite": "B",
+   "laenge_m": 7.4
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-201",
+   "seite": "A",
+   "laenge_m": 7.4
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-182",
+   "seite": "A",
+   "laenge_m": 3.64
+  },
+  {
+   "art": "Stahlblech flächig",
+   "wand": "W-EG-182",
+   "seite": "B",
+   "laenge_m": 3.5
+  },
+  {
+   "art": "Traverse Feuerlöscher Holz",
+   "wand": "W-EG-024",
+   "seite": "A",
+   "laenge_m": 0.63
+  },
+  {
+   "art": "Traverse Feuerlöscher Holz",
+   "laenge_m": 0.62,
+   "wand": null,
+   "hinweis": "keine Trockenbauwand in 35 cm"
+  },
+  {
+   "art": "Traverse Feuerlöscher Holz",
+   "laenge_m": 0.62,
+   "wand": null,
+   "hinweis": "keine Trockenbauwand in 35 cm"
+  },
+  {
+   "art": "Stahlblech Alarmmonitor",
+   "wand": "W-EG-161",
+   "seite": "A",
+   "laenge_m": 1.17
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-025",
+   "x": 19.97,
+   "y": 55.19
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-225",
+   "x": 75.28,
+   "y": 58.66
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-226",
+   "x": 76.47,
+   "y": 58.66
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-202",
+   "x": 51.5,
+   "y": 20.09
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-149",
+   "x": 18.44,
+   "y": 14.48
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-149",
+   "x": 18.44,
+   "y": 13.04
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-108",
+   "x": 14.07,
+   "y": 8.19
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-106",
+   "x": 14.11,
+   "y": 9.45
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-122",
+   "x": 5.44,
+   "y": 9.51
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-107",
+   "x": 6.58,
+   "y": 9.51
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-107",
+   "x": 9.78,
+   "y": 9.51
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-107",
+   "x": 10.88,
+   "y": 9.51
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-097",
+   "x": 10.88,
+   "y": 12.41
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-097",
+   "x": 9.76,
+   "y": 12.41
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-097",
+   "x": 6.62,
+   "y": 12.41
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-097",
+   "x": 5.51,
+   "y": 12.41
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-130",
+   "x": 11.57,
+   "y": 61.51
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-130",
+   "x": 11.57,
+   "y": 60.48
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": null,
+   "x": 10.83,
+   "y": 57.32
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-126",
+   "x": 9.79,
+   "y": 57.32
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": null,
+   "x": 13.03,
+   "y": 54.79
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-024",
+   "x": 12.11,
+   "y": 55.22
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-121",
+   "x": 4.97,
+   "y": 51.03
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-121",
+   "x": 4.97,
+   "y": 49.95
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-125",
+   "x": 9.48,
+   "y": 51.03
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-124",
+   "x": 9.48,
+   "y": 49.95
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-152",
+   "x": 18.98,
+   "y": 57.32
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-157",
+   "x": 19.93,
+   "y": 57.33
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-157",
+   "x": 20.46,
+   "y": 57.32
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-010",
+   "x": 20.29,
+   "y": 60.19
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 21.51,
+   "y": 60.19
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 21.09,
+   "y": 60.19
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-010",
+   "x": 20.75,
+   "y": 60.19
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 22.05,
+   "y": 60.19
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 22.37,
+   "y": 60.19
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 22.39,
+   "y": 59.83
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 22.09,
+   "y": 59.83
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 13.64,
+   "y": 60.07
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 13.34,
+   "y": 60.07
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 12.94,
+   "y": 60.07
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 12.58,
+   "y": 60.07
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 12.3,
+   "y": 60.07
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 13.08,
+   "y": 59.72
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 13.41,
+   "y": 59.72
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-025",
+   "x": 21.04,
+   "y": 55.19
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-024",
+   "x": 10.51,
+   "y": 55.23
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-024",
+   "x": 11.64,
+   "y": 55.22
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-162",
+   "x": 23.09,
+   "y": 15.43
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-162",
+   "x": 23.09,
+   "y": 14.52
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-162",
+   "x": 23.13,
+   "y": 13.23
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-162",
+   "x": 23.13,
+   "y": 12.03
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-162",
+   "x": 23.13,
+   "y": 11.51
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": null,
+   "x": 23.13,
+   "y": 10.31
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": null,
+   "x": 23.13,
+   "y": 9.82
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-163",
+   "x": 23.09,
+   "y": 8.58
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-097",
+   "x": 13.85,
+   "y": 12.36
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-097",
+   "x": 12.61,
+   "y": 12.36
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-106",
+   "x": 13.73,
+   "y": 9.65
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-107",
+   "x": 12.61,
+   "y": 9.62
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-131",
+   "x": 11.76,
+   "y": 58.25
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-131",
+   "x": 11.76,
+   "y": 57.69
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 21.33,
+   "y": 59.84
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 20.84,
+   "y": 59.84
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-139",
+   "x": 13.71,
+   "y": 54.84
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-136",
+   "x": 13.71,
+   "y": 54.28
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 8.02,
+   "y": 11.85
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 8.02,
+   "y": 11.43
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-093",
+   "x": 8.01,
+   "y": 13.16
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-097",
+   "x": 8.01,
+   "y": 12.69
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 8.35,
+   "y": 11.85
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 8.35,
+   "y": 11.43
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-129",
+   "x": 11.38,
+   "y": 11.85
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-129",
+   "x": 11.38,
+   "y": 11.43
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-129",
+   "x": 11.44,
+   "y": 13.16
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-129",
+   "x": 11.44,
+   "y": 12.69
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-093",
+   "x": 8.26,
+   "y": 13.16
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-097",
+   "x": 8.26,
+   "y": 12.69
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-093",
+   "x": 7.99,
+   "y": 13.73
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-093",
+   "x": 8.29,
+   "y": 13.73
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 36.41,
+   "y": 13.97
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 36.75,
+   "y": 13.97
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 35.29,
+   "y": 13.98
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 35.71,
+   "y": 13.98
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 35.29,
+   "y": 13.73
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 35.71,
+   "y": 13.73
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 36.99,
+   "y": 13.3
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 36.99,
+   "y": 12.9
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 37.0,
+   "y": 12.42
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-104",
+   "x": 37.0,
+   "y": 12.09
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 37.28,
+   "y": 13.29
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 37.28,
+   "y": 12.91
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-021",
+   "x": 12.56,
+   "y": 57.32
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-021",
+   "x": 13.73,
+   "y": 57.32
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-131",
+   "x": 11.48,
+   "y": 59.47
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-131",
+   "x": 11.49,
+   "y": 59.13
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-138",
+   "x": 13.68,
+   "y": 59.72
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": null,
+   "x": 12.78,
+   "y": 59.72
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-157",
+   "x": 20.31,
+   "y": 59.53
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-157",
+   "x": 20.31,
+   "y": 58.83
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-093",
+   "x": 8.89,
+   "y": 13.73
+  },
+  {
+   "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+   "wand": "W-EG-093",
+   "x": 9.29,
+   "y": 13.73
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-010",
+   "x": 18.98,
+   "y": 60.15
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-010",
+   "x": 19.98,
+   "y": 60.15
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-092",
+   "x": 24.46,
+   "y": 14.1
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-092",
+   "x": 24.46,
+   "y": 13.69
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-092",
+   "x": 25.34,
+   "y": 14.09
+  },
+  {
+   "art": "Stahlhohlprofil 50x50",
+   "wand": "W-EG-092",
+   "x": 25.34,
+   "y": 13.69
+  },
+  {
+   "art": "Stahlhohlprofil 75x75",
+   "wand": "W-EG-159",
+   "x": 21.51,
+   "y": 57.34
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-093"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-094"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-095"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-096"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-097"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-098"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-099"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-100"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-101"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-102"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-123"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-127"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-129"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-134"
+  },
+  {
+   "art": "Korrosivitätskategorie C3",
+   "wand": "W-EG-141"
+  }
+ ],
+ "geschossteilung": [
+  {
+   "wand": "W-EG-005",
+   "neu": "W-OG1-189",
+   "z_teilung": 3.45,
+   "OK": 6.82,
+   "art": "GK"
+  },
+  {
+   "wand": "W-EG-006",
+   "neu": "W-OG1-190",
+   "z_teilung": 3.45,
+   "OK": 6.82,
+   "art": "GK"
+  },
+  {
+   "wand": "W-EG-045",
+   "neu": "W-OG1-191",
+   "z_teilung": 3.45,
+   "OK": 6.82,
+   "art": "GK"
+  },
+  {
+   "wand": "W-EG-047",
+   "neu": "W-OG1-192",
+   "z_teilung": 3.45,
+   "OK": 6.82,
+   "art": "GK"
+  },
+  {
+   "wand": "W-EG-048",
+   "neu": "W-OG1-193",
+   "z_teilung": 3.45,
+   "OK": 6.82,
+   "art": "GK"
+  },
+  {
+   "wand": "W-EG-049",
+   "neu": "W-OG1-194",
+   "z_teilung": 3.45,
+   "OK": 6.82,
+   "art": "GK"
+  }
+ ],
+ "anschluesse": [],
+ "offene_enden": [
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-005",
+   "guid": "19PDklyUjTS8LHnb3Hy8TN",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 36.41,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-005",
+   "guid": "19PDklyUjTS8LHnb3Hy8TN",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 36.79,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-006",
+   "guid": "2XbHwEzATJMOpvL_oXGuEB",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 40.91,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-006",
+   "guid": "2XbHwEzATJMOpvL_oXGuEB",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 41.29,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-007",
+   "guid": "1zgDkycP9GQPRWekB0Z6cX",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 63.41,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-007",
+   "guid": "1zgDkycP9GQPRWekB0Z6cX",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 63.79,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-008",
+   "guid": "0YXC8CYuHJ7ADURqQqpJCb",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 67.91,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-008",
+   "guid": "0YXC8CYuHJ7ADURqQqpJCb",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 68.29,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-012",
+   "guid": "14jk0qBPPRFfzTTXZx4HGL",
+   "ende": "Anfang",
+   "abstand_m": 0.43,
+   "x": 11.04,
+   "y": 59.99,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-027",
+   "guid": "2$8shAPkfRrg3wW4DK7RRQ",
+   "ende": "Anfang",
+   "abstand_m": 0.33,
+   "x": 74.04,
+   "y": 55.03,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-046",
+   "guid": "0h0JntmgbVkhhcNHQvuG5E",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 63.41,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-046",
+   "guid": "0h0JntmgbVkhhcNHQvuG5E",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 63.79,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-049",
+   "guid": "1ZIJht56rRux3GCBJb4KMd",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 49.91,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-049",
+   "guid": "1ZIJht56rRux3GCBJb4KMd",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 50.29,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-094",
+   "guid": "2hYZUf4EnS99af5mJzDSyu",
+   "ende": "Anfang",
+   "abstand_m": 0.013,
+   "x": 6.62,
+   "y": 13.5,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-096",
+   "guid": "36AutAzEfI8A160b6CCu97",
+   "ende": "Ende",
+   "abstand_m": 0.758,
+   "x": 12.65,
+   "y": 13.5,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-105",
+   "guid": "3SvPFdF_XItRvfGg$_jXMH",
+   "ende": "Anfang",
+   "abstand_m": 0.025,
+   "x": 34.45,
+   "y": 11.81,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-106",
+   "guid": "1D8uBB0iTSjBd_jdhVjaS$",
+   "ende": "Anfang",
+   "abstand_m": 0.24,
+   "x": 13.79,
+   "y": 9.57,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-107",
+   "guid": "3Esm_$lTXTUAgp2t5wGwa$",
+   "ende": "Anfang",
+   "abstand_m": 1.372,
+   "x": 6.61,
+   "y": 9.57,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-107",
+   "guid": "3Esm_$lTXTUAgp2t5wGwa$",
+   "ende": "Ende",
+   "abstand_m": 1.135,
+   "x": 12.65,
+   "y": 9.57,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-127",
+   "guid": "2rUScM2$TN79NARGscw7Iq",
+   "ende": "Anfang",
+   "abstand_m": 1.682,
+   "x": 9.54,
+   "y": 15.62,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-128",
+   "guid": "3fn79OSnLSiuE5TQGv4FF6",
+   "ende": "Ende",
+   "abstand_m": 0.43,
+   "x": 10.23,
+   "y": 57.35,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-131",
+   "guid": "2T_TvDFObJjxlNN8cFlIhU",
+   "ende": "Anfang",
+   "abstand_m": 0.71,
+   "x": 11.61,
+   "y": 59.22,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-141",
+   "guid": "09J_1RG_rTC89DV_jSQr$T",
+   "ende": "Anfang",
+   "abstand_m": 0.637,
+   "x": 14.09,
+   "y": 14.97,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-157",
+   "guid": "1$GMOnJffSARf1CV1wEbmq",
+   "ende": "Ende",
+   "abstand_m": 1.291,
+   "x": 20.35,
+   "y": 57.35,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-159",
+   "guid": "1bHWrKlRTGJ8slzwGvN1cg",
+   "ende": "Ende",
+   "abstand_m": 1.138,
+   "x": 21.69,
+   "y": 57.27,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-160",
+   "guid": "2e5pdKYWrOaOZkq_hK4vdr",
+   "ende": "Anfang",
+   "abstand_m": 0.169,
+   "x": 22.35,
+   "y": -1.46,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-160",
+   "guid": "2e5pdKYWrOaOZkq_hK4vdr",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 22.35,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-162",
+   "guid": "2rGyL7kD9MFfePI9LYv2AK",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 23.09,
+   "y": 11.62,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-163",
+   "guid": "2nxCDCNRPVSBH2l080il8D",
+   "ende": "Anfang",
+   "abstand_m": 0.445,
+   "x": 23.09,
+   "y": 8.5,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-171",
+   "guid": "3arwiwldjVg9KKU6lnIFQy",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 28.35,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-179",
+   "guid": "0u39e9lB9JFOjMqBNl4dZw",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 34.35,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-180",
+   "guid": "2lIZ$WUDTOPxzTzzphvfrD",
+   "ende": "Ende",
+   "abstand_m": 1.523,
+   "x": 37.22,
+   "y": 13.71,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-184",
+   "guid": "1kHuDf_WTJguLONTrWUb7$",
+   "ende": "Ende",
+   "abstand_m": 1.472,
+   "x": 40.31,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-185",
+   "guid": "2PPZwqQFjLaehFe693DbFT",
+   "ende": "Ende",
+   "abstand_m": 1.438,
+   "x": 41.85,
+   "y": -5.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-186",
+   "guid": "2A8YaAaDvGg8$Tv7AsCwH6",
+   "ende": "Ende",
+   "abstand_m": 0.202,
+   "x": 43.35,
+   "y": -5.74,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-190",
+   "guid": "1GZglk7_5Lje8DMUmBHIlq",
+   "ende": "Ende",
+   "abstand_m": 0.202,
+   "x": 45.6,
+   "y": -5.74,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-194",
+   "guid": "1cvCmJTffL694u5DhmZq8u",
+   "ende": "Ende",
+   "abstand_m": 0.202,
+   "x": 47.85,
+   "y": -5.74,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-198",
+   "guid": "11MAvrsgvLswmSfQ6uOxfV",
+   "ende": "Ende",
+   "abstand_m": 0.202,
+   "x": 50.16,
+   "y": -5.74,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-202",
+   "guid": "1qKL7SmBXHyxcPh1Q20dbT",
+   "ende": "Ende",
+   "abstand_m": 0.66,
+   "x": 51.5,
+   "y": 20.05,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-225",
+   "guid": "1THmk4twTUHP2Yccr8sZH5",
+   "ende": "Anfang",
+   "abstand_m": 1.105,
+   "x": 75.31,
+   "y": 58.63,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "EG",
+   "wand": "W-EG-226",
+   "guid": "0cDoCFfoXPbux7ziXC44fh",
+   "ende": "Anfang",
+   "abstand_m": 1.027,
+   "x": 76.47,
+   "y": 58.53,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-001",
+   "guid": "3$3u5a3hPLmxBUyDvhkW8q",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 5.12,
+   "y": 62.02,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-003",
+   "guid": "2WfJvPKyvGNhUaNs32kxIt",
+   "ende": "Anfang",
+   "abstand_m": 1.418,
+   "x": 24.69,
+   "y": 62.02,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-003",
+   "guid": "2WfJvPKyvGNhUaNs32kxIt",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 26.21,
+   "y": 62.02,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-013",
+   "guid": "0dms17mwLJ18rf8R877Kmr",
+   "ende": "Anfang",
+   "abstand_m": 0.638,
+   "x": 13.09,
+   "y": 57.31,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-014",
+   "guid": "1ktIGcl_fSs81VPpQxj8Mm",
+   "ende": "Anfang",
+   "abstand_m": 0.644,
+   "x": 19.37,
+   "y": 57.31,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-015",
+   "guid": "1X$IDV3PXR6u0tk1yHF8ur",
+   "ende": "Anfang",
+   "abstand_m": 0.835,
+   "x": 5.25,
+   "y": 55.21,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-015",
+   "guid": "1X$IDV3PXR6u0tk1yHF8ur",
+   "ende": "Ende",
+   "abstand_m": 1.529,
+   "x": 8.11,
+   "y": 55.21,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-017",
+   "guid": "22aIYpkzDQ$wkhsz5dkAnj",
+   "ende": "Ende",
+   "abstand_m": 0.625,
+   "x": 26.82,
+   "y": 55.19,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-028",
+   "guid": "2bOJlMfBPSRheZncsebbvu",
+   "ende": "Ende",
+   "abstand_m": 0.03,
+   "x": 12.44,
+   "y": 53.95,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-047",
+   "guid": "3pJDioW_XQfQd3kbxFhVyo",
+   "ende": "Ende",
+   "abstand_m": 0.325,
+   "x": 19.17,
+   "y": 31.84,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-048",
+   "guid": "2IxMcwCWDTtQUEE$Yd7cVF",
+   "ende": "Ende",
+   "abstand_m": 0.325,
+   "x": 19.17,
+   "y": 30.87,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-050",
+   "guid": "1WdqoXyoPJaQ_Sk2JAUFRB",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 0.15,
+   "y": 30.71,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-052",
+   "guid": "3jlpgW6STVoATY_qjJNdRT",
+   "ende": "Ende",
+   "abstand_m": 0.3,
+   "x": 19.14,
+   "y": 28.83,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-055",
+   "guid": "2rtYxpzFPM48rxMorbjsBo",
+   "ende": "Ende",
+   "abstand_m": 0.3,
+   "x": 19.14,
+   "y": 27.86,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-068",
+   "guid": "3kFSiFRhnIsw1S_pJV4YzN",
+   "ende": "Ende",
+   "abstand_m": 0.14,
+   "x": 51.56,
+   "y": 19.96,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-070",
+   "guid": "3NoaaL3W9UFAtavnKh1gtV",
+   "ende": "Ende",
+   "abstand_m": 1.123,
+   "x": 51.52,
+   "y": 18.79,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-087",
+   "guid": "2jnA_FPtvT4fU16ZNs$4M2",
+   "ende": "Anfang",
+   "abstand_m": 0.602,
+   "x": 38.19,
+   "y": 11.18,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-089",
+   "guid": "3E9eqDU1LIvADFvbw2$6NJ",
+   "ende": "Ende",
+   "abstand_m": 0.025,
+   "x": 37.05,
+   "y": 11.17,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-099",
+   "guid": "0PL6EH9S1TrxdniuzvBnM5",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": -0.12,
+   "y": 60.3,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-099",
+   "guid": "0PL6EH9S1TrxdniuzvBnM5",
+   "ende": "Ende",
+   "abstand_m": 1.375,
+   "x": -0.12,
+   "y": 58.83,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-111",
+   "guid": "1TqoPccwjPQuMM$kMbvNoi",
+   "ende": "Ende",
+   "abstand_m": 0.022,
+   "x": 6.84,
+   "y": -1.13,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-114",
+   "guid": "1u6TxI1zPNxP4NTBXpd0$I",
+   "ende": "Anfang",
+   "abstand_m": 0.886,
+   "x": 9.69,
+   "y": 54.97,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-116",
+   "guid": "3$iSSKFTTSEgGGYYwy6B4k",
+   "ende": "Anfang",
+   "abstand_m": 1.363,
+   "x": 11.21,
+   "y": 57.53,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-116",
+   "guid": "3$iSSKFTTSEgGGYYwy6B4k",
+   "ende": "Ende",
+   "abstand_m": 1.363,
+   "x": 11.21,
+   "y": 57.27,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-133",
+   "guid": "0TZvybZcXKYezf7rtitIm0",
+   "ende": "Ende",
+   "abstand_m": 1.014,
+   "x": 18.61,
+   "y": 53.11,
+   "hinweis": "Lücke in gleicher Flucht – Durchgang/Öffnung prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-148",
+   "guid": "3YeKax5sHMzvlHatPy$k0l",
+   "ende": "Anfang",
+   "abstand_m": 1.438,
+   "x": 32.01,
+   "y": 19.81,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-157",
+   "guid": "0trtCoLj9UuQUT0qYXWQop",
+   "ende": "Anfang",
+   "abstand_m": 1.54,
+   "x": 48.67,
+   "y": 15.62,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-161",
+   "guid": "0z4na1VxTJl8RZKgm_vMMB",
+   "ende": "Anfang",
+   "abstand_m": 1.172,
+   "x": 50.29,
+   "y": 15.62,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-161",
+   "guid": "0z4na1VxTJl8RZKgm_vMMB",
+   "ende": "Ende",
+   "abstand_m": 1.247,
+   "x": 50.29,
+   "y": 13.11,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-162",
+   "guid": "0jzUWcc0LQQBq4cu2vix4R",
+   "ende": "Anfang",
+   "abstand_m": 0.371,
+   "x": 51.6,
+   "y": 13.11,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-163",
+   "guid": "1g338B_y5Pc8N0HGLZrFbh",
+   "ende": "Anfang",
+   "abstand_m": 1.118,
+   "x": 51.91,
+   "y": 14.48,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-163",
+   "guid": "1g338B_y5Pc8N0HGLZrFbh",
+   "ende": "Ende",
+   "abstand_m": 0.383,
+   "x": 51.91,
+   "y": 13.41,
+   "hinweis": "Anschluss prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-184",
+   "guid": "24aKNltgbRGQk$T4FhAiCs",
+   "ende": "Ende",
+   "abstand_m": 1.052,
+   "x": 75.3,
+   "y": 57.5,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-185",
+   "guid": "25p5WAMWTQIPTg36lC1SUN",
+   "ende": "Ende",
+   "abstand_m": 1.027,
+   "x": 76.47,
+   "y": 57.52,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-189",
+   "guid": "2HPCs4UaD54x760FBNxnaE",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 36.41,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-189",
+   "guid": "2HPCs4UaD54x760FBNxnaE",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 36.79,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-190",
+   "guid": "0BXwOBCiv0J8HsFDem8tvK",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 40.91,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-190",
+   "guid": "0BXwOBCiv0J8HsFDem8tvK",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 41.29,
+   "y": 61.74,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-194",
+   "guid": "3Dj0F54Qv6XfFAQzLsOUuG",
+   "ende": "Anfang",
+   "abstand_m": 9.9,
+   "x": 49.91,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  },
+  {
+   "geschoss": "OG1",
+   "wand": "W-OG1-194",
+   "guid": "3Dj0F54Qv6XfFAQzLsOUuG",
+   "ende": "Ende",
+   "abstand_m": 9.9,
+   "x": 50.29,
+   "y": 49.42,
+   "hinweis": "frei endend (z. B. Raumteiler) – prüfen"
+  }
+ ]
+}

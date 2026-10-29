@@ -55,6 +55,25 @@ def pruefen(ifc_path, projekt_dir):
                                     "partner_guid": W[j].el.GlobalId,
                                     "text": f"überlappt mit {W[j].name()} ({a:.2f} m² Grundfläche) – Doppelzählung prüfen".replace(".", ",")})
 
+    for el in f.by_type("IfcWall"):
+        wt = ue.get_type(el)
+        d = ue.get_psets(wt).get("HFW_Wandtyp_Detail", {}) if wt else {}
+        mx = d.get("Max_Raumhoehe")
+        if mx:
+            import re
+            m = re.search(r"(\d+[,.]\d+)", mx)
+            w = Wand(el)
+            if m and w.H > float(m.group(1).replace(",", ".")) + 0.005:
+                befunde.append({"pruefung": "max_raumhoehe", "stufe": "Fehler", "element": el.Name, "guid": el.GlobalId,
+                                "text": f"Wandhöhe {w.H:.2f} m > max. Raumhöhe {d.get('Wandtyp')} ({mx})".replace(".", ",")})
+        pw = ue.get_psets(el).get("HFW_Wandtyp", {})
+        if pw.get("Pruefstatus") == "prüfen":
+            befunde.append({"pruefung": "wandtyp", "stufe": "Hinweis", "element": el.Name, "guid": el.GlobalId,
+                            "text": f"Wandtyp {pw.get('Wandtyp')} automatisch zugeordnet, prüfen: {pw.get('Hinweis', '')}"})
+        he = ue.get_psets(el).get("HFW_Erfassung", {}).get("Hoehe_Hinweis")
+        if he and "prüfen" in he:
+            befunde.append({"pruefung": "hoehe", "stufe": "Hinweis", "element": el.Name, "guid": el.GlobalId, "text": he})
+
     for o in offene_enden(f):
         befunde.append({"pruefung": "offene_enden", "stufe": "Hinweis", "element": o["wand"], "guid": o["guid"],
                         "text": f"{o['ende']}: {o['hinweis']} (Abstand {o['abstand_m']:.2f} m)".replace(".", ","),
@@ -72,6 +91,7 @@ def pruefen(ifc_path, projekt_dir):
 
 
 TITEL = {"guid_doppelt": "Doppelte GlobalId", "geschossgrenze": "Wand über Geschossgrenze",
+         "max_raumhoehe": "Wandhöhe über max. Raumhöhe des Wandtyps", "wandtyp": "Wandtyp prüfen", "hoehe": "Wandhöhe prüfen",
          "ueberlappung": "Überlappende Wände", "offene_enden": "Offene Trockenbau-Wandenden",
          "raum_ohne_geometrie": "Räume ohne Geometrie"}
 

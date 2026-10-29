@@ -106,6 +106,16 @@ table.kv td:last-child{font-family:var(--f-num);word-break:break-word}
 .toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--panel);padding:8px 14px;border-radius:6px;font-size:12.5px;z-index:20;max-width:90vw}
 .loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:13px}
 .mobtabs{display:none}
+.wtk{border:1px solid var(--line);border-radius:6px;margin:6px 0;overflow:hidden}
+.wtk>summary{display:flex;gap:8px;align-items:center;padding:6px 8px;cursor:pointer;list-style:none;background:var(--bg)}
+.wtk>summary::-webkit-details-marker{display:none}
+.wtk .sw{width:16px;height:16px}
+.wtk .wtn{font-weight:600;font-size:12px}
+.wtk .wts{margin-left:auto;font:11px var(--f-num);color:var(--muted);white-space:nowrap}
+.wtk .wtb{padding:6px 8px}
+.wtk img,.wtcard img{width:100%;background:#fff;border:1px solid var(--line);border-radius:4px;margin-top:6px}
+.wtcard{border:1px solid var(--line);border-radius:6px;padding:6px 8px;margin:6px 0}
+.wtcard ol{margin:4px 0 0;padding-left:18px;font-size:11.5px}
 @media (max-width:900px){
   body{overflow:auto}
   .app{height:auto;min-height:100%}
@@ -142,7 +152,8 @@ table.kv td:last-child{font-family:var(--f-num);word-break:break-word}
         <option value="class">Farbe: Bauteilklasse</option>
         <option value="art">Farbe: Wandart</option>
         <option value="fire">Farbe: Brandschutz</option>
-        <option value="type">Farbe: Wandtyp</option>
+        <option value="type">Farbe: Wandtyp (Erfassung)</option>
+        <option value="tw">Farbe: Wandtyp Plan (TW/VW)</option>
       </select>
       <button class="tb" id="bIfc" title="IFC-Datei herunterladen">⬇ IFC</button>
     </div>
@@ -156,6 +167,7 @@ table.kv td:last-child{font-family:var(--f-num);word-break:break-word}
       <div class="tabs" role="tablist">
         <button class="tab" role="tab" aria-selected="true" data-t="tree">Modell</button>
         <button class="tab" role="tab" aria-selected="false" data-t="auf">Aufmaß Trockenbau</button>
+        <button class="tab" role="tab" aria-selected="false" data-t="wt">Wandtypen</button>
         <button class="tab" role="tab" aria-selected="false" data-t="info">Planstand</button>
       </div>
       <div class="pbody" id="p-tree">
@@ -163,6 +175,7 @@ table.kv td:last-child{font-family:var(--f-num);word-break:break-word}
         <div id="tree"></div>
       </div>
       <div class="pbody" id="p-auf" hidden></div>
+      <div class="pbody" id="p-wt" hidden></div>
       <div class="pbody" id="p-info" hidden></div>
     </section>
     <section class="viewwrap" id="vw">
@@ -179,6 +192,8 @@ table.kv td:last-child{font-family:var(--f-num);word-break:break-word}
         <span class="chip"><input type="checkbox" id="tRlab" class="vis"><label for="tRlab">Raumnummern</label></span>
         <span class="chip"><input type="checkbox" id="tWd" class="vis" checked><label for="tWd">Durchbrüche</label></span>
         <span class="chip"><input type="checkbox" id="tWdF" class="vis"><label for="tWdF">ohne Wand</label></span>
+        <span class="chip"><input type="checkbox" id="tVs" class="vis" checked><label for="tVs">Verstärkungen</label></span>
+        <span class="chip"><input type="checkbox" id="tBp" class="vis" checked><label for="tBp">Bodenplatte</label></span>
         <span class="chip"><input type="checkbox" id="tMk" class="vis" checked><label for="tMk">Markierungen</label></span>
         <span class="chip" id="markChip" hidden>Wand anklicken, um eine Markierung zu setzen</span>
         <span class="chip" id="measChip" hidden><span id="measInfo">Punkt 1 wählen</span><button class="tb" id="bMclr" style="padding:2px 6px">Löschen</button></span>
@@ -226,7 +241,7 @@ const root=new THREE.Group(); scene.add(root);
 const gridGroup=new THREE.Group(); scene.add(gridGroup);
 const measGroup=new THREE.Group(); scene.add(measGroup);
 
-const COL={IfcOpeningElement:0xd8343c,IfcBuildingElementProxy:0xf08c28,IfcWall:0xb9bfc6,IfcDoor:0x6f8fb5,IfcWindow:0x9fd3ea,IfcColumn:0x7f868e,IfcStairFlight:0xb59c74,IfcSpace:0x4f8fd8,default:0xc9c9c9};
+const COL={IfcSlab:0xa3a9b0,IfcMember:0xd2342f,IfcOpeningElement:0xd8343c,IfcBuildingElementProxy:0xf08c28,IfcWall:0xb9bfc6,IfcDoor:0x6f8fb5,IfcWindow:0x9fd3ea,IfcColumn:0x7f868e,IfcStairFlight:0xb59c74,IfcSpace:0x4f8fd8,default:0xc9c9c9};
 const ART={GK:0xe57a2e,STB:0xa9b1ba,MW:0xb65a40};
 const FIRE={'F90':0xe06666,'BBW F90':0xa55aff,'A (nb)':0x6fd6d6,'F60':0xf0b48a,none:0xc5cad0};
 const matCache={};
@@ -268,7 +283,7 @@ async function load(){
     if(e.c!=='IfcSpace'){const eg=new THREE.EdgesGeometry(g,25);const ls=new THREE.LineSegments(eg,edgeMat);ls.raycast=()=>{};m.add(ls)}
     if(e.c==='IfcSpace'){m.visible=false;m.renderOrder=2}
     if(e.c==='IfcBuildingElementProxy')m.visible=false;
-    if(e.c==='IfcOpeningElement'||e.c==='IfcBuildingElementProxy')m.renderOrder=3;
+    if(e.c==='IfcOpeningElement'||e.c==='IfcBuildingElementProxy'||e.c==='IfcMember')m.renderOrder=3;
     meshes[e.g]=m; root.add(m);
     if(e.c!=='IfcSpace')bbox.expandByObject(m);
   }
@@ -313,6 +328,9 @@ function typeColor(t){if(!t)return COL.default;if(!typeColors[t]){const n=Object
 function baseColor(e){
   if(e.c==='IfcSpace')return COL.IfcSpace;
   if(e.c==='IfcOpeningElement'||e.c==='IfcBuildingElementProxy')return COL[e.c];
+  if(e.c==='IfcMember'){const h=M.meta.verstaerkung_farben?.[e.o];return h?parseInt(h.slice(1),16):COL.IfcMember}
+  if(e.c==='IfcSlab')return COL.IfcSlab;
+  if(colorMode==='tw'){if(e.c!=='IfcWall')return 0xdde1e5;const k=WT()[wtyp(e)];return k?.farbe?parseInt(k.farbe.slice(1),16):(wallArt(e)==='GK'?0xf1e3d6:0xc5cad0)}
   if(colorMode==='class')return e.c==='IfcWall'?(wallArt(e)==='GK'?ART.GK:COL.IfcWall):(COL[e.c]??COL.default);
   if(colorMode==='art'){if(e.c!=='IfcWall')return 0xd9dde2;return ART[wallArt(e)]??COL.default}
   if(colorMode==='fire'){if(e.c!=='IfcWall')return 0xdde1e5;const fr=e.p?.Pset_WallCommon?.FireRating;return FIRE[fr]??FIRE.none}
@@ -337,6 +355,7 @@ function legend(){
   if(colorMode==='art')items=[['Trockenbau (GK)',ART.GK],['Stahlbeton',ART.STB],['Mauerwerk',ART.MW]];
   if(colorMode==='fire')items=[['F90 feuerbeständig',FIRE.F90],['BBW F90-A+[M]',FIRE['BBW F90']],['F60',FIRE.F60],['nichtbrennbar A',FIRE['A (nb)']],['ohne Angabe',FIRE.none]];
   if(colorMode==='type'){const n=Object.keys(typeColors).length;L.innerHTML=`<div>${n} Wandtypen, Farbe je Typ</div>`;return}
+  if(colorMode==='tw'){const used=new Set(M.elements.map(wtyp).filter(Boolean));items=[...used].sort().map(t=>[wtTitel(t),parseInt((WT()[t]?.farbe||'#cccccc').slice(1),16)]);items.push(['GK ohne Plantyp',0xf1e3d6])}
   L.innerHTML=items.map(([t,c])=>`<div><span class="sw" style="background:#${c.toString(16).padStart(6,'0')}"></span>${t}</div>`).join('');
 }
 
@@ -360,7 +379,7 @@ function setCam(mode){
 $('#bFit').onclick=()=>fit();
 $('#b3d').onclick=()=>{setSection(false);setCam('3d')};
 function stZ(n){return (M.storeys.find(s=>s.n===n)||{z:0}).z}
-function baseVis(g){const e=E[g];return (e.c!=='IfcSpace'||$('#tSpace').checked)&&(e.c!=='IfcOpeningElement'||$('#tWd').checked)&&(e.c!=='IfcBuildingElementProxy'||$('#tWdF').checked)&&(stFilter==='all'||e.st===stFilter)}
+function baseVis(g){const e=E[g];return (e.c!=='IfcSpace'||$('#tSpace').checked)&&(e.c!=='IfcMember'||$('#tVs').checked)&&(e.c!=='IfcSlab'||$('#tBp').checked)&&(e.c!=='IfcOpeningElement'||$('#tWd').checked)&&(e.c!=='IfcBuildingElementProxy'||$('#tWdF').checked)&&(stFilter==='all'||e.st===stFilter)}
 let stFilter='all';
 function setStorey(n){stFilter=n;$('#stSel').value=n;for(const g in meshes)meshes[g].visible=baseVis(g);syncTreeChecks();
   if(camera===ortho){setSection(true,stZ(n==='all'?M.storeys[0].n:n)+1.0)}fit()}
@@ -381,7 +400,7 @@ $('#sz').oninput=e=>{clipZ.constant=+e.target.value;$('#szv').textContent=(clipZ
 $('#tGrid').onchange=e=>{gridGroup.visible=e.target.checked};
 $('#tSpace').onchange=e=>{for(const g in meshes)if(E[g].c==='IfcSpace')meshes[g].visible=baseVis(g);syncTreeChecks()};
 $('#tRlab').onchange=e=>buildRoomLabels(e.target.checked);
-$('#tWd').onchange=$('#tWdF').onchange=()=>{for(const g in meshes)if(E[g].c==='IfcOpeningElement'||E[g].c==='IfcBuildingElementProxy')meshes[g].visible=baseVis(g);syncTreeChecks()};
+$('#tWd').onchange=$('#tWdF').onchange=$('#tVs').onchange=$('#tBp').onchange=()=>{for(const g in meshes)if(['IfcOpeningElement','IfcBuildingElementProxy','IfcMember','IfcSlab'].includes(E[g].c))meshes[g].visible=baseVis(g);syncTreeChecks()};
 $('#tMk').onchange=()=>{};
 function select(gs,add){
   if(!add)sel.clear();
@@ -512,7 +531,7 @@ addEventListener('keydown',e=>{
 });
 
 /* ---------- Modellbaum ---------- */
-const CLS={IfcWall:'Wände',IfcDoor:'Türen',IfcWindow:'Fenster',IfcOpeningElement:'Durchbrüche',IfcBuildingElementProxy:'Durchbrüche ohne Wand',IfcColumn:'Stützen',IfcStairFlight:'Treppenläufe',IfcSpace:'Räume'};
+const CLS={IfcWall:'Wände',IfcSlab:'Bodenplatte / Decken',IfcMember:'Verstärkungen',IfcDoor:'Türen',IfcWindow:'Fenster',IfcOpeningElement:'Durchbrüche',IfcBuildingElementProxy:'Durchbrüche ohne Wand',IfcColumn:'Stützen',IfcStairFlight:'Treppenläufe',IfcSpace:'Räume'};
 function elLabel(e){if(e.c==='IfcSpace')return `${e.n} ${e.d||e.o||''}`;if(e.c==='IfcWall')return `${e.n}  ${e.p?.HFW_Erfassung?.Lage||''}`;return `${e.n||''} ${e.d||''}`}
 function buildTree(){
   const T={};
@@ -576,6 +595,10 @@ function renderProps(){
     h+=`<div class="chip" style="margin:6px 0"><input type="checkbox" class="vis" id="pwd" ${v?'checked':''}><label for="pwd">Im Aufmaß abziehen</label></div>`}
   h+=`<div class="sec">Attribute</div>`+kvTable({'IFC-Klasse':e.c,'GlobalId':e.g,'Name':e.n,'Beschreibung':e.d,'ObjectType':e.o,'Tag':e.tag,'PredefinedType':e.pt,'Typ':e.ty,'Geschoss':e.st});
   if(e.auf){const a=e.auf;h+=`<div class="sec">Aufmaßwerte</div>`+kvTable({'Länge [m]':a.L,'Höhe [m]':a.H,'Dicke [m]':a.t,'Wandfläche brutto [m²]':a.L*a.H,'Öffnungen':a.ops.length?a.ops.map(o=>`${o.typ==='Durchbruch'?(o.tag||'WD'):o.typ+' '+f2(o.b)+'×'+f2(o.h)+(o.tag?' '+o.tag:'')}`).join('; '):'keine','Manuelle Markierungen':MK.filter(m=>m.wall===e.g).length||null,'Lage':a.lage,'Raum Seite A':a.rA,'Raum Seite B':a.rB})}
+  if(e.c==='IfcWall'&&(wallArt(e)==='GK'||wtyp(e))){const t=wtyp(e),man=!!WTZ[e.g];
+    h+=`<div class="sec">Wandtyp Plan (Detail)</div><div class="form"><label for="pwt">Typ</label><select id="pwt"><option value="">– kein Plantyp –</option>${Object.keys(WT()).map(k=>`<option value="${k}"${k===t?' selected':''}>${esc(wtTitel(k))}</option>`).join('')}</select></div>
+    <div class="note">${t?(man?'manuell zugeordnet'+(WTZ[e.g].datum?' am '+esc(WTZ[e.g].datum):''):'aus Plan '+esc(e.p?.HFW_Wandtyp?.Quelle||'')+(e.p?.HFW_Wandtyp?.Pruefstatus==='prüfen'?' – <b>prüfen</b>':'')):'Noch kein Plantyp. Typ wählen, um ihn zuzuordnen (wird gespeichert und im Aufmaß verwendet).'}${man&&e.p?.HFW_Wandtyp?.Wandtyp?' | Plan: '+esc(e.p.HFW_Wandtyp.Wandtyp):''}</div>
+    ${man?'<div class="btnrow"><button class="tb" id="pwtx">Manuelle Zuordnung entfernen</button></div>':''}${t?wtCard(t):''}`}
   if(e.ml){h+=`<div class="sec">Schichtaufbau</div><table class="kv">${e.ml.map(l=>`<tr><td>${esc(l[0])}</td><td>${nf2.format(l[1])} mm</td></tr>`).join('')}</table>`}
   for(const [ps,vals] of Object.entries(e.p||{})){h+=`<details open><summary class="sec" style="cursor:pointer">${esc(ps)}</summary>${kvTable(vals)}</details>`}
   P.innerHTML=h;
@@ -583,7 +606,49 @@ function renderProps(){
   $('#pc').onclick=()=>{navigator.clipboard?.writeText(e.g).then(()=>toast('GUID kopiert'),()=>toast(e.g))};
   if($('#ph'))$('#ph').onclick=()=>{select([e.host],false);zoomTo([e.host]);revealInTree(e.host)};
   if($('#pm'))$('#pm').onclick=()=>openMarkForm({wall:e.g,along:e.auf.L/2,z:(e.auf.z0+e.auf.z1)/2});
+  if($('#pwt'))$('#pwt').onchange=ev=>setWT(e.g,ev.target.value);
+  if($('#pwtx'))$('#pwtx').onclick=()=>setWT(e.g,null);
   if($('#pwd'))$('#pwd').onchange=ev=>{CFG.wdx[e.g]=ev.target.checked;saveCfg();renderAuf();toast(ev.target.checked?'Durchbruch wird abgezogen':'Durchbruch wird nicht abgezogen')};
+}
+
+/* ---------- Wandtypen (Plan / Detailkatalog) ---------- */
+let WTZ={};                                   // manuelle Zuordnungen aus der Datenbank: guid -> {typ, datum}
+const WT=()=>M?.meta?.wandtypen||{};
+function wtyp(e){if(!e||e.c!=='IfcWall')return null;if(WTZ[e.g])return WTZ[e.g].typ||null;return e.p?.HFW_Wandtyp?.Wandtyp||null}
+function wtTitel(t){const k=WT()[t];return k?(k.legende||k.titel||t):t}
+function wtCard(t,mitBild=true){const k=WT()[t];if(!k)return '';const kw=k.kennwerte||{};
+  return `<div class="wtcard"><div style="display:flex;gap:8px;align-items:center"><span class="sw" style="background:${k.farbe||'#ccc'}"></span><b>${esc(wtTitel(t))}</b></div>
+  ${kvTable({'Ständerwerk':k.staenderwerk,'Brandschutz':kw.brandschutz,'Schallschutz':kw.schallschutz,'max. Raumhöhe':kw.max_raumhoehe,'Wanddicke':kw.wanddicke,'Dämmung':kw.daemmung,'Quelle':k.quelle})}
+  ${(k.schichten||[]).length?`<ol>${k.schichten.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>`:''}${mitBild&&k.bild?`<img src="${esc(k.bild)}" alt="Detail ${esc(t)}" loading="lazy">`:''}</div>`}
+function subscribeWT(){if(!db)return;db.collection('wandtypen').onSnapshot(snap=>{WTZ={};snap.docs.forEach(d=>{WTZ[d.id]=d.data()});recolor();renderAuf();if(!$('#p-wt').hidden)renderWT();if(sel.size===1)renderProps()},err=>toast('Wandtyp-Zuordnungen nicht ladbar: '+(err.code||'Fehler')))}
+async function setWT(g,typ){
+  const doc={typ:typ||null,datum:new Date().toLocaleDateString('de-DE'),wand:E[g]?.n||''};
+  if(db){try{if(typ===null)await db.collection('wandtypen').doc(g).delete();else await db.collection('wandtypen').doc(g).set(doc);toast(typ===null?'Zuordnung entfernt':`${E[g].n}: ${typ||'kein Plantyp'} gespeichert`)}catch(err){toast('Nicht gespeichert: '+(err.code||err.message))}}
+  else{if(typ===null)delete WTZ[g];else WTZ[g]=doc;recolor();renderAuf();renderProps();toast('Zuordnung nur in dieser Sitzung (Speicher nicht verfügbar)')}
+}
+function renderWT(){
+  if(!M)return;const K=WT(),walls=M.elements.filter(e=>e.c==='IfcWall'&&e.auf&&(stFilter==='all'||e.st===stFilter));
+  const by={};for(const e of walls){const t=wtyp(e);if(t)(by[t]??=[]).push(e)}
+  const ohne=walls.filter(e=>!wtyp(e)&&wallArt(e)==='GK');
+  let h=`<p class="note">Wandtypen aus Übersichtsplan und Detailblättern. Typ an einer Wand ändern: Wand wählen → Eigenschaften → „Wandtyp Plan“. Zuordnungen werden gespeichert und gelten auch für höhere Geschosse.</p>
+  <div class="btnrow"><button class="tb" id="wtFarbe">Modell nach Wandtyp einfärben</button>${ohne.length?`<button class="tb" id="wtOhne">${ohne.length} GK-Wände ohne Plantyp zeigen</button>`:''}</div>`;
+  for(const [t,k] of Object.entries(K)){const L=by[t]||[];const sL=L.reduce((s,e)=>s+e.auf.L,0),sA=L.reduce((s,e)=>s+e.auf.L*e.auf.H,0);
+    h+=`<details class="wtk"><summary><span class="sw" style="background:${k.farbe||'#ccc'}"></span><span class="wtn">${esc(wtTitel(t))}</span><span class="wts">${L.length?`${L.length} W | ${f2(sA)} m²`:'–'}</span></summary>
+    <div class="wtb">${L.length?`<div class="btnrow"><button class="tb" data-wtshow="${t}">${L.length} Wände im Modell zeigen</button></div>`:''}${wtCard(t)}</div></details>`}
+  $('#p-wt').innerHTML=h;
+  $('#wtFarbe').onclick=()=>{colorMode='tw';$('#cMode').value='tw';recolor()};
+  if($('#wtOhne'))$('#wtOhne').onclick=()=>{select(ohne.map(e=>e.g),false);xray=true;$('#bXray').setAttribute('aria-pressed',true);recolor();fit()};
+  $$('#p-wt [data-wtshow]').forEach(b=>b.onclick=()=>{const gs=(by[b.dataset.wtshow]||[]).map(e=>e.g);select(gs,false);xray=true;$('#bXray').setAttribute('aria-pressed',true);recolor();zoomTo(gs)});
+}
+/* Verstärkungen (Plan UE_12) fürs Aufmaß */
+function vsRows(){
+  const out={};
+  for(const e of M.elements){if(e.c!=='IfcMember'||(CFG.st!=='all'&&e.st!==CFG.st))continue;const v=e.p?.HFW_Verstaerkung||{};
+    const post=e.pt==='POST',plate=e.pt==='PLATE';const einheit=plate?'m²':'Stk';
+    const g=(out[e.o]??={art:e.o,einheit,rows:[],summe:0,laenge:0});
+    const menge=plate?(v.Flaeche||0):1;g.summe+=menge;g.laenge+=v.Laenge||0;
+    g.rows.push({g:e.g,n:e.n,wand:v.Wand||'–',seite:v.Seite||'',L:v.Laenge,H:plate||!post?((v.OK_ueber_FFB??0)-(v.UK_ueber_FFB??0)):null,menge})}
+  return Object.values(out).sort((a,b)=>a.art.localeCompare(b.art,'de'));
 }
 
 /* ---------- Planstand ---------- */
@@ -604,19 +669,19 @@ function renderInfo(){
   <div class="sec">Weiterarbeit</div><p class="note">Neue Pläne im Chat hochladen. Das Modell wird ergänzt und an dieser Stelle aktualisiert; Viewer, Aufmaß-Einstellungen und LV-Zuordnungen bleiben erhalten.</p>`;
   $('#p-info').querySelectorAll('[data-qg]').forEach(el=>el.onclick=()=>{const gs=el.dataset.qg.split(' ').filter(g=>meshes[g]);if(!gs.length)return toast('Bauteil ohne Geometrie');gs.forEach(g=>meshes[g].visible=true);syncTreeChecks();select(gs,false);zoomTo(gs);revealInTree(gs[0])});
 }
-const QA_TITEL={guid_doppelt:'Doppelte GlobalId',geschossgrenze:'Wand über Geschossgrenze',ueberlappung:'Überlappende Wände (Doppelzählung prüfen)',offene_enden:'Offene Trockenbau-Wandenden',raum_ohne_geometrie:'Räume ohne Geometrie'};
+const QA_TITEL={max_raumhoehe:'Wandhöhe über max. Raumhöhe des Wandtyps',wandtyp:'Wandtyp prüfen',hoehe:'Wandhöhe prüfen',guid_doppelt:'Doppelte GlobalId',geschossgrenze:'Wand über Geschossgrenze',ueberlappung:'Überlappende Wände (Doppelzählung prüfen)',offene_enden:'Offene Trockenbau-Wandenden',raum_ohne_geometrie:'Räume ohne Geometrie'};
 function qaHtml(qa){
   const by={};qa.befunde.forEach(b=>(by[b.pruefung]??=[]).push(b));
   let h=`<div class="sec">Modellprüfung (${esc(qa.datei)})</div>`;
   if(!qa.befunde.length)return h+'<p class="note"><span class="pill ok">ok</span> keine Befunde</p>';
-  for(const k of ['guid_doppelt','geschossgrenze','ueberlappung','offene_enden']){const L=by[k];if(!L)continue;
+  for(const k of ['guid_doppelt','geschossgrenze','max_raumhoehe','wandtyp','hoehe','ueberlappung','offene_enden']){const L=by[k];if(!L)continue;
     const bad=L.some(b=>b.stufe==='Fehler');
     h+=`<details class="node"><summary><span class="car">▸</span><span class="pill ${bad?'warn':''}">${L.length}</span>&nbsp;${esc(QA_TITEL[k]||k)}</summary><div class="kids note">${L.map(b=>`<div class="leaf" data-qg="${esc([b.guid,b.partner_guid].filter(Boolean).join(' '))}" title="Im Modell zeigen"><span class="nm"><b>${esc(b.element)}</b> ${esc(b.text)}</span></div>`).join('')}</div></details>`}
   return h+'<p class="note">Eintrag anklicken: Bauteil(e) werden gewählt und herangezoomt.</p>';
 }
 
 /* ---------- Tabs ---------- */
-$$('.tabs .tab[data-t]').forEach(b=>b.onclick=()=>{$$('.tabs .tab[data-t]').forEach(x=>x.setAttribute('aria-selected',x===b));['tree','auf','info'].forEach(t=>$('#p-'+t).hidden=t!==b.dataset.t);if(b.dataset.t==='auf')renderAuf()});
+$$('.tabs .tab[data-t]').forEach(b=>b.onclick=()=>{$$('.tabs .tab[data-t]').forEach(x=>x.setAttribute('aria-selected',x===b));['tree','auf','wt','info'].forEach(t=>$('#p-'+t).hidden=t!==b.dataset.t);if(b.dataset.t==='auf')renderAuf();if(b.dataset.t==='wt')renderWT()});
 $$('.mobtabs [data-m]').forEach(b=>b.onclick=()=>{$$('.mobtabs [data-m]').forEach(x=>x.setAttribute('aria-pressed',x===b));$('#left').classList.toggle('mhide',b.dataset.m!=='left');$('#right').classList.toggle('mhide',b.dataset.m!=='right')});
 if(matchMedia('(max-width:900px)').matches)$('#right').classList.add('mhide');
 
@@ -625,7 +690,7 @@ const CFG_DEF={header:{projekt:'Hauptfeuerwache mit Rettungswache Trier',ag:'Sta
   rule:'vob',wdRule:'none',wdx:{},sides:1,hov:'',filter:'gk',st:'all',lv:{},excl:{}};
 let CFG=JSON.parse(JSON.stringify(CFG_DEF)); let db=null, saveT=null, dbState='lokal';
 async function initAufmass(){
-  try{const c=await window.claude?.use?.('db');if(c){db=c;const s=await db.doc('aufmass/config').get();if(s.exists){CFG={...CFG_DEF,...s.data(),header:{...CFG_DEF.header,...(s.data().header||{})}}}CFG.wdx=CFG.wdx||{};dbState='gespeichert';subscribeMarks()}}catch(e){dbState='lokal'}
+  try{const c=await window.claude?.use?.('db');if(c){db=c;const s=await db.doc('aufmass/config').get();if(s.exists){CFG={...CFG_DEF,...s.data(),header:{...CFG_DEF.header,...(s.data().header||{})}}}CFG.wdx=CFG.wdx||{};dbState='gespeichert';subscribeMarks();subscribeWT()}}catch(e){dbState='lokal'}
   renderAuf();
 }
 function saveCfg(){clearTimeout(saveT);saveT=setTimeout(async()=>{if(!db){dbState='nur in dieser Sitzung';updDb();return}try{await db.doc('aufmass/config').set(JSON.parse(JSON.stringify(CFG)));dbState='gespeichert';}catch(e){dbState='nicht gespeichert ('+(e.code||'Fehler')+')'}updDb()},700)}
@@ -643,8 +708,9 @@ function aufRows(){
       else{ar=o.b*Math.min(o.h,H);d=CFG.rule==='all'||(CFG.rule==='vob'&&ar>2.5)}
       if(d)abz+=ar*CFG.sides;ops.push({...o,ar,d})}
     for(const m of MK){if(m.wall!==e.g||m.kind!=='open')continue;const ar=(+m.b||0)*(+m.h||0);abz+=ar*CFG.sides;ops.push({typ:'Manuell',tag:m.label||'Öffnung',b:+m.b,h:+m.h,ar,d:true,note:m.note})}
-    const r={g:e.g,id:a.id,typ:a.type,lage:a.lage,raum:[a.rA,a.rB].filter(Boolean).join(' / '),L:a.L,H,brutto,abz,netto:brutto-abz,ops,x:!!CFG.excl[e.g]};
-    (groups[a.type]??=[]).push(r)}
+    const ty=wtyp(e)?wtTitel(wtyp(e)):a.type;
+    const r={g:e.g,id:a.id,typ:ty,lage:a.lage,raum:[a.rA,a.rB].filter(Boolean).join(' / '),L:a.L,H,brutto,abz,netto:brutto-abz,ops,x:!!CFG.excl[e.g]};
+    (groups[ty]??=[]).push(r)}
   const keys=Object.keys(groups).sort((a,b)=>sumN(groups[b])-sumN(groups[a]));
   return keys.map((k,i)=>({typ:k,oz:CFG.lv[k]?.oz||'',kt:CFG.lv[k]?.kt||k,rows:groups[k].sort((a,b)=>a.id.localeCompare(b.id,'de',{numeric:true})),idx:i+1}));
 }
@@ -673,12 +739,14 @@ function renderAuf(){
       ${g.rows.map(r=>`<tr data-g="${r.g}" class="${r.x?'x':''}${sel.has(r.g)?' sel':''}" title="${esc(r.raum)}"><td><input type="checkbox" class="vis" data-ex="${r.g}" ${r.x?'':'checked'} aria-label="einbeziehen"></td><td>${esc(r.id)} | ${esc(r.lage.replace('Achse ',''))}${nWD(r)}</td><td>${f2(r.L)}</td><td>${f2(r.H)}</td><td>${f2(r.brutto)}</td><td>${r.abz?'−'+f2(r.abz):'–'}</td><td><b>${f2(r.netto)}</b></td></tr>`).join('')}
       </tbody></table></div></div>`}
   h+=`<div class="tot"><span>Summe Trockenbau ${esc(CFG.header.geschoss)}</span><span>${f2(tot)} m²</span></div>
+  ${(()=>{const V=vsRows();return V.length?`<div class="sec">Verstärkungen (Plan)</div><div style="overflow-x:auto"><table class="atab"><thead><tr><th></th><th>Art</th><th>Anzahl</th><th>Länge</th><th>Menge</th></tr></thead><tbody>${V.map(v=>`<tr data-vsart="${esc(v.art)}"><td><span class="sw" style="display:inline-block;background:${M.meta.verstaerkung_farben?.[v.art]||'#d2342f'}"></span></td><td>${esc(v.art)}</td><td>${v.rows.length}</td><td>${f2(v.laenge)} m</td><td><b>${f2(v.summe)} ${v.einheit}</b></td></tr>`).join('')}</tbody></table></div>`:''})()}
   <div class="sec">Markierungen (${MK.length})</div>${MK.length?'<div style="overflow-x:auto"><table class="atab"><thead><tr><th></th><th>Art | Bezeichnung</th><th>B</th><th>H</th><th>UK</th><th></th></tr></thead><tbody>'+MK.map(m=>`<tr data-mk="${m.id}"><td>${m.kind==='open'?'<span class="pill warn">Abzug</span>':'<span class="pill">Hinweis</span>'}</td><td title="${esc(m.note||'')}">${esc(E[m.wall]?.n||'')} ${esc(m.label||'')}${m.note?' | '+esc(m.note):''}</td><td>${m.kind==='open'?f2(+m.b):''}</td><td>${m.kind==='open'?f2(+m.h):''}</td><td>${m.uk!=null?f3(+m.uk):''}</td><td><button class="tb" data-mkdel="${m.id}" style="padding:1px 6px" title="Markierung löschen">✕</button></td></tr>`).join('')+'</tbody></table></div>':'<p class="note">Noch keine Markierungen. Mit ✚ Markieren eine Wand anklicken, um eine Öffnung zum Abziehen oder einen Hinweis zu setzen.</p>'}
   <p class="note">Abrechnung nach VOB/C DIN 18340: Wandflächen in m², Öffnungen über 2,5 m² Einzelgröße werden abgezogen. Durchbrüche (WD) aus dem Plan sind einzeln im Modell; Abzug per Regel oder je Durchbruch in den Eigenschaften. Manuell markierte Öffnungen werden immer abgezogen. Höhen und Öffnungsmaße teilweise angenommen (siehe Planstand). Ausgeschlossene Zeilen (Haken entfernt) zählen nicht zur Summe.</p>`;
   const P=$('#p-auf');P.innerHTML=h;
   $('#a_f').value=CFG.filter;$('#a_r').value=CFG.rule;$('#a_s').value=String(CFG.sides);
   P.querySelectorAll('tr[data-mk]').forEach(tr=>tr.onclick=ev=>{if(ev.target.closest('[data-mkdel]'))return;const m=MK.find(x=>x.id===tr.dataset.mk);if(m&&E[m.wall]){select([m.wall],false);zoomTo([m.wall])}});
   P.querySelectorAll('[data-mkdel]').forEach(b=>b.onclick=()=>delMark(b.dataset.mkdel));
+  P.querySelectorAll('tr[data-vsart]').forEach(tr=>tr.onclick=()=>{const gs=M.elements.filter(e=>e.c==='IfcMember'&&e.o===tr.dataset.vsart&&(CFG.st==='all'||e.st===CFG.st)).map(e=>e.g);$('#tVs').checked=true;gs.forEach(g=>meshes[g]&&(meshes[g].visible=true));select(gs,false);xray=true;$('#bXray').setAttribute('aria-pressed',true);recolor();zoomTo(gs)});
   P.querySelectorAll('[data-h]').forEach(i=>i.oninput=()=>{CFG.header[i.dataset.h]=i.value;saveCfg()});
   $('#a_f').onchange=e=>{CFG.filter=e.target.value;saveCfg();renderAuf()};
   $('#a_st').value=CFG.st||'all';$('#a_st').onchange=e=>{CFG.st=e.target.value;saveCfg();renderAuf()};
@@ -708,6 +776,8 @@ function opTxt(o){return o.typ==='Durchbruch'?`Durchbruch ${o.tag||'WD'} (${f3(o
 function exportCsv(G){
   const L=[['Pos','LV-OZ','Wandtyp','Bauteil','Lage','Räume','Länge m','Höhe m','Brutto m²','Abzug m²','Netto m²','Öffnungen'].join(';')];
   for(const g of G)for(const r of g.rows){if(r.x)continue;L.push([String(g.idx).padStart(2,'0'),g.oz,g.kt||g.typ,r.id,r.lage,r.raum,f3(r.L),f3(r.H),f2(r.brutto),f2(r.abz),f2(r.netto),r.ops.map(o=>opTxt(o)+(o.d?' (abgezogen)':'')).join(', ')].map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(';'))}
+  const V=vsRows();if(V.length){L.push('');L.push(['Verstärkung','Bauteil','Wand','Seite','Länge m','Höhe m','Menge','Einheit'].join(';'));
+    for(const v of V)for(const r of v.rows)L.push([v.art,r.n,r.wand,r.seite,f3(r.L),r.H!=null?f3(r.H):'',f2(r.menge),v.einheit].map(x=>`"${String(x??'').replace(/"/g,'""')}"`).join(';'))}
   save(fname('csv'),'﻿'+L.join('\r\n'));
 }
 function exportPdf(G){
@@ -727,6 +797,9 @@ function exportPdf(G){
     columnStyles:{3:{halign:'right'},4:{halign:'right'},5:{halign:'right'},6:{halign:'right'},7:{halign:'right'}},margin:{left:14,right:14,top:34},
     didDrawPage:d=>{if(d.pageNumber>1)head();doc.setFontSize(7.5);doc.text(`Seite ${d.pageNumber}`,283,203,{align:'right'});doc.text(`Abrechnung VOB/C DIN 18340, Öffnungen ${CFG.rule==='vob'?'> 2,5 m² abgezogen':CFG.rule==='all'?'alle abgezogen':'nicht abgezogen'}, Flächenansatz ${CFG.sides===2?'beidseitig':'einseitig'}`,14,203)}});
   const yy=doc.lastAutoTable.finalY+14; if(yy<190){doc.setFontSize(8.5);doc.line(14,yy,90,yy);doc.line(200,yy,276,yy);doc.text('Auftragnehmer, Datum, Unterschrift',14,yy+4);doc.text('Auftraggeber / Bauleitung, Datum, Unterschrift',200,yy+4)}
+  const V=vsRows();if(V.length){const vb=[];for(const v of V){vb.push([{content:v.art,colSpan:6,styles:{fontStyle:'bold',fillColor:[235,239,243]}}]);v.rows.forEach(r=>vb.push([r.n,r.wand,r.seite,f3(r.L),r.H!=null?f3(r.H):'',f2(r.menge)+' '+v.einheit]));vb.push([{content:'Summe '+v.art,colSpan:5,styles:{halign:'right',fontStyle:'bold'}},{content:f2(v.summe)+' '+v.einheit,styles:{fontStyle:'bold',halign:'right'}}])}
+    doc.addPage();head();doc.setFontSize(10);doc.setFont('helvetica','bold');doc.text('Verstärkungen in Trockenbauwänden (Plan UE_12)',14,38);doc.setFont('helvetica','normal');
+    doc.autoTable({startY:42,head:[['Bauteil','Wand','Seite','Länge [m]','Höhe [m]','Menge']],body:vb,styles:{fontSize:7.5,cellPadding:1.2},headStyles:{fillColor:[29,95,166]},columnStyles:{3:{halign:'right'},4:{halign:'right'},5:{halign:'right'}},margin:{left:14,right:14,top:34}})}
   save(fname('pdf'),doc.output('blob'));
 }
 function x(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
@@ -746,7 +819,9 @@ async function exportDocx(G){
   const border='<w:tblBorders>'+['top','left','bottom','right','insideH','insideV'].map(b=>`<w:${b} w:val="single" w:sz="4" w:space="0" w:color="B8C2CC"/>`).join('')+'</w:tblBorders>';
   const meta=[['Bauvorhaben',H.projekt],['Auftraggeber',H.ag],['Auftragnehmer',H.an||'–'],['Gewerk',H.gewerk],['Aufmaß-Nr. / Datum',`${H.nr} / ${H.datum}`],['Geschoss',H.geschoss],['Grundlage',`IFC-Modell HFW Trier, Stand ${M.meta.version} (${M.meta.generated})`],['Abrechnung',`VOB/C DIN 18340, Öffnungen ${CFG.rule==='vob'?'> 2,5 m² abgezogen':CFG.rule==='all'?'alle abgezogen':'nicht abgezogen'}, Flächenansatz ${CFG.sides===2?'beidseitig':'einseitig'}`]];
   const metaT=`<w:tbl><w:tblPr><w:tblW w:w="12600" w:type="dxa"/></w:tblPr><w:tblGrid><w:gridCol w:w="2600"/><w:gridCol w:w="10000"/></w:tblGrid>${meta.map(([k,v])=>R(wc(k,2600,{b:true})+wc(v,10000))).join('')}</w:tbl>`;
-  const body=`${wp('Aufmaß Trockenbauarbeiten',{b:true,sz:30,after:120})}${metaT}${wp('',{after:120})}<w:tbl><w:tblPr><w:tblW w:w="${W.reduce((a,b)=>a+b)}" w:type="dxa"/>${border}<w:tblLayout w:type="fixed"/></w:tblPr><w:tblGrid>${W.map(w=>`<w:gridCol w:w="${w}"/>`).join('')}</w:tblGrid>${rows}</w:tbl>
+  const body=`${wp('Aufmaß Trockenbauarbeiten',{b:true,sz:30,after:120})}${metaT}${wp('',{after:120})}<w:tbl><w:tblPr><w:tblW w:w="${W.reduce((a,b)=>a+b)}" w:type="dxa"/>${border}<w:tblLayout w:type="fixed"/></w:tblPr><w:tblGrid>${W.map(w=>`<w:gridCol w:w="${w}"/>`).join('')}</w:tblGrid>${rows}</w:tbl>${(()=>{const V=vsRows();if(!V.length)return '';const VW=[2400,3200,1000,1500,1500,2000];let vr=R(['Bauteil','Wand','Seite','Länge [m]','Höhe [m]','Menge'].map((t,i)=>wc(t,VW[i],{b:true,fill:'1D5FA6',col:'FFFFFF',jc:i>2?'right':'left'})).join(''),true);
+    for(const v of V){vr+=R(wc(v.art,VW.reduce((a,b)=>a+b),{span:6,b:true,fill:'EBEFF3'}));for(const r of v.rows)vr+=R([r.n,r.wand,r.seite,f3(r.L),r.H!=null?f3(r.H):'',f2(r.menge)+' '+v.einheit].map((t,i)=>wc(t,VW[i],{jc:i>2?'right':'left'})).join(''));vr+=R(wc('Summe '+v.art,VW.slice(0,5).reduce((a,b)=>a+b),{span:5,b:true,jc:'right'})+wc(f2(v.summe)+' '+v.einheit,VW[5],{b:true,jc:'right'}))}
+    return wp('',{after:200})+wp('Verstärkungen in Trockenbauwänden (Plan UE_12)',{b:true,sz:22,after:80})+`<w:tbl><w:tblPr><w:tblW w:w="${VW.reduce((a,b)=>a+b)}" w:type="dxa"/>${border}<w:tblLayout w:type="fixed"/></w:tblPr><w:tblGrid>${VW.map(w=>`<w:gridCol w:w="${w}"/>`).join('')}</w:tblGrid>${vr}</w:tbl>`})()}
   ${wp('',{after:600})}${wp('_______________________________________                    _______________________________________',{after:0})}${wp('Auftragnehmer, Datum, Unterschrift                                           Auftraggeber / Bauleitung, Datum, Unterschrift',{sz:16})}`;
   const docXml=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><w:body>${body}<w:sectPr><w:footerReference w:type="default" r:id="rId2"/><w:pgSz w:w="16838" w:h="11906" w:orient="landscape"/><w:pgMar w:top="850" w:right="850" w:bottom="850" w:left="850" w:header="400" w:footer="400" w:gutter="0"/></w:sectPr></w:body></w:document>`;
   const footer=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:p><w:pPr><w:jc w:val="right"/></w:pPr><w:r><w:rPr><w:sz w:val="16"/></w:rPr><w:t xml:space="preserve">HFW Trier | Aufmaß Trockenbau | Seite </w:t></w:r><w:r><w:rPr><w:sz w:val="16"/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:sz w:val="16"/></w:rPr><w:instrText>PAGE</w:instrText></w:r><w:r><w:rPr><w:sz w:val="16"/></w:rPr><w:fldChar w:fldCharType="end"/></w:r></w:p></w:ftr>`;

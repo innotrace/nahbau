@@ -13,7 +13,14 @@ tools/                   Werkzeuge (für alle Projekte)
   wandgeometrie.py       Wand verlängern/kürzen, Mengen (Qto) nachführen
   pruefung.py            Modellprüfung -> berichte/pruefbericht_v*.json/.md
   viewer_export.py       IFC -> viewer/model.json (IFC ist die einzige Datenquelle)
-  build.py               Bereinigung + Prüfung + Export in einem Lauf
+  build.py               Bereinigung + Planabgleich + Prüfung + Export in einem Lauf
+  planraster.py          PDF <-> Modell über die Achsbeschriftungen (1..18 / A..J), mm-genau
+  raumstempel.py         Raumstempel (OK FFB, OK RFB, UK RFB, UK RD, UK FD, FB) -> projekte/<p>/raumstempel.json
+  planabgleich.py        Build-Schritt, gesteuert über projekt.json -> planabgleich:
+  rohbau_hoehen.py         Wandhöhen aus Raumstempeln, Stahlbeton-Bodenplatte nach Raumzonen
+  plan_wandtypen.py        Wandtypen TW/VW/IW aus farbigem Trockenbau-Übersichtsplan (UE_02)
+  detailkatalog.py         Wandtyp-Katalog + Detailbilder aus Detailblättern (DE_01) -> wandtypen.json, viewer/details/
+  plan_verstaerkungen.py   Wandverstärkungen, Stahlhohlprofile, C3-Unterkonstruktion aus Verstärkungsplan (UE_12)
   viewer_test.js         Viewer headless testen (Screenshots, JS-Fehler, Aufmaßsumme)
 viewer/index.html        Viewer-Seite (gemeinsam für alle Projekte)
 projekte/<projekt>/
@@ -34,6 +41,21 @@ projekte/<projekt>/
 - GlobalIds eindeutig; IFC muss `python -m ifcopenshell.validate` ohne Fehler bestehen.
 - Vor dem Einarbeiten eines Plans **Plankopf prüfen** (Projekt, Bauherr, Höhenbezug ±0,00). Fremde Pläne nicht
   einarbeiten, sondern in `projekt.json -> fremde_plaene` vermerken und den Nutzer informieren.
+
+## Höhen (Raumstempel)
+Wandhöhe Trockenbau = OK RFB bis UK RD der angrenzenden Räume (DIN 18340). OK FFB, Fußbodenaufbau (FFB−RFB),
+UK RFB und Plattendicke stehen im Pset HFW_Raumstempel. Die Allplan-Grundrisse führen die Stempel als Tabelle
+außerhalb der Räume; die Raumlage kommt aus einem Plan mit Raumnummern im Raum (EG: UE_02). Für OG1 fehlt so ein
+Plan noch – dort bleiben die Wandhöhen beim Geschossstandard (OK RFB +3,45 bis UK RD +6,70).
+
+## Wandtypen und Verstärkungen
+- Plan-Wandtyp je Wand: IfcWallType 'TW 02 | 125mm' + Pset HFW_Wandtyp (Quelle, Überdeckung, Pruefstatus).
+  Katalog (Brandschutz, Schallschutz, max. Raumhöhe, Schichten, Detailbild) in wandtypen.json und meta.wandtypen.
+- Manuelle Zuordnungen im Viewer liegen in der Artifact-Datenbank, Sammlung `wandtypen` (Dokument-ID = Wand-GUID,
+  Feld `typ`). Vor jedem Build mit `ArtifactData list` lesen und als `projekte/<p>/wandtyp_zuordnung.json`
+  ({guid: {typ, datum}}) speichern – planabgleich übernimmt sie dann in die IFC.
+- Verstärkungen (IfcMember PLATE/MEMBER/POST, mit der Wand über IfcRelConnectsElements verbunden): Legende und
+  Höhen aus den Ansichtspiktogrammen stehen in projekt.json -> planabgleich.verstaerkungen (bei neuen Plänen ergänzen).
 
 ## Ablauf bei einem neuen Plan
 1. PDF nach `projekte/<projekt>/plaene/` legen, in `projekt.json -> plaene` eintragen.

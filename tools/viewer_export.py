@@ -13,7 +13,7 @@ import ifcopenshell
 import ifcopenshell.geom
 import ifcopenshell.util.element as ue
 
-KLASSEN = ("IfcWall", "IfcDoor", "IfcWindow", "IfcColumn", "IfcStairFlight", "IfcSpace",
+KLASSEN = ("IfcWall", "IfcSlab", "IfcMember", "IfcDoor", "IfcWindow", "IfcColumn", "IfcStairFlight", "IfcSpace",
            "IfcOpeningElement", "IfcBuildingElementProxy", "IfcGrid")
 
 
@@ -125,6 +125,10 @@ def export(projekt_dir, ifc_path, version, qa_path=None):
                 P_all.append(v); I_all.append(i); nv += len(v); ni += len(i)
             if c == "IfcWall":
                 e["auf"] = auf(el, p, ty, s)
+            if c == "IfcMember":
+                host = [r.RelatingElement for r in el.ConnectedFrom if r.is_a("IfcRelConnectsElements")]
+                if host:
+                    e["host"] = host[0].GlobalId
             if c == "IfcOpeningElement":
                 if el.HasFillings:
                     continue  # Tür-/Fensteröffnungen stecken in der Füllung, nicht als eigenes Element
@@ -139,6 +143,13 @@ def export(projekt_dir, ifc_path, version, qa_path=None):
             "generated": datetime.datetime.now().strftime("%d.%m.%Y %H:%M"), "ifc": P["ifc_viewer_datei"],
             "schema": f.schema, "version": version, "sources": P["plaene"], "assumptions": P["annahmen"],
             "staende": P.get("modellstaende", [])}
+    vf = {}
+    for vs in P.get("planabgleich", {}).get("verstaerkungen", []):
+        vf.update(vs.get("legende_farben", {}))
+    if vf:
+        meta["verstaerkung_farben"] = vf
+    if (projekt_dir / "wandtypen.json").exists():
+        meta["wandtypen"] = json.loads((projekt_dir / "wandtypen.json").read_text())
     if qa_path and Path(qa_path).exists():
         meta["qa"] = json.loads(Path(qa_path).read_text())
     storeys = [{"n": s.Name, "z": s.Elevation} for s in sorted(f.by_type("IfcBuildingStorey"), key=lambda s: s.Elevation)]

@@ -1,0 +1,525 @@
+{
+ "IW": {
+  "typ": "IW",
+  "titel": "IW 1 - 15 | 245 - 385mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "385mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#408080",
+  "art": "IW",
+  "legende": "IW 1 - 15 | 245 - 385mm"
+ },
+ "TW01": {
+  "typ": "TW01",
+  "titel": "TW 01 | 100mm",
+  "schichten": [
+   "2x 12.5 mm Gipskartonplatte GKB",
+   "50 mm CW-Metallständer, dazwischen vollflächig eingestellt 40 mm Mineralfaserplatte",
+   "2x 12.5 mm Gipskartonplatte GKB"
+  ],
+  "kennwerte": {
+   "brandschutz": "F0",
+   "max_raumhoehe": "4,00m",
+   "wanddicke": "100mm",
+   "daemmung": "40mm",
+   "schallschutz": "RW,P ≥  48 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#feef98",
+  "bild": "details/TW01.png",
+  "art": "TW",
+  "legende": "TW 01 | 100mm"
+ },
+ "TW02": {
+  "typ": "TW02",
+  "titel": "TW 02 | 125mm",
+  "schichten": [
+   "2x 12.5 mm Gipskartonplatte GKB",
+   "75 mm CW-Metallständer, dazwischen vollflächig eingestellt 60 mm Mineralfaserplatte",
+   "2x 12.5 mm Gipskartonplatte GKB"
+  ],
+  "kennwerte": {
+   "brandschutz": "F0",
+   "max_raumhoehe": "4,00m",
+   "wanddicke": "125mm",
+   "daemmung": "60mm",
+   "schallschutz": "RW,P ≥  48 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#ffb13b",
+  "bild": "details/TW02.png",
+  "art": "TW",
+  "legende": "TW 02 | 125mm"
+ },
+ "TW03": {
+  "typ": "TW03",
+  "titel": "TW 03 | 125mm",
+  "schichten": [
+   "2x 12.5 mm Gipskartonplatte Feuerschutz GKF",
+   "75 mm CW-Metallständer, dazwischen vollflächig eingestellt 60 mm Mineralfaserplatte",
+   "2x 12.5 mm Gipskartonplatte Feuerschutz GKF"
+  ],
+  "kennwerte": {
+   "brandschutz": "keine",
+   "max_raumhoehe": "4,00m",
+   "wanddicke": "125mm",
+   "daemmung": "80mm",
+   "schallschutz": "RW,P ≥  56 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#f18c03",
+  "bild": "details/TW03.png",
+  "art": "TW",
+  "legende": "TW 03 | 125mm"
+ },
+ "TW04": {
+  "typ": "TW04",
+  "titel": "TW 04 | 125mm",
+  "schichten": [
+   "2x 12.5 mm Hartgipsplatte GKFI + / DFH2IR",
+   "75 mm CW-Metallständer, dazwischen vollflächig eingestellt 60 mm Mineralfaserplatte",
+   "2x 12.5 mm Hartgipsplatte GKFI + / DFH2IR"
+  ],
+  "kennwerte": {
+   "brandschutz": "keine Anforderung",
+   "max_raumhoehe": "4,00m",
+   "wanddicke": "125mm",
+   "daemmung": "60mm",
+   "schallschutz": "RW,P ≥  60 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#400080",
+  "bild": "details/TW04.png",
+  "art": "TW",
+  "legende": "TW 04 | 125mm"
+ },
+ "TW05": {
+  "typ": "TW05",
+  "titel": "TW 05 | 125mm",
+  "schichten": [
+   "2x 12.5 mm Gipskartonplatte GKB",
+   "75 mm CW-Metallständer",
+   "2x 12.5 mm Gipskartonplatte GKB"
+  ],
+  "kennwerte": {
+   "brandschutz": "F30",
+   "max_raumhoehe": "3,60m",
+   "wanddicke": "125mm",
+   "daemmung": "60mm",
+   "schallschutz": "RW,P ≥  48 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#ffff00",
+  "bild": "details/TW05.png",
+  "art": "TW",
+  "legende": "TW 05 | 125cm"
+ },
+ "TW06": {
+  "typ": "TW06",
+  "titel": "TW 06 | 125mm",
+  "schichten": [
+   "2x 12.5 mm Feuerschutzplatten GKF",
+   "75 mm CW-Metallständer, dazwischen vollflächig eingestellt 60 mm Mineralfaserplatte",
+   "2x 12.5 mm Feuerschutzplatten GKF"
+  ],
+  "kennwerte": {
+   "brandschutz": "F60",
+   "max_raumhoehe": "3,60m",
+   "wanddicke": "125mm",
+   "daemmung": "60mm",
+   "schallschutz": "RW,P ≥  48 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#804000",
+  "bild": "details/TW06.png",
+  "art": "TW",
+  "legende": "TW 06 | 125mm"
+ },
+ "TW07": {
+  "typ": "TW07",
+  "titel": "TW 07 | 125mm",
+  "schichten": [
+   "2x 12.5 mm Hartgipsplatte GKFI+ / DFH2IR",
+   "75 mm CW-Metallständer, dazwischen vollflächig eingestellt 60 mm Mineralfaserplatte",
+   "2x 12.5 mm Hartgipsplatte GKFI+ / DFH2IR"
+  ],
+  "kennwerte": {
+   "brandschutz": "F60",
+   "max_raumhoehe": "4,00m",
+   "wanddicke": "125mm",
+   "daemmung": "60mm",
+   "schallschutz": "RW,P ≥  60 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#ff00ff",
+  "bild": "details/TW07.png",
+  "art": "TW",
+  "legende": "TW 07 | 125mm"
+ },
+ "TW08": {
+  "typ": "TW08",
+  "titel": "TW 08 | 100mm",
+  "schichten": [
+   "2x 12.5 mm Feuerschutzplatte GKF",
+   "50 mm CW-Metallständer, dazwischen vollflächig eingestellt 40 mm Mineralfaserplatte",
+   "2x 12.5 mm Feuerschutzplatte GKF"
+  ],
+  "kennwerte": {
+   "brandschutz": "F60",
+   "max_raumhoehe": "4,00m",
+   "wanddicke": "100mm",
+   "daemmung": "40mm",
+   "schallschutz": "RW,P ≥  48 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#ff8080",
+  "bild": "details/TW08.png",
+  "art": "TW",
+  "legende": "TW 08 | 100mm"
+ },
+ "TW09": {
+  "typ": "TW09",
+  "titel": "TW 09 | 125mm",
+  "schichten": [
+   "2x 12.5 mm Feuerschutzplatten GKF",
+   "75 mm CW-Metallständer, dazwischen vollflächig eingestellt 60 mm Mineralfaserplatte",
+   "2x 12.5 mm Feuerschutzplatten GKF"
+  ],
+  "kennwerte": {
+   "brandschutz": "F90",
+   "max_raumhoehe": "4,00m",
+   "wanddicke": "125mm",
+   "daemmung": "60mm",
+   "schallschutz": "keine Anforderung"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#719b31",
+  "bild": "details/TW09.png",
+  "art": "TW",
+  "legende": "TW 09 | 125mm"
+ },
+ "TW10": {
+  "typ": "TW10",
+  "titel": "TW 10 | 125mm",
+  "schichten": [
+   "1x 25mm Massivbauplatte GKF 1x 12.5 mm Hartgipsplatte GKFI+ / DFH2IR",
+   "50 mm CW-Metallständer, dazwischen vollflächig eingestellt 40 mm Mineralfaserplatte",
+   "1x 25mm Massivbauplatte GKF 1x 12.5 mm Hartgipsplatte GKFI+ / DFH2IR"
+  ],
+  "kennwerte": {
+   "brandschutz": "F90",
+   "max_raumhoehe": "3,6m",
+   "wanddicke": "125mm",
+   "daemmung": "40mm",
+   "schallschutz": "RW,P ≥  48 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#ff80ff",
+  "bild": "details/TW10.png",
+  "art": "TW",
+  "legende": "TW 10 | RC2 125mm"
+ },
+ "TW11": {
+  "typ": "TW11",
+  "titel": "TW 11 | RC3 127mm",
+  "schichten": [
+   "2x 12.5 mm Hartgipsplatten GKFI+/ DFH2IR mit Stahlblechkaschierung + 0,4mm 75 mm CW-Metallständer, dazwischen vollflächig eingestellt 60 mm Mineralfaserplatte",
+   "2x 12.5 mm Hartgipsplatten GKFI+/ DFH2IR mit Stahlblechkaschierung + 0,4mm"
+  ],
+  "kennwerte": {
+   "brandschutz": "F90",
+   "max_raumhoehe": "4,00m",
+   "wanddicke": "127mm",
+   "daemmung": "60mm",
+   "schallschutz": "RW,P ≥  60 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#cd3228",
+  "bild": "details/TW11.png",
+  "art": "TW",
+  "legende": "TW 11 | RC3 127mm"
+ },
+ "TW12": {
+  "typ": "TW12",
+  "titel": "TW 12 | 125mm",
+  "schichten": [
+   "2x 12.5 mm Gipskartonplatte Feuerschutz GKF",
+   "75 mm CW-Metallständer, dazwischen vollflächig eingestellt 60 mm Mineralfaserplatte",
+   "2x 12.5 mm Gipskartonplatte Feuerschutz GKF"
+  ],
+  "kennwerte": {
+   "brandschutz": "F60",
+   "max_raumhoehe": "3,60m",
+   "wanddicke": "125mm",
+   "daemmung": "80mm",
+   "schallschutz": "RW,P ≥  56 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#0000ff",
+  "bild": "details/TW12.png",
+  "art": "TW",
+  "legende": "TW 12 | 125mm"
+ },
+ "TW13": {
+  "typ": "TW13",
+  "titel": "TW 13 | 116mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "116mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#ff0000",
+  "art": "TW",
+  "legende": "TW 13 | 116mm"
+ },
+ "TW14": {
+  "typ": "TW14",
+  "titel": "TW 14 | 126mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "126mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#626262",
+  "art": "TW",
+  "legende": "TW 14 | 126mm"
+ },
+ "TW15": {
+  "typ": "TW15",
+  "titel": "TW 15 | 125mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "125mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#77bbff",
+  "art": "TW",
+  "legende": "TW 15 | 125mm"
+ },
+ "TW16": {
+  "typ": "TW16",
+  "titel": "TW 16 | 125mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "125mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#3485c0",
+  "art": "TW",
+  "legende": "TW 16 | 125mm"
+ },
+ "TW17": {
+  "typ": "TW17",
+  "titel": "TW 17 | 125mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "125mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#2492ff",
+  "art": "TW",
+  "legende": "TW 17 | 125mm"
+ },
+ "TW18": {
+  "typ": "TW18",
+  "titel": "TW 18 | 100mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "100mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#0000a0",
+  "art": "TW",
+  "legende": "TW 18 | 100mm"
+ },
+ "TW19": {
+  "typ": "TW19",
+  "titel": "TW 19 | 125mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "125mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#5555ff",
+  "art": "TW",
+  "legende": "TW 19 | 125mm"
+ },
+ "TW20": {
+  "typ": "TW20",
+  "titel": "TW 20 | 125mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "125mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#00ffff",
+  "art": "TW",
+  "legende": "TW 20 | 125mm"
+ },
+ "TW21": {
+  "typ": "TW21",
+  "titel": "TW 21 | 125mm",
+  "schichten": [
+   "2x 12.5 mm Hartgipsplatte GKFI+ / DFH2IR",
+   "75 mm CW-Metallständer, dazwischen vollflächig eingestellt 60 mm Mineralfaserplatte",
+   "2x 12.5 mm Hartgipsplatte GKFI+ / DFH2IR"
+  ],
+  "kennwerte": {
+   "brandschutz": "F60",
+   "max_raumhoehe": "4,00m",
+   "wanddicke": "125mm",
+   "daemmung": "60mm",
+   "schallschutz": "RW,P ≥  60 dB"
+  },
+  "quelle": "HFW_X_5_039.1_XX_DE_01_F-B.pdf",
+  "staenderwerk": "Einfachständerwerk",
+  "farbe": "#408080",
+  "bild": "details/TW21.png",
+  "art": "TW",
+  "legende": "TW 21 | 125mm"
+ },
+ "TW22": {
+  "typ": "TW22",
+  "titel": "TW 22 | 125mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "125mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#804040",
+  "art": "TW",
+  "legende": "TW 22 | 125mm"
+ },
+ "TW24": {
+  "typ": "TW24",
+  "titel": "TW 24 | 150mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "150mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#008000",
+  "art": "TW",
+  "legende": "TW 24 | 150mm"
+ },
+ "VW01": {
+  "typ": "VW01",
+  "titel": "VW 01 | 100mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "100mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#00ffff",
+  "art": "VW",
+  "legende": "VW 01 | 100mm"
+ },
+ "VW02": {
+  "typ": "VW02",
+  "titel": "VW 02 | 100mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "100mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#cbf5ff",
+  "art": "VW",
+  "legende": "VW 02 | 100mm"
+ },
+ "VW03": {
+  "typ": "VW03",
+  "titel": "VW 03 | 100mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "100mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#3485c0",
+  "art": "VW",
+  "legende": "VW 03 | 100mm"
+ },
+ "VW04": {
+  "typ": "VW04",
+  "titel": "VW 04 | 115mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "115mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#ffb3d9",
+  "art": "VW",
+  "legende": "VW 04 | 115mm"
+ },
+ "VW05": {
+  "typ": "VW05",
+  "titel": "VW 05 | 100mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "100mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#feef98",
+  "art": "VW",
+  "legende": "VW 05 | 100mm"
+ },
+ "VW06": {
+  "typ": "VW06",
+  "titel": "VW 06 | ",
+  "schichten": [],
+  "kennwerte": {},
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#719b31",
+  "art": "VW",
+  "legende": "VW 06 | "
+ },
+ "VW07": {
+  "typ": "VW07",
+  "titel": "VW 07 | 100mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "100mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#c0c0c0",
+  "art": "VW",
+  "legende": "VW 07 | 100mm"
+ },
+ "VW08": {
+  "typ": "VW08",
+  "titel": "VW 08 | 125mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "125mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#3f561b",
+  "art": "VW",
+  "legende": "VW 08 | 125mm"
+ },
+ "VW09": {
+  "typ": "VW09",
+  "titel": "VW 09 | 120mm",
+  "schichten": [],
+  "kennwerte": {
+   "wanddicke": "120mm"
+  },
+  "quelle": "nur Legende Übersichtsplan (Detailblatt fehlt)",
+  "farbe": "#ba75ff",
+  "art": "VW",
+  "legende": "VW 09 | 120mm"
+ }
+}

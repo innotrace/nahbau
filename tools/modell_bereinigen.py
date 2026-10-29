@@ -320,11 +320,13 @@ def bereinigen(ifc_in, ifc_out, projekt_dir):
     f = ifcopenshell.open(ifc_in)
     dup = duplikate_entfernen(f)
     enth = enthaltene_entfernen(f)
+    from planabgleich import planabgleich
+    abgl = planabgleich(f, projekt_dir)  # Höhen, Bodenplatte, Wandtypen aus Plänen (vor der Geschossteilung)
     split = geschosse_teilen(f, P["geschosse"])
     anschl, offen = wandanschluesse(f)
     besitzer_vereinheitlichen(f)
     f.write(ifc_out)
-    return {"duplikate": dup, "enthaltene_wände": enth, "geschossteilung": split, "anschluesse": anschl, "offene_enden": offen}
+    return {"duplikate": dup, "enthaltene_wände": enth, **abgl, "geschossteilung": split, "anschluesse": anschl, "offene_enden": offen}
 
 
 if __name__ == "__main__":

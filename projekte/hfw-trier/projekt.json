@@ -34,6 +34,30 @@
       "status": "Ausführungsplanung",
       "datum": "03.06.2026 / Index 06.08.2026",
       "geschoss": "OG1"
+    },
+    {
+      "plan": "HFW_F_5_039.1_00_UE_02_F-D",
+      "inhalt": "FWT EG Trockenbauwände (Wandtypen farbig)",
+      "massstab": "1:100",
+      "status": "Ausführungsplanung",
+      "datum": "15.07.2026 / Index D",
+      "geschoss": "EG"
+    },
+    {
+      "plan": "HFW_F_5_039.1_00_UE_12_F-F",
+      "inhalt": "FWT EG Trockenbauverstärkung (Wandverstärkungen, Trockenbaustürze)",
+      "massstab": "1:100",
+      "status": "Ausführungsplanung",
+      "datum": "18.08.2026 / Index F",
+      "geschoss": "EG"
+    },
+    {
+      "plan": "HFW_X_5_039.1_XX_DE_01_F-B",
+      "inhalt": "Innenwände Typen Trockenbau 1 (TW01–TW12, TW21)",
+      "massstab": "1:10",
+      "status": "Ausführungsplanung",
+      "datum": "Index B",
+      "geschoss": "alle"
     }
   ],
   "annahmen": [
@@ -84,6 +108,238 @@
         "geschossteilung": 0,
         "anschluesse": 1
       }
+    },
+    {
+      "version": 6,
+      "datum": "29.10.2026",
+      "notiz": "Planabgleich: Raumstempel-Höhen, Bodenplatte EG, Wandtypen TW/VW (UE_02) mit Katalog (DE_01), Verstärkungen (UE_12)",
+      "aenderungen": {
+        "duplikate": 0,
+        "enthaltene_wände": 0,
+        "raumstempel": 1,
+        "wandhoehen": 104,
+        "bodenplatte": 9,
+        "bodenplatte_hinweise": 1,
+        "wandtypen_farben": 14,
+        "wandtypen": 104,
+        "verstaerkungen": 139,
+        "geschossteilung": 6,
+        "anschluesse": 0
+      }
     }
-  ]
+  ],
+  "stempel_aus": {
+    "EG": "HFW_F_5_GPOBJ_00_GR_10_F-L.pdf",
+    "OG1": "HFW_F_5_GPOBJ_01_GR_10_F-H.pdf"
+  },
+  "raumnummer_praefix": {
+    "EG": "FW.00.",
+    "OG1": "FW.01."
+  },
+  "planabgleich": {
+    "raumlage_aus": {
+      "EG": "HFW_F_5_039.1_00_UE_02_F-D.pdf"
+    },
+    "bodenplatte": {
+      "geschoss": "EG",
+      "bereich": [
+        -1.5,
+        7.0,
+        79.5,
+        63.5
+      ]
+    },
+    "wandtypen": [
+      {
+        "geschoss": "EG",
+        "plan": "HFW_F_5_039.1_00_UE_02_F-D.pdf",
+        "legende": [
+          2850,
+          1400,
+          3340,
+          1760
+        ],
+        "planbereich": [
+          100,
+          250,
+          2800,
+          2200
+        ]
+      }
+    ],
+    "detailblaetter": [
+      "HFW_X_5_039.1_XX_DE_01_F-B.pdf"
+    ],
+    "verstaerkungen": [
+      {
+        "geschoss": "EG",
+        "plan": "HFW_F_5_039.1_00_UE_12_F-F.pdf",
+        "planbereich": [
+          100,
+          500,
+          2780,
+          2300
+        ],
+        "linien": [
+          {
+            "farbe": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "breite": 2.27,
+            "min_m": 1.5,
+            "art": "Stahlblech flächig",
+            "ifc": "PLATE",
+            "hoehen": [
+              [
+                0.3,
+                2.5
+              ]
+            ],
+            "text": "flächige Verstärkung in Trockenbauwand Stahlblech für Werkstatträume o. ä., feucht- und nassraumgeeignet"
+          },
+          {
+            "farbe": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "breite": 2.27,
+            "max_m": 1.0,
+            "art": "Traverse Feuerlöscher Stahl",
+            "ifc": "MEMBER",
+            "hoehen": [
+              [
+                0.5,
+                1.0
+              ]
+            ],
+            "text": "Verstärkungstraversen Trockenbauwand Stahl Feuerlöscher"
+          },
+          {
+            "farbe": [
+              0.0,
+              1.0,
+              1.0
+            ],
+            "breite": 2.27,
+            "art": "Stahlblech Alarmmonitor",
+            "ifc": "PLATE",
+            "hoehen": [
+              [
+                1.7,
+                2.7
+              ]
+            ],
+            "text": "Verstärkung in Trockenbauwand Stahlblech für z. B. Alarmmonitore, feucht- und nassraumgeeignet"
+          },
+          {
+            "farbe": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "breite": 2.27,
+            "max_m": 1.0,
+            "art": "Traverse Feuerlöscher Holz",
+            "ifc": "MEMBER",
+            "hoehen": [
+              [
+                0.5,
+                1.0
+              ]
+            ],
+            "text": "Verstärkungstraversen Trockenbauwand Holz Feuerlöscher"
+          }
+        ],
+        "profile": [
+          {
+            "farbe": [
+              0.976,
+              0.863,
+              0.235
+            ],
+            "art": "Stahlhohlprofil 50x50",
+            "profil": "50 x 50 mm",
+            "a": 0.05,
+            "b": 0.05,
+            "text": "Verstärkung Stahlhohlprofil 50 mm x 50 mm"
+          },
+          {
+            "farbe": [
+              1.0,
+              0.502,
+              1.0
+            ],
+            "art": "Stahlhohlprofil 75x75",
+            "profil": "75 x 75 mm",
+            "a": 0.075,
+            "b": 0.075,
+            "text": "Verstärkung Stahlhohlprofil 75 mm x 75 mm"
+          },
+          {
+            "farbe": [
+              0.925,
+              0.094,
+              0.075
+            ],
+            "art": "Stahlhohlprofil 100x100",
+            "profil": "100 x 100 mm",
+            "a": 0.1,
+            "b": 0.1,
+            "text": "Verstärkung Stahlhohlprofil 100 mm x 100 mm"
+          },
+          {
+            "farbe": [
+              0.251,
+              0.0,
+              0.502
+            ],
+            "art": "Stahlhohlprofil 75x50",
+            "profil": "75 x 50 mm",
+            "a": 0.075,
+            "b": 0.05,
+            "text": "Verstärkung Stahlhohlprofil 75 mm x 50 mm"
+          },
+          {
+            "farbe": [
+              0.251,
+              0.502,
+              0.502
+            ],
+            "art": "Verstärkung Sanitär (Stahlhohlprofil)",
+            "profil": "Stahlhohlprofil",
+            "a": 0.05,
+            "b": 0.05,
+            "text": "Verstärkung für Sanitärinstallationen / Waschtische, Stahlhohlprofile (Legendenzuordnung prüfen)"
+          }
+        ],
+        "flaechen": [
+          {
+            "farbe": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "art": "Korrosivitätskategorie C3",
+            "wandattribut": {
+              "Korrosivitaetskategorie_UK": "C3"
+            }
+          }
+        ],
+        "legende_farben": {
+          "Stahlblech flächig": "#ff0000",
+          "Traverse Feuerlöscher Stahl": "#ff0000",
+          "Stahlblech Alarmmonitor": "#00ffff",
+          "Traverse Feuerlöscher Holz": "#0000ff",
+          "Stahlhohlprofil 50x50": "#f9dc3c",
+          "Stahlhohlprofil 75x75": "#ff80ff",
+          "Stahlhohlprofil 100x100": "#ec1813",
+          "Stahlhohlprofil 75x50": "#400080",
+          "Verstärkung Sanitär (Stahlhohlprofil)": "#408080"
+        }
+      }
+    ]
+  }
 }
